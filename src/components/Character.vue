@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div id="character">
-            <p>Class Name: {{characterData.name}}</p>
-            <p>Class Skills: {{characterData.skills}}</p>
+        <div id="character" v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
+            <h3>{{characterData.name}}</h3>
+            <p v-if ="hover">{{characterData.description}}</p>
         </div>
     </div>
 </template>
@@ -12,6 +12,11 @@
         name: "Character",
         props: {
             characterData: Object
+        },
+        data: function () {
+            return {
+                hover: false
+            }  
         }
     }
 </script>
@@ -29,5 +34,8 @@
         border-color: hotpink;
         color: hotpink;
         cursor: pointer;
+    }
+    h3 {
+        text-align: center
     }
 </style>
