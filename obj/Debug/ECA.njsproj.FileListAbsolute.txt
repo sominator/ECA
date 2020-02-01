@@ -1,0 +1,2 @@
+C:\Users\ultfl\coding\ECA\obj\Debug\ECA.njsprojAssemblyReference.cache
+C:\Users\ultfl\coding\ECA\bin\Microsoft.NodejsTools.WebRole.dll
