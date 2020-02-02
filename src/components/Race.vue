@@ -21,7 +21,7 @@
             }
         },
         methods: {
-            chosen: function (event) {
+            chosen: function () {
                 this.choice = this.raceData.name;
                 this.$emit("raceChosen", this.choice);
             }

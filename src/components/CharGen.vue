@@ -1,32 +1,53 @@
 <template>
     <div>
         <h2>Character Generator</h2>
-        <p>Your Race: {{raceChoice}}</p>
-        <p>Your Class: {{classChoice}}</p>
+        <div id="char-display">
+            <p>Your Race: {{raceChoice}}</p>
+            <p>Your Class: {{classChoice}}</p>
+            <p>Your Archetype: {{archetypeChoice}}</p>
+        </div>
+        <div id="buttons">
+            <button v-on:click="toggle = 'races'">Choose Race</button>
+            <button v-on:click="toggle = 'classes'">Choose Class</button>
+            <button v-on:click="toggle = 'archetypes'">Choose Archetype</button>
+        </div>
         <div id="char-gen">
-            <div id="buttons">
-                <button v-on:click="raceToggle = !raceToggle">
-                    <span v-show="!raceToggle">Show Races</span>
-                    <span v-show="raceToggle">Hide Races</span>
-                </button>
-                <button v-on:click="classToggle = !classToggle">
-                    <span v-show="!classToggle">Show Classes</span>
-                    <span v-show="classToggle">Hide Classes</span>
-                </button>
-            </div>
-            <div id="races" v-show="raceToggle">
+            <div id="races" v-show="toggle === 'races'">
                 <Race :raceData="raceData.dwarf" :raceChoice="raceChoice" @raceChosen="updateRace" />
                 <Race :raceData="raceData.gnome" :raceChoice="raceChoice" @raceChosen="updateRace" />
                 <Race :raceData="raceData.highAuric" :raceChoice="raceChoice" @raceChosen="updateRace" />
                 <Race :raceData="raceData.human" :raceChoice="raceChoice" @raceChosen="updateRace" />
                 <Race :raceData="raceData.lowAuric" :raceChoice="raceChoice" @raceChosen="updateRace" />
             </div>
-            <div id="classes" v-show="classToggle">
+            <div id="classes" v-show="toggle === 'classes'">
                 <Class :classData="classData.nightAgent" :classChoice="classChoice" @classChosen="updateClass" />
                 <Class :classData="classData.revolutionary" :classChoice="classChoice" @classChosen="updateClass" />
                 <Class :classData="classData.technomancer" :classChoice="classChoice" @classChosen="updateClass" />
                 <Class :classData="classData.terramancer" :classChoice="classChoice" @classChosen="updateClass" />
                 <Class :classData="classData.vanguard" :classChoice="classChoice" @classChosen="updateClass" />
+            </div>
+            <div id="archetypes" v-show="toggle === 'archetypes'">
+                <h3 v-show="classChoice === ''">Choose a class to determine your archetype.</h3>
+                <div class="archetypes-sub" v-show="classChoice === 'Night Agent'">
+                    <Archetype :archetypeData="classData.nightAgent.archetypes.nightpath" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                    <Archetype :archetypeData="classData.nightAgent.archetypes.daypath" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                </div>
+                <div class="archetypes-sub" v-show="classChoice === 'Revolutionary'">
+                    <Archetype :archetypeData="classData.revolutionary.archetypes.gunslinger" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                    <Archetype :archetypeData="classData.revolutionary.archetypes.sharpshooter" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                </div>
+                <div class="archetypes-sub" v-show="classChoice === 'Technomancer'">
+                    <Archetype :archetypeData="classData.technomancer.archetypes.combatEngineer" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                    <Archetype :archetypeData="classData.technomancer.archetypes.netSpecialist" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                </div>
+                <div class="archetypes-sub" v-show="classChoice === 'Terramancer'">
+                    <Archetype :archetypeData="classData.terramancer.archetypes.arcanePitcher" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                    <Archetype :archetypeData="classData.terramancer.archetypes.naturesHarbinger" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                </div>
+                <div class="archetypes-sub" v-show="classChoice === 'Vanguard'">
+                    <Archetype :archetypeData="classData.vanguard.archetypes.assassin" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                    <Archetype :archetypeData="classData.vanguard.archetypes.shadowstalker" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
+                </div>
             </div>
         </div>
     </div>
@@ -35,52 +56,103 @@
 <script>
     import Class from "./Class.vue";
     import Race from "./Race.vue";
+    import Archetype from "./Archetype.vue";
     export default {
         name: "CharGen",
         components: {
             Class,
-            Race
+            Race,
+            Archetype
         },
         props: {
 
         },
         data: function () {
             return {
-                raceToggle: false,
-                classToggle: false,
+                toggle: "",
                 raceChoice: "",
                 classChoice: "",
+                archetypeChoice: "",
                 classData: {
                     nightAgent: {
                         name: "Night Agent",
                         description: "NIGHT Agents are special agents of the highest order, members of a paramilitary force that is called upon to enforce peace among aurics and humans - sometimes using extreme measures. As a NIGHT Agent, you're skilled in espionage and magical combat, and will have to decide between the paths of shadowmancy and photomancy for your archetype.",
                         skills: "Athletics, Grappling, Mancy, Stealth, Tumbling",
-                        image: 'NightAgent.png'
+                        image: 'NightAgent.png',
+                        archetypes: {
+                            nightpath: {
+                                name: "Nightpath",
+                                description: "Master of shadow."
+                            },
+                            daypath: {
+                                name: "Daypath",
+                                description: "Master of light."
+                            }
+                        }
                     },
                     revolutionary: {
                         name: "Revolutionary",
                         description: "Revolutionaries are often allied to Aurichome, sacrificing the comforts of the status quo for the promise of equality for all underraces. As a Revolutionary, you're trained in all manner of ranged combat, and are unparalleled in your understanding of modern vehicles.",
                         skills: "Athletics, Healing, Negotiation, Tumbling, Vehicles",
-                        image: 'Revolutionary.png'
-
+                        image: 'Revolutionary.png',
+                        archetypes: {
+                            gunslinger: {
+                                name: "Gunslinger",
+                                description: "Master of dual pistols."
+                            },
+                            sharpshooter: {
+                                name: "Sharpshooter",
+                                description: "Master of sniping."
+                            }
+                        }
                     },
                     technomancer: {
                         name: "Technomancer",
                         description: "Technomancers are gifted to the extreme in hacking, robotics, and manipulating any type of machinery. As a Technomancer, your training allows you to get closer to the metal with feats and spells than any other class.",
                         skills: "Discernment, Hacking, Knowledge, Mancy, Vehicles",
-                        image: 'Technomancer.png'
+                        image: 'Technomancer.png',
+                        archetypes: {
+                            combatEngineer: {
+                                name: "Combat Engineer",
+                                description: "Master of combat engineering."
+                            },
+                            netSpecialist: {
+                                name: "Net Specialist",
+                                description: "Master of the network."
+                            }
+                        }
                     },
                     terramancer: {
                         name: "Terramancer",
                         description: "Terramancers have dedicated their lives towards communing with nature, drawing their inspiration from the flora and fauna around them. As a Terramancer, your proficiency with healing magic is unmatched, as is your ability to throw projectiles with deadly effect.",
                         skills: "Healing, Knowledge, Mancy, Nature, Negotiation",
-                        image: 'Terramancer.png'
+                        image: 'Terramancer.png',
+                        archetypes: {
+                            arcanePitcher: {
+                                name: "Arcane Pitcher",
+                                description: "Master of magic."
+                            },
+                            naturesHarbinger: {
+                                name: "Nature's Harbinger",
+                                description: "Master of nature."
+                            }
+                        }
                     },
                     vanguard: {
                         name: "Vanguard",
                         description: "Vanguards thrive in the shadows, specializing in the arts of stealth and subterfuge. As a Vanguard, your skills in remaining unseen and getting the drop on your opponents are unparalleled.",
                         skills: "Drama, Hacking, Stealth, Thievery, Tumbling",
-                        image: 'Vanguard.png'
+                        image: 'Vanguard.png',
+                        archetypes: {
+                            assassin: {
+                                name: "Assassin",
+                                description: "Master of assassins."
+                            },
+                            shadowstalker: {
+                                name: "Shadowstalker",
+                                description: "Master of shadows."
+                            }
+                        }
                     }
                 },
                 raceData: {
@@ -112,7 +184,13 @@
                 this.raceChoice = raceChoice;
             },
             updateClass(classChoice) {
-                this.classChoice = classChoice;
+                if (this.classChoice !== classChoice) {
+                    this.classChoice = classChoice;
+                    this.archetypeChoice = " ";
+                }
+            },
+            updateArchetype(archetypeChoice) {
+                this.archetypeChoice = archetypeChoice;
             }
         }
     }
@@ -127,21 +205,37 @@
     #races {
         display: flex;
         flex-wrap: wrap;
+        margin-left: 100px;
         justify-content: center;
     }
     #classes {
         display: flex;
         flex-wrap: wrap;
+        margin-left: 100px;
         justify-content: center;
     }
+    #archetypes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .archetypes-sub {
+        display: inline-flex;
+    }
     #buttons {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 10px;
+        margin-left: 10px;
+        width: 100px;
+        position: fixed;
     }
     button {
         background-color: cyan;
         border-radius: 10px;
         border: 0px;
-        margin-left: 10px;
+        height: 50px;
+        margin-bottom: 10px;
         font-weight: bold;
         outline: none;
         font-family: 'Trebuchet MS';
@@ -149,5 +243,23 @@
     button:hover {
         cursor: pointer;
         background-color: hotpink;
+    }
+    @media (max-width: 700px) {
+        #buttons {
+            flex-direction: row;
+            position: relative;
+            margin: auto;
+            justify-content: center;
+        }
+        #races {
+            margin: auto;
+        }
+        #classes {
+            margin: auto;
+        }
+        button {
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+        }
     }
 </style>
