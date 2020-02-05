@@ -5,11 +5,13 @@
             <p>Your Race: {{raceChoice}}</p>
             <p>Your Class: {{classChoice}}</p>
             <p>Your Archetype: {{archetypeChoice}}</p>
+            <p>Your Feats: {{featChoice}}</p>
         </div>
         <div id="buttons">
             <button v-on:click="toggle = 'races'">Choose Race</button>
             <button v-on:click="toggle = 'classes'">Choose Class</button>
             <button v-on:click="toggle = 'archetypes'">Choose Archetype</button>
+            <button v-on:click="toggle = 'feats'">Choose Feats</button>
         </div>
         <div id="char-gen">
             <div id="races" v-show="toggle === 'races'">
@@ -49,6 +51,44 @@
                     <Archetype :archetypeData="classData.vanguard.archetypes.shadowstalker" :archetypeChoice="archetypeChoice" @archetypeChosen="updateArchetype" />
                 </div>
             </div>
+            <div id="feats" v-show="toggle === 'feats'">
+                <h3 v-show="classChoice === ''">Choose a class to determine your feats.</h3>
+                <div class="feats-sub" v-show="classChoice === 'Night Agent'">
+                    <Feat :featData="classData.nightAgent.feats.intoTheFray" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.nightAgent.feats.nightTraining" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.nightAgent.feats.preemptiveStrike" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.nightAgent.feats.stunningDefense" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.nightAgent.feats.swordMastery" :featChoice="featChoice" @featChosen="updateFeat" />
+                </div>
+                <div class="feats-sub" v-show="classChoice === 'Revolutionary'">
+                    <Feat :featData="classData.revolutionary.feats.fullMatrices" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.revolutionary.feats.knowledgeIsPower" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.revolutionary.feats.revolutionaryConnections" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.revolutionary.feats.secondChance" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.revolutionary.feats.thousandYardStare" :featChoice="featChoice" @featChosen="updateFeat" />
+                </div>
+                <div class="feats-sub" v-show="classChoice === 'Technomancer'">
+                    <Feat :featData="classData.technomancer.feats.deviousPrototype01" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.technomancer.feats.deviousPrototype02" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.technomancer.feats.deviousPrototype03" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.technomancer.feats.juryRigging" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.technomancer.feats.pinballWizard" :featChoice="featChoice" @featChosen="updateFeat" />
+                </div>
+                <div class="feats-sub" v-show="classChoice === 'Terramancer'">
+                    <Feat :featData="classData.terramancer.feats.arcaneWard" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.terramancer.feats.holisticHealer" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.terramancer.feats.reflectiveWard" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.terramancer.feats.strengthOfTheEarth" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.terramancer.feats.teamSpirit" :featChoice="featChoice" @featChosen="updateFeat" />
+                </div>
+                <div class="feats-sub" v-show="classChoice === 'Vanguard'">
+                    <Feat :featData="classData.vanguard.feats.compromisingStrike" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.vanguard.feats.scoundrelsLuck" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.vanguard.feats.shadowDealer" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.vanguard.feats.sprintAttack" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat :featData="classData.vanguard.feats.unendingFlow" :featChoice="featChoice" @featChosen="updateFeat" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -57,12 +97,14 @@
     import Class from "./Class.vue";
     import Race from "./Race.vue";
     import Archetype from "./Archetype.vue";
+    import Feat from "./Feat.vue";
     export default {
         name: "CharGen",
         components: {
             Class,
             Race,
-            Archetype
+            Archetype,
+            Feat
         },
         props: {
 
@@ -73,6 +115,7 @@
                 raceChoice: "",
                 classChoice: "",
                 archetypeChoice: "",
+                featChoice: "",
                 classData: {
                     nightAgent: {
                         name: "Night Agent",
@@ -87,6 +130,28 @@
                             daypath: {
                                 name: "Daypath",
                                 description: "Master of light."
+                            }
+                        },
+                        feats: {
+                            intoTheFray: {
+                                name: "Into the Fray",
+                                description: "When you take two move actions during your turn, you can attempt a melee attack if you end your second move action within 5 feet of a creature."
+                            },
+                            nightTraining: {
+                                name: "NIGHT Training",
+                                description: "Your deeds and training in the NIGHT organization have gained you a certain political cachet and allow you to pick up cues that most would miss. You have advantage on Awareness checks to spot a hidden creature, and on Discernment checks to determine whether a creature is lying. Additionally, you can use your political sway to gain advantage on all Negotiation checks when you're dealing with law enforcement."
+                            },
+                            preemptiveStrike: {
+                                name: "Preemptive Strike",
+                                description: "Once per round, if a creature attempts to make an attack against you, you can immediately retaliate with a melee attack if you are within 5 feet of it. Your attack is made before the creature's attack."
+                            },
+                            stunningDefense: {
+                                name: "Stunning Defense",
+                                description: "Once per round, when a creature hits you with a melee or ranged attack, you can halve the attack's damage against you."
+                            },
+                            swordMastery: {
+                                name: "Sword Mastery",
+                                description: "Your skill with the nightblade has become such that it defies logic and reason. When attempting a melee attack with your nightblade, you ignore any damage reduction or immunity held by your target."
                             }
                         }
                     },
@@ -104,6 +169,28 @@
                                 name: "Sharpshooter",
                                 description: "Master of sniping."
                             }
+                        },
+                        feats: {
+                            fullMatrices: {
+                                name: "Full Matrices",
+                                description: "Your honed reflexes and uncanny sense of danger have saved you more than once. Once per round, when an attack hits you, make a Tumbling check, with a DC equal to the attack roll of your target. If you succeed, you take half damage, rather than full damage, from the attack."
+                            },
+                            knowledgeIsPower: {
+                                name: "Knowledge is Power",
+                                description: "You've had to study all manner of opponents to ensure your survival. Once per round, you can make a Negotiation check against a target's AC. If you succeed, you have advantage on attack rolls against that target until the beginning of your next turn."
+                            },
+                            revolutionaryConnections: {
+                                name: "Revolutionary Connections",
+                                description: "Your networking has made the most impossible of connections probable. Double your skill bonus for all Negotiation checks with factions for which you have at least Neutral standing."
+                            },
+                            secondChance: {
+                                name: "Second Chance",
+                                description: "Once per mission, if the damage from a creature's attack will reduce your hit points to 0 or below, reduce your hit points to 1 instead."
+                            },
+                            thousandYardStare: {
+                                name: "Thousand Yard Stare",
+                                description: "If you have advantage on a ranged attack, you can forgo the advantage to double your damage for that attack."
+                            }
                         }
                     },
                     technomancer: {
@@ -119,6 +206,28 @@
                             netSpecialist: {
                                 name: "Net Specialist",
                                 description: "Master of the network."
+                            }
+                        },
+                        feats: {
+                            deviousPrototype01: {
+                                name: "Devious Prototype 0.1",
+                                description: "You begin building the framework for a companion weapon, taking the form of a mobile turret, drone, or similar device. At the start of each mission, you can decide how you've modified your prototype by choosing between Assault, Defender, Explorer or Medical (consult the 'Devious Prototype' section on Page 36). The Devious Prototype can move and attack independently of its master, and can take basic actions on your behalf, such as delivering spells with the touch requirement. It has its own turn and actions, playing before or after you in the Initiative order. It can also transmit your voice and relay live and archived video footage to you. Unless indicated otherwise in its statblock, the Devious Prototype has an AC of 10, 10 hit points, and its own ability bonuses. Unless empowered by other spells, it can make a ranged attack once per round as a combat action. Its speed is indicated in its statblock, based on the type of prototype you choose."
+                            },
+                            deviousPrototype02: {
+                                name: "Devious Prototype 0.2",
+                                description: "Requirement: Devious Prototype 0.1 Work on your Devious Prototype has continued, increasing its AC to 12, hit points to 12, and it can attack twice when it takes a combat action."
+                            },
+                            deviousPrototype03: {
+                                name: "Devious Prototype 0.3",
+                                description: "Requirement: Devious Prototype 0.2 Your Devious Prototype is not yet market-ready but is quickly increasing in effectiveness. It now has an AC of 14, 14 hit points, and can attack twice when it takes a combat action. Additionally, its damage increases by an additional 1d4 for each attack."
+                            },
+                            juryRigging: {
+                                name: "Jury-Rigging",
+                                description: "Requirement: Devious Prototype 0.1 You are an expert at repurposing spare parts to repair your Devious Prototype. At the end of an encounter, if one or more artificial creatures were destroyed, excluding your Devious Prototype, you can use the remains to repair your Devious Prototype. It regains 1d4 + 4 hit points. Additionally, you gain advantage on all Hacking and Vehicles checks when attempting to repair a broken device.",
+                            },
+                            pinballWizard: {
+                                name: "Pinball Wizard",
+                                description: "Your constant tinkering with spells allows you to broaden their effectiveness once in a while. Once per round, you can add one target within range to any single-target Technomancy spell you cast, doubling the ceridium cost for that spell."
                             }
                         }
                     },
@@ -136,6 +245,28 @@
                                 name: "Nature's Harbinger",
                                 description: "Master of nature."
                             }
+                        },
+                        feats: {
+                            arcaneWard: {
+                                name: "Arcane Ward",
+                                description: "Your understanding of magic allows you to better defend yourself against it. You gain advantage on checks made against spells and other magical effects."
+                            },
+                            holisticHealer: {
+                                name: "Holistic Healer",
+                                description: "Your intuitive understanding of all life grants you advantage on Healing checks, and you can add your Nature skill bonus to your Healing checks in addition to any other bonuses. Whenever you use a spell to restore hit points to a creature, the creature regains an additional 1d6 hit points."
+                            },
+                            reflectiveWard: {
+                                name: "Reflective Ward",
+                                description: "Prerequisite: Arcane Ward Once per round, when you are hit by a spell or ranged attack, you can make a Mancy check, with a DC equal to the result of the attack roll. If your check is successful, the attack is reflected back at the attacker as though it originated from you, turning the attacker into the target. The spell or ranged attack retains its initial attack roll."
+                            },
+                            strengthOfTheEarth: {
+                                name: "Strength of the Earth",
+                                description: "You’ve entrenched yourself into the natural world, occasionally being able to draw magic from the earth itself. When you cast a spell, roll a d6. On a 5 or higher, you regain the ceridium cost of the spell."
+                            },
+                            teamSpirit: {
+                                name: "Team Spirit",
+                                description: "You know from experience that while one wolf is scary, an entire wolf pack is terrifying. Once per round, when an ally within your range hits a target that you can see, you can make a ranged attack against the same target."
+                            }
                         }
                     },
                     vanguard: {
@@ -151,6 +282,28 @@
                             shadowstalker: {
                                 name: "Shadowstalker",
                                 description: "Master of shadows."
+                            }
+                        },
+                        feats: {
+                            compromisingStrike: {
+                                name: "Compromising Strike",
+                                description: "Your ability to utilize distractions allows you to deal more damage in melee combat. Add 1d8 damage to any melee attack performed against a target that is already engaged in melee combat with another character, or to any melee attack for which you have advantage, including attacks made from Stealth."
+                            },
+                            scoundrelsLuck: {
+                                name: "Scoundrel's Luck",
+                                description: "At the start of a mission, roll three d20s and record each result. Throughout the mission, you can replace any check made by you or a creature that you can see with one of these rolls. You must declare your intention to do so before the roll occurs, and you can replace a roll in this way only once per round. Each roll can only be used once."
+                            },
+                            shadowDealer: {
+                                name: "Shadow Dealer",
+                                description: "Your connections open doors that appear locked to others. Treat your faction standing with each faction as one level higher than your faction points would indicate, even if doing so grants you Allied faction standing with more than one faction."
+                            },
+                            sprintAttack: {
+                                name: "Sprint Attack",
+                                description: "When opportunity strikes, you're quick to comply. Once per round, you can take a double move action and still take a combat action."
+                            },
+                            unendingFlow: {
+                                name: "Unending Flow",
+                                description: "Requirement: Compromising Strike Wounds you inflict bleed profusely. When you deal Compromising Strike damage to an organic creature, it starts taking 1d6 damage at the beginning of each of its turns. At the end of each of its turns, it can spend a move action to attempt to staunch the flow by making a successful Healing check (DC 10). Multiple instances of Unending Flow are not cumulative."
                             }
                         }
                     }
@@ -191,6 +344,9 @@
             },
             updateArchetype(archetypeChoice) {
                 this.archetypeChoice = archetypeChoice;
+            },
+            updateFeat(featChoice) {
+                this.featChoice = featChoice;
             }
         }
     }
@@ -219,7 +375,16 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    #feats {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 100px;
+        justify-content: center;
+    }
     .archetypes-sub {
+        display: inline-flex;
+    }
+    .feats-sub {
         display: inline-flex;
     }
     #buttons {
@@ -255,6 +420,9 @@
             margin: auto;
         }
         #classes {
+            margin: auto;
+        }
+        #feats {
             margin: auto;
         }
         button {
