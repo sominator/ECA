@@ -38,6 +38,8 @@
     <Content Include="src\assets\Technomancer.png" />
     <Content Include="src\assets\Terramancer.png" />
     <Content Include="src\assets\Vanguard.png" />
+    <Content Include="src\components\Spell.vue" />
+    <Content Include="src\components\Talent.vue" />
     <Content Include="src\components\Feat.vue" />
     <Content Include="src\components\Class.vue" />
     <Content Include="src\components\Race.vue" />
@@ -59,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="babel.config.js" />
+    <Content Include="src\characterData.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\main.js" />
   </ItemGroup>
   <PropertyGroup>
