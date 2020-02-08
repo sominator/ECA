@@ -2,6 +2,7 @@
     <div>
         <div class="feat" v-bind:class="{selected: isActive}" v-on:click="chosen">
             <h3>{{featData.name}}</h3>
+            <p>Requirement: {{featData.requirement}}</p>
             <p>{{featData.description}}</p>
         </div>
     </div>
