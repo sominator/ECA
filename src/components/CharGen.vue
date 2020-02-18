@@ -5,8 +5,12 @@
             <p>Your Race: {{raceChoice}}</p>
             <p>Your Class: {{classChoice}}</p>
             <p>Your Archetype: {{archetypeChoice}}</p>
-            <p>Your Feats: {{featChoice}}</p>
-            <p>Your Talents/Spells: {{talentChoice}}</p>
+            <p>Your Feats: 
+                <span v-for="feat in featChoice">| {{feat}} |</span>
+            </p>
+            <p>Your Talents/Spells: 
+                <span v-for="talent in talentChoice">| {{talent}} |</span>
+            </p>
         </div>
         <div id="buttons">
             <button v-on:click="toggle = 'races'">Choose Race</button>
@@ -43,52 +47,52 @@
             <div id="feats" v-show="toggle === 'feats'">
                 <h3 v-show="classChoice === ''">Choose a class to determine your feats.</h3>
                 <div class="feats-sub" v-show="classChoice === 'NIGHT Agent'">
-                    <Feat v-for="feat in classData.nightAgent.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat v-for="feat in classData.nightAgent.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featAdded="addFeat" @featRemoved="removeFeat" />
                 </div>
                 <div class="feats-sub" v-show="classChoice === 'Revolutionary'">
-                    <Feat v-for="feat in classData.revolutionary.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat v-for="feat in classData.revolutionary.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featAdded="addFeat" @featRemoved="removeFeat" />
                 </div>
                 <div class="feats-sub" v-show="classChoice === 'Technomancer'">
-                    <Feat v-for="feat in classData.technomancer.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat v-for="feat in classData.technomancer.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featAdded="addFeat" @featRemoved="removeFeat" />
                 </div>
                 <div class="feats-sub" v-show="classChoice === 'Terramancer'">
-                    <Feat v-for="feat in classData.terramancer.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat v-for="feat in classData.terramancer.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featAdded="addFeat" @featRemoved="removeFeat" />
                 </div>
                 <div class="feats-sub" v-show="classChoice === 'Vanguard'">
-                    <Feat v-for="feat in classData.vanguard.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featChosen="updateFeat" />
+                    <Feat v-for="feat in classData.vanguard.feats" :featData="feat" :key="feat.name" :featChoice="featChoice" @featAdded="addFeat" @featRemoved="removeFeat" />
                 </div>
             </div>
             <div id="talents" v-show="toggle === 'talents'">
                 <h3 v-show="archetypeChoice === '' || archetypeChoice === ' '">Choose an archetype to determine your talents/spells.</h3>
                 <div class="talents-sub" v-show="archetypeChoice === 'Nightpath'">
-                    <Spell v-for="spell in classData.nightAgent.archetypes.nightpath.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.nightAgent.archetypes.nightpath.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Daypath'">
-                    <Spell v-for="spell in classData.nightAgent.archetypes.daypath.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.nightAgent.archetypes.daypath.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Gunslinger'">
-                    <Talent v-for="talent in classData.revolutionary.archetypes.gunslinger.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Talent v-for="talent in classData.revolutionary.archetypes.gunslinger.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Sharpshooter'">
-                    <Talent v-for="talent in classData.revolutionary.archetypes.sharpshooter.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Talent v-for="talent in classData.revolutionary.archetypes.sharpshooter.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Combat Engineer'">
-                    <Spell v-for="spell in classData.technomancer.archetypes.combatEngineer.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.technomancer.archetypes.combatEngineer.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Net Specialist'">
-                    <Spell v-for="spell in classData.technomancer.archetypes.netSpecialist.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.technomancer.archetypes.netSpecialist.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Arcane Pitcher'">
-                    <Spell v-for="spell in classData.terramancer.archetypes.arcanePitcher.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.terramancer.archetypes.arcanePitcher.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Nature\'s Harbinger'">
-                    <Spell v-for="spell in classData.terramancer.archetypes.naturesHarbinger.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Spell v-for="spell in classData.terramancer.archetypes.naturesHarbinger.spells" :spellData="spell" :key="spell.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Assassin'">
-                    <Talent v-for="talent in classData.vanguard.archetypes.assassin.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Talent v-for="talent in classData.vanguard.archetypes.assassin.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
                 <div class="talents-sub" v-show="archetypeChoice === 'Shadowstalker'">
-                    <Talent v-for="talent in classData.vanguard.archetypes.shadowstalker.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentChosen="updateTalent" />
+                    <Talent v-for="talent in classData.vanguard.archetypes.shadowstalker.talents" :talentData="talent" :key="talent.name" :talentChoice="talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
             </div>
         </div>
@@ -123,8 +127,8 @@
                 raceChoice: "",
                 classChoice: "",
                 archetypeChoice: "",
-                featChoice: "",
-                talentChoice: "",
+                featChoice: [],
+                talentChoice: [],
                 classData: json.classData,
                 raceData: json.raceData
             }
@@ -137,19 +141,28 @@
                 if (this.classChoice !== classChoice) {
                     this.classChoice = classChoice;
                     this.archetypeChoice = " ";
-                    this.featChoice = " ";
-                    this.talentChoice = " ";
+                    this.featChoice = [];
+                    this.talentChoice = [];
                 }
             },
             updateArchetype(archetypeChoice) {
-                this.archetypeChoice = archetypeChoice;
+                if (this.archetypeChoice !== archetypeChoice) {
+                    this.archetypeChoice = archetypeChoice;
+                    this.talentChoice = [];
+                }
             },
-            updateFeat(featChoice) {
-                this.featChoice = featChoice;
+            addFeat(featChoice) {
+                this.featChoice.push(featChoice);
             },
-            updateTalent(talentChoice) {
-                this.talentChoice = talentChoice;
+            removeFeat(featChoice) {
+                this.featChoice = this.featChoice.filter(i => i !== featChoice);
             },
+            addTalent(talentChoice) {
+                this.talentChoice.push(talentChoice);
+            },
+            removeTalent(talentChoice) {
+                this.talentChoice = this.talentChoice.filter(i => i !== talentChoice);
+            }
         }
     }
 </script>
