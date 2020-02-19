@@ -32,7 +32,7 @@
     <Content Include="deploy.sh">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="ve.config.js">
+    <Content Include="vue.config.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\index.html" />
