@@ -68,8 +68,4 @@
     h3 {
         text-align: center
     }
-    img {
-        width: 70%;
-        height: 70%;
-    }
 </style>

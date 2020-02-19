@@ -1,0 +1,98 @@
+{
+  "locationData": {
+    "aurichome": {
+      "name": "Aurichome",
+      "description": "Squatting less than forty miles from San Francisco proper in what's known as the 'North Bay,' the nation of Aurichome is a haven for all races - provided that they swear unequivocal fealty to King Thog’run II. Parts of the underground kingdom are still under construction, but its borders are ever-expanding, and well-defended."
+    },
+    "columbus-farrow": {
+      "name": "Columbus-Farrow",
+      "description": "The carnivalesque atmosphere of the city’s North Beach district is punctuated by booming music, kaleidoscopic THREE-DIMENSIONAL DIGITAL ADS ('DIGADS'), and neon lights. If there’s action to be had, it can undoubtedly be found here."
+    },
+    "downtown": {
+      "name": "Downtown",
+      "description": "San Francisco, being geographically contained within a 49-square-mile peninsula, was one of the first global city centers to begin building vertically in earnest. The skyline is crowded to the point of being impenetrable to all but the midday sun, and the auric-majority undercity reaches half as deep into the earth as Downtown’s tallest building."
+    },
+    "east bay": {
+      "name": "East Bay",
+      "description": "What the East Bay lacks in glamor, it more than makes up for in diversity. Industrial shipyards and towering skyscrapers can be found alongside luxury houses and underground ghettos, and there are rumors of Unaligned safehouses and saloons located in abandoned subway train stations."
+    },
+    "golden gate bridge": {
+      "name": "Golden Gate Bridge",
+      "description": "The iconic suspension bridge lay dormant and decrepit for a period of two decades, caught in the crossfire between Aurichome to the north and the Pacific South NIGHT Headquarters. It has since been returned to its former glory as a tremulous show of peace between the two factions, serving as an orange beacon spanning the San Francisco Bay."
+    },
+    "new castro": {
+      "name": "New Castro",
+      "description": "Rivaled only by Columbus-Farrow in its ostentation, the centrally located New Castro is home to nightclubs, digad-pocked virtual reality emporiums, and vacation suites. It’s sleek, it’s sexy, and it represents the absolute best that San Francisco money can buy."
+    },
+    "pacific south night headquarters": {
+      "name": "Pacific South NIGHT Headquarters",
+      "description": "Poised forebodingly on the island of Alcatraz in the center of the San Francisco Bay, the three ivory towers of the Pacific South NIGHT Headquarters house over 200 NIGHT Agents, Inquisitors, foot soldiers, staff, and officials. It has enough space for 50 virtual penitentiary inhabitants, and is comparable in size to the Pacific North NIGHT Headquarters in Seattle, Central West NIGHT Headquarters in Denver, and Atlantic North NIGHT Headquarters in New York."
+    },
+    "presidio": {
+      "name": "Presidio",
+      "description": "Once a military base, then a park, now an overgrown forest that abuts the Golden Gate Bridge to the north, the Presidio is a not-so-mute testament to the societal and magical issues that plague modern societies. Filled with ragers and worse, the Presidio has been reported to feature a naturally-occurring source of ceridium, although no faction has yet been publicly willing to send its forces to investigate."
+    },
+    "richmond-sunset district": {
+      "name": "Richmond-Sunset District",
+      "description": "Ordinary people have to find somewhere to live, and in San Francisco, the RichmondSunset District is their best option. Soaring apartment buildings, underground housing structures, and the ever-present dual layer of traffic all dot the landscape, along with a visibly Aurichome-themed sports bar known as They Might Be Giant."
+    },
+    "santa clara": {
+      "name": "Santa Clara",
+      "description": "Having boomed and busted multiple times over, Silicon Valley has continued to expand, finding Santa Clara to be its current hub forty-five miles south of San Francisco. All manner of technology - from drones and antigravity cars to cerujet engines and ceridium weaponry - can be found here, provided that one has the appropriate connections and pay grade."
+    },
+    "sparks, nv": {
+      "name": "Sparks, NV",
+      "description": "220 miles to the east of San Francisco, beyond a dwarven outpost and the forgotten - but still neon - city of Reno, sits the tiny city of Sparks, Nevada. From this suburb appeared an augur known as the Sigil, who has since taken up residence in an open-air casino amphitheatre in Reno, surrounded by drones and all types of machinery."
+    }
+  },
+  "npcData": {
+    "agrid": {
+      "name": "Agrid the Destroyer",
+      "description": "(location unknown) A low auric Entromancer with ties to Aurichome, and known equally as 'the Destroyer' and 'the Betrayer,' Agrid has the command of a legion of assassins that are loyal to his word alone, although his current whereabouts are unknown."
+    },
+    "alina": {
+      "name": "Alina Hadzic",
+      "description": "Former relief pitcher and owner of a revolutionary-friendly tavern in the RichmondSunset District known as They Might Be Giant, Alina Hadzic is a veteran high auric Terramancer and Aurichome’s official Consul for Human-Auric Relations."
+    },
+    "damara": {
+      "name": "Damara Drivas",
+      "description": "– Cunning, driven, and deadly, Damara Drivas is a human Inquisitor and NIGHT’s most politically influential, public-facing figure next to the Inquisitor General Marguerite Liu."
+    },
+    "eskander": {
+      "name": "Eskander Aradowsi",
+      "description": "Spymaster to the King, Eskander Aradowsi holds the dubious honor of being one of the first high auric NIGHT Agents, having recently made the jump to Aurichome after a mission gone south."
+    },
+    "gloric": {
+      "name": "Gloric Vunderfel",
+      "description": "Gloric Vunderfel is a gnome Technomancer extraordinaire and King Thog’run’s Chief of Technology, despite his long-standing ties with the Unaligned Sigil of Sparks."
+    },
+    "madge": {
+      "name": "Marguerite Liu",
+      "description": "Former attaché to William D. Karthax, Marguerite 'Madge' Liu is a human Daypath of some repute and voted to be the next Inquisitor General after her predecessor abdicated the position under accusations of treason."
+    },
+    "sigil": {
+      "name": "The Sigil of Sparks",
+      "description": "Although the artificial intelligence experiment has failed many times over, the Unaligned boast of a sentient, preternaturally clairvoyant leader who, just as strangely, takes the form of an early-20th century automatic vacuum cleaner and is attended only by his cantankerous - and very human - Scribe."
+    },
+    "striker": {
+      "name": "Striker Johnson",
+      "description": "Striker Johnson is a NIGHT Agent celebrated for his efforts during the Karthax affair, although his metal arm, breastplate, and assortment of cybernetics indicate the toll the incident has taken on the human Nightpath."
+    },
+    "thog'run": {
+      "name": "King Thog'run II",
+      "description": "A low auric war hero and sovereign of Aurichome, King Thog’run II is known far and wide for his battle prowess, tactical acumen, and brutal dealings with enemies of the throne."
+    },
+    "tribe": {
+      "name": "Tribe Achebe",
+      "description": "A high auric Vanguard and the adoptive nephew of King Thog’run, Tribe Achebe is more often found causing problems for Aurichome than solving them."
+    },
+    "vasshka": {
+      "name": "Vasshka 'Doubleshot' Lestrage",
+      "description": "Known by most only by her moniker, 'Doubleshot,' the dwarf Vasshka Lestrage is a Revolutionary in service to the crown and one of King Thog’run’s personal tactical advisors."
+    },
+    "karthax": {
+      "name": "William D. Karthax",
+      "description": "(location unknown) A war hero and the former Inquisitor General of NIGHT, William D. Karthax was indicted in absentia for collusion against NIGHT while attempting to manipulate both Aurichome and the Unaligned. Karthax was last seen escaping from the Pacific South NIGHT Headquarters with Agrid the Destroyer."
+    }
+  }
+}
