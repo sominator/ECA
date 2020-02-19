@@ -1,6 +1,7 @@
 <template>
     <div id="flex-container">
         <div id="image">
+            <h3 v-if="characterData.classChoice===''">Choose a class to display your character.</h3>
             <img v-if="characterData.classChoice==='NIGHT Agent'" src="../assets/NightAgent.png" />
             <img v-if="characterData.classChoice==='Revolutionary'" src="../assets/Revolutionary.png" />
             <img v-if="characterData.classChoice==='Technomancer'" src="../assets/Technomancer.png" />
@@ -19,11 +20,11 @@
             </h2>
             <h2>Feats:</h2>
             <ul>
-                <li v-for="feat in characterData.featChoice">{{feat}}</li>
+                <li v-for="feat in characterData.featChoice" v-bind:key="feat">{{feat}}</li>
             </ul>
             <h2>Talents/Spells:</h2>
             <ul>
-                <li v-for="talent in characterData.talentChoice">{{talent}}</li>
+                <li v-for="talent in characterData.talentChoice" v-bind:key="talent">{{talent}}</li>
             </ul>
         </div>
         
@@ -48,6 +49,8 @@
         border: 5px solid cyan;
         text-align: left;
         padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     #image {
         width: 50%;

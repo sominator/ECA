@@ -2,15 +2,15 @@
   "locationData": {
     "aurichome": {
       "name": "Aurichome",
-      "description": "Squatting less than forty miles from San Francisco proper in what's known as the 'North Bay,' the nation of Aurichome is a haven for all races - provided that they swear unequivocal fealty to King Thog’run II. Parts of the underground kingdom are still under construction, but its borders are ever-expanding, and well-defended."
+      "description": "Squatting less than forty miles from San Francisco proper in what's known as the 'North Bay,' the nation of Aurichome is a haven for all races - provided that they swear unequivocal fealty to King Thog'run II. Parts of the underground kingdom are still under construction, but its borders are ever-expanding, and well-defended."
     },
     "columbus-farrow": {
       "name": "Columbus-Farrow",
-      "description": "The carnivalesque atmosphere of the city’s North Beach district is punctuated by booming music, kaleidoscopic THREE-DIMENSIONAL DIGITAL ADS ('DIGADS'), and neon lights. If there’s action to be had, it can undoubtedly be found here."
+      "description": "The carnivalesque atmosphere of the city's North Beach district is punctuated by booming music, kaleidoscopic three-dimensional digital ads ('digads'), and neon lights. If there's action to be had, it can undoubtedly be found here."
     },
     "downtown": {
       "name": "Downtown",
-      "description": "San Francisco, being geographically contained within a 49-square-mile peninsula, was one of the first global city centers to begin building vertically in earnest. The skyline is crowded to the point of being impenetrable to all but the midday sun, and the auric-majority undercity reaches half as deep into the earth as Downtown’s tallest building."
+      "description": "San Francisco, being geographically contained within a 49-square-mile peninsula, was one of the first global city centers to begin building vertically in earnest. The skyline is crowded to the point of being impenetrable to all but the midday sun, and the auric-majority undercity reaches half as deep into the earth as Downtown's tallest building."
     },
     "east bay": {
       "name": "East Bay",
@@ -22,7 +22,7 @@
     },
     "new castro": {
       "name": "New Castro",
-      "description": "Rivaled only by Columbus-Farrow in its ostentation, the centrally located New Castro is home to nightclubs, digad-pocked virtual reality emporiums, and vacation suites. It’s sleek, it’s sexy, and it represents the absolute best that San Francisco money can buy."
+      "description": "Rivaled only by Columbus-Farrow in its ostentation, the centrally located New Castro is home to nightclubs, digad-pocked virtual reality emporiums, and vacation suites. It's sleek, it's sexy, and it represents the absolute best that San Francisco money can buy."
     },
     "pacific south night headquarters": {
       "name": "Pacific South NIGHT Headquarters",
@@ -48,15 +48,15 @@
   "npcData": {
     "agrid": {
       "name": "Agrid the Destroyer",
-      "description": "(location unknown) A low auric Entromancer with ties to Aurichome, and known equally as 'the Destroyer' and 'the Betrayer,' Agrid has the command of a legion of assassins that are loyal to his word alone, although his current whereabouts are unknown."
+      "description": "(Location Unknown) A low auric Entromancer with ties to Aurichome, and known equally as 'the Destroyer' and 'the Betrayer,' Agrid has the command of a legion of assassins that are loyal to his word alone, although his current whereabouts are unknown."
     },
     "alina": {
       "name": "Alina Hadzic",
-      "description": "Former relief pitcher and owner of a revolutionary-friendly tavern in the RichmondSunset District known as They Might Be Giant, Alina Hadzic is a veteran high auric Terramancer and Aurichome’s official Consul for Human-Auric Relations."
+      "description": "Former relief pitcher and owner of a revolutionary-friendly tavern in the RichmondSunset District known as They Might Be Giant, Alina Hadzic is a veteran high auric Terramancer and Aurichome's official Consul for Human-Auric Relations."
     },
     "damara": {
       "name": "Damara Drivas",
-      "description": "– Cunning, driven, and deadly, Damara Drivas is a human Inquisitor and NIGHT’s most politically influential, public-facing figure next to the Inquisitor General Marguerite Liu."
+      "description": "Cunning, driven, and deadly, Damara Drivas is a human Inquisitor and NIGHT's most politically influential, public-facing figure next to the Inquisitor General Marguerite Liu."
     },
     "eskander": {
       "name": "Eskander Aradowsi",
@@ -64,11 +64,11 @@
     },
     "gloric": {
       "name": "Gloric Vunderfel",
-      "description": "Gloric Vunderfel is a gnome Technomancer extraordinaire and King Thog’run’s Chief of Technology, despite his long-standing ties with the Unaligned Sigil of Sparks."
+      "description": "Gloric Vunderfel is a gnome Technomancer extraordinaire and King Thog'run's Chief of Technology, despite his long-standing ties with the Unaligned Sigil of Sparks."
     },
     "madge": {
       "name": "Marguerite Liu",
-      "description": "Former attaché to William D. Karthax, Marguerite 'Madge' Liu is a human Daypath of some repute and voted to be the next Inquisitor General after her predecessor abdicated the position under accusations of treason."
+      "description": "Former attache to William D. Karthax, Marguerite 'Madge' Liu is a human Daypath of some repute and voted to be the next Inquisitor General after her predecessor abdicated the position under accusations of treason."
     },
     "sigil": {
       "name": "The Sigil of Sparks",
@@ -80,19 +80,19 @@
     },
     "thog'run": {
       "name": "King Thog'run II",
-      "description": "A low auric war hero and sovereign of Aurichome, King Thog’run II is known far and wide for his battle prowess, tactical acumen, and brutal dealings with enemies of the throne."
+      "description": "A low auric war hero and sovereign of Aurichome, King Thog'run II is known far and wide for his battle prowess, tactical acumen, and brutal dealings with enemies of the throne."
     },
     "tribe": {
       "name": "Tribe Achebe",
-      "description": "A high auric Vanguard and the adoptive nephew of King Thog’run, Tribe Achebe is more often found causing problems for Aurichome than solving them."
+      "description": "A high auric Vanguard and the adoptive nephew of King Thog'run, Tribe Achebe is more often found causing problems for Aurichome than solving them."
     },
     "vasshka": {
       "name": "Vasshka 'Doubleshot' Lestrage",
-      "description": "Known by most only by her moniker, 'Doubleshot,' the dwarf Vasshka Lestrage is a Revolutionary in service to the crown and one of King Thog’run’s personal tactical advisors."
+      "description": "Known by most only by her moniker, 'Doubleshot,' the dwarf Vasshka Lestrage is a Revolutionary in service to the crown and one of King Thog'run's personal tactical advisors."
     },
     "karthax": {
       "name": "William D. Karthax",
-      "description": "(location unknown) A war hero and the former Inquisitor General of NIGHT, William D. Karthax was indicted in absentia for collusion against NIGHT while attempting to manipulate both Aurichome and the Unaligned. Karthax was last seen escaping from the Pacific South NIGHT Headquarters with Agrid the Destroyer."
+      "description": "(Location Unknown) A war hero and the former Inquisitor General of NIGHT, William D. Karthax was indicted in absentia for collusion against NIGHT while attempting to manipulate both Aurichome and the Unaligned. Karthax was last seen escaping from the Pacific South NIGHT Headquarters with Agrid the Destroyer."
     }
   }
 }

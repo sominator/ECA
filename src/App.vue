@@ -11,11 +11,6 @@
         name: 'app',
         components: {
             Home
-        },
-        data: function () {
-            return {
-
-            }
         }
     };
 </script>

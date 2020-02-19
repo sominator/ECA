@@ -218,7 +218,7 @@
             "privateEscort": {
               "name": "Private Escort",
               "requirement": "None",
-              "description": "You gain a +5 bonus on Vehicles skill checks when traveling with at least one more passenger. Additionally, once per round, if you or one of your passengers is hit by a ranged attack, you can make a Vehicles check (DC 10 or at the GM’s discretion). If you succeed, halve the attack’s damage."
+              "description": "You gain a +5 bonus on Vehicles skill checks when traveling with at least one more passenger. Additionally, once per round, if you or one of your passengers is hit by a ranged attack, you can make a Vehicles check (DC 10 or at the GM's discretion). If you succeed, halve the attack's damage."
             },
             "quickDraw": {
               "name": "Quick Draw",
@@ -228,7 +228,7 @@
             "runAndGun": {
               "name": "Run and Gun",
               "requirement": "None",
-              "description": "There’s always room for acrobatics, especially during a firefight. Once per round, you can attempt a Tumbling check (DC 10 or at the GM’s discretion) to combine a move action with a ranged attack. On a success, you can take an extra move action after your ranged attack. On a failure, you spend your move action as you normally would."
+              "description": "There's always room for acrobatics, especially during a firefight. Once per round, you can attempt a Tumbling check (DC 10 or at the GM's discretion) to combine a move action with a ranged attack. On a success, you can take an extra move action after your ranged attack. On a failure, you spend your move action as you normally would."
             }
           }
         },
@@ -249,12 +249,12 @@
             "snipe": {
               "name": "Snipe",
               "requirement": "None",
-              "description": ": Spend a move action, aiming at a target. Until the beginning of your next turn, add +2 to your ranged attack roll and damage against that target and extend your critical range against that target to 19-20."
+              "description": "Spend a move action, aiming at a target. Until the beginning of your next turn, add +2 to your ranged attack roll and damage against that target and extend your critical range against that target to 19-20."
             },
             "sprayAndPray": {
               "name": "Spray and Pray",
               "requirement": "None",
-              "description": ": Sometimes a hammer will do when a screwdriver won’t. Roll 1d4 and subtract the result from your attack roll, adding it to your damage roll."
+              "description": "Sometimes a hammer will do when a screwdriver won't. Roll 1d4 and subtract the result from your attack roll, adding it to your damage roll."
             },
             "tacticalSupport": {
               "name": "Tactical Support",
@@ -358,7 +358,7 @@
               "range": "30 feet",
               "duration": "1 round, until the end of your next turn",
               "ceridium": "2",
-              "description": "You send a jolt of energy at a target, attempting to fry their weapon. Choose a manufactured ranged weapon, such as a firearm or a drone’s integrated gun, that you can see within range. Make a spell attack against the target. If it hits, the target’s ranged weapon cannot be used to attack for the duration of the spell, and the target takes 2d6 damage."
+              "description": "You send a jolt of energy at a target, attempting to fry their weapon. Choose a manufactured ranged weapon, such as a firearm or a drone's integrated gun, that you can see within range. Make a spell attack against the target. If it hits, the target's ranged weapon cannot be used to attack for the duration of the spell, and the target takes 2d6 damage."
             },
             "systemFailure": {
               "name": "System Failure",
@@ -366,7 +366,7 @@
               "range": "30 feet",
               "duration": "1 round, until the end of your next turn",
               "ceridium": "1",
-              "description": "You hack the systems of a machine or an artificial creature, shutting it down temporarily. Make a Hacking check, contested by the target’s own Hacking check. If you succeed, the target is unable to take actions, and all attacks made against it have advantage."
+              "description": "You hack the systems of a machine or an artificial creature, shutting it down temporarily. Make a Hacking check, contested by the target's own Hacking check. If you succeed, the target is unable to take actions, and all attacks made against it have advantage."
             },
             "whiteHat": {
               "name": "White Hat",
@@ -396,7 +396,7 @@
               "range": "30 feet",
               "duration": "1 round, until the beginning of your next turn",
               "ceridium": "1",
-              "description": "You quickly write an override program and give it a nudge with the tiniest bit of power. Choose one artificial creature within range and make a Hacking check, contested by the target’s Hacking check. If you succeed, you take control of the target for the spell’s duration. The target takes only the actions you choose, and doesn’t do anything that you don’t allow it to do"
+              "description": "You quickly write an override program and give it a nudge with the tiniest bit of power. Choose one artificial creature within range and make a Hacking check, contested by the target's Hacking check. If you succeed, you take control of the target for the spell's duration. The target takes only the actions you choose, and doesn't do anything that you don't allow it to do"
             },
             "needARide": {
               "name": "Need a Ride",
@@ -420,7 +420,7 @@
               "range": "Self",
               "duration": "N/A",
               "ceridium": "1",
-              "description": "Your comfort with finding information on the network — with a little help from your technomancy skill — is such that only the most gifted can elude you. If a person, creature, or object is in an urban area and not purposely isolated from the network, you can attempt to determine their current location. Make a Hacking check with advantage, contested by the target’s own Hacking check. If your Hacking check succeeds, you discern the target’s current exact location. If it fails by 5 or more, the target detects your attempt."
+              "description": "Your comfort with finding information on the network - with a little help from your technomancy skill - is such that only the most gifted can elude you. If a person, creature, or object is in an urban area and not purposely isolated from the network, you can attempt to determine their current location. Make a Hacking check with advantage, contested by the target's own Hacking check. If your Hacking check succeeds, you discern the target's current exact location. If it fails by 5 or more, the target detects your attempt."
             }
           }
         }
@@ -503,7 +503,7 @@
               "range": "Ceridium orb's range (standard: 30 feet)",
               "duration": "N/A",
               "ceridium": "2",
-              "description": "Make a spell attack against a target, using your ceridium orb as a magic-empowered projectile. If it hits, you can make it ricochet to another target which must be within the ceridium orb’s range of the previous target. The orb can hit as many as two other targets, including the original target, and you must make a separate spell attack for each target. Each time the orb hits a target it deals 2d6 extra damage, up to a cumulative 4d6. If you miss an attack, the spell ends."
+              "description": "Make a spell attack against a target, using your ceridium orb as a magic-empowered projectile. If it hits, you can make it ricochet to another target which must be within the ceridium orb's range of the previous target. The orb can hit as many as two other targets, including the original target, and you must make a separate spell attack for each target. Each time the orb hits a target it deals 2d6 extra damage, up to a cumulative 4d6. If you miss an attack, the spell ends."
             },
             "seventhInningStretch": {
               "name": "7th Inning Stretch",
@@ -511,7 +511,7 @@
               "range": "Self",
               "duration": "N/A",
               "ceridium": "2",
-              "description": "You’re able to find respite in the midst of the storm. Heal a total of 3d6 hit points between yourself and any organic creature within 5 feet of you."
+              "description": "You're able to find respite in the midst of the storm. Heal a total of 3d6 hit points between yourself and any organic creature within 5 feet of you."
             },
             "knuckleball": {
               "name": "Knuckleball",
@@ -519,7 +519,7 @@
               "range": "Ceridium orb's range (standard: 30 feet)",
               "duration": "N/A",
               "ceridium": "1",
-              "description": "Make a spell attack against a target, using your ceridium orb as a magic-empowered projectile. If it hits, you deal an extra 2d6 damage. If the target is a creature, it must succeed on a Strength check against your spell DC or it can’t take actions until the end of its next turn."
+              "description": "Make a spell attack against a target, using your ceridium orb as a magic-empowered projectile. If it hits, you deal an extra 2d6 damage. If the target is a creature, it must succeed on a Strength check against your spell DC or it can't take actions until the end of its next turn."
             },
             "reliefPitcher": {
               "name": "Relief Pitcher",
@@ -535,7 +535,7 @@
               "range": "Ceridium orb's range (standard: 30 feet)",
               "duration": "N/A",
               "ceridium": "2",
-              "description": "You create energy-based simulacra of your ceridium orb that continue to duplicate as they pass through cover and enemies. Your next ceridium orb attack automatically hits every creature in a line equal to your weapon’s range and deals an extra 2d6 damage."
+              "description": "You create energy-based simulacra of your ceridium orb that continue to duplicate as they pass through cover and enemies. Your next ceridium orb attack automatically hits every creature in a line equal to your weapon's range and deals an extra 2d6 damage."
             }
           }
         },
@@ -573,7 +573,7 @@
               "range": "30 feet",
               "duration": "1 encounter",
               "ceridium": "1",
-              "description": "You roar into the ether and an animal companion responds to your call. Choose an animal from the following list to be summoned in a free 5-foot space within the spell’s range: bear, bobcat, crocodile, eagle, fox, python, stag, wolf (consult the “Animal Companions” section on Page 34). Until the end of the spell, you gain a bonus based on the “Nature’s Chosen” feature of your animal companion. You establish a telepathic link with your animal companion. Through it, the animal can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. You cannot have more than one animal companion at any time. If your animal companion is reduced to 0 hit points or the spell ends, it disappears back into the ether."
+              "description": "You roar into the ether and an animal companion responds to your call. Choose an animal from the following list to be summoned in a free 5-foot space within the spell's range: bear, bobcat, crocodile, eagle, fox, python, stag, wolf (consult the 'Animal Companions' section on Page 34). Until the end of the spell, you gain a bonus based on the 'Nature's Chosen' feature of your animal companion. You establish a telepathic link with your animal companion. Through it, the animal can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. You cannot have more than one animal companion at any time. If your animal companion is reduced to 0 hit points or the spell ends, it disappears back into the ether."
             },
             "telluricConduit": {
               "name": "Telluric Conduit",
@@ -661,22 +661,22 @@
             "assassinsQuarry": {
               "name": "Assassin's Quarry",
               "requirement": "None",
-              "description": "You’ve trained yourself to block out all distractions as you close in on your prey. Once per encounter, choose one creature that you can see within 60 feet of you. The first time each turn that you hit that target with a melee attack, it takes an extra 1d6 damage from the attack. If you reduce your quarry to 0 hit points, you can immediately take an extra move and combat action, even if you’ve already taken a move and combat action this turn."
+              "description": "You've trained yourself to block out all distractions as you close in on your prey. Once per encounter, choose one creature that you can see within 60 feet of you. The first time each turn that you hit that target with a melee attack, it takes an extra 1d6 damage from the attack. If you reduce your quarry to 0 hit points, you can immediately take an extra move and combat action, even if you've already taken a move and combat action this turn."
             },
             "bloodInTheWater": {
               "name": "Blood in the Water",
               "requirement": "Compromising Strike",
-              "description": "You’re able to sense weakness and exploit it to your advantage. If you hit with a melee attack against a creature that has fewer than its maximum hit points, add your Compromising Strike damage."
+              "description": "You're able to sense weakness and exploit it to your advantage. If you hit with a melee attack against a creature that has fewer than its maximum hit points, add your Compromising Strike damage."
             },
             "faceInTheCrowd": {
               "name": "Face in the Crowd",
               "requirement": "N/A",
-              "description": "You’ve learned that the best way to remain unseen is by blending in. You gain a +6 bonus on all Drama checks when attempting to appear inconspicuous, impersonate someone, or utilize a disguise."
+              "description": "You've learned that the best way to remain unseen is by blending in. You gain a +6 bonus on all Drama checks when attempting to appear inconspicuous, impersonate someone, or utilize a disguise."
             },
             "killOrBeKilled": {
               "name": "Kill or Be Killed",
               "requirement": "None",
-              "description": "You leave nothing to chance. If you’re able to observe a creature for 1 round before engaging in combat, your first melee attack against that creature automatically hits for critical damage."
+              "description": "You leave nothing to chance. If you're able to observe a creature for 1 round before engaging in combat, your first melee attack against that creature automatically hits for critical damage."
             },
             "stareDown": {
               "name": "Stare Down",
@@ -692,7 +692,7 @@
             "highwayRobbery": {
               "name": "Highway Robbery",
               "requirement": "None",
-              "description": "Once per round, when you hit with a melee attack, you can make a Stealth check, contested against the target’s Awareness check. If you succeed, you have advantage on attack rolls against that target until the end of your next turn."
+              "description": "Once per round, when you hit with a melee attack, you can make a Stealth check, contested against the target's Awareness check. If you succeed, you have advantage on attack rolls against that target until the end of your next turn."
             },
             "hitAndRun": {
               "name": "Hit and Run",

@@ -21,16 +21,10 @@
             Lore,
             Characters
         },
-        props: {
-            
-        },
         data: function () {
             return {
                 displayToggle: ""
             }
-        },
-        methods: {
-
         }
     };
 </script>
