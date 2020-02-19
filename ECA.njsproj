@@ -29,6 +29,12 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="deploy.sh">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ve.config.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
     <Content Include="src\assets\Environment1.png" />
