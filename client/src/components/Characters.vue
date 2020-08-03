@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>Character Generator</h2>
         <div class="div-button" v-on:click="displayToggle = 'chargen'" v-bind:class="{selected: displayToggle==='chargen'}">
             <p>Create Character</p>
         </div>

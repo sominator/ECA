@@ -1,7 +1,9 @@
 <template>
-    <div :id="containerId" v-if="downloaded" />
-    <div class="placeholder" v-else>
-        Downloading...
+    <div id="game">
+        <div :id="containerId" v-show="downloaded" />
+        <div class="placeholder" v-show="!downloaded">
+            Downloading...
+        </div>
     </div>
 </template>
 

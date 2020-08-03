@@ -1,7 +1,6 @@
 <template>
     <div id="container">
         <div id="output">
-            <h1>STRUCT</h1>
             <p v-for="(text, index) in textOutput" :key="index">{{text}}</p>
         </div>
         <div id="input">
@@ -50,7 +49,7 @@
         display: flex;
         flex-direction: column;
         margin-left: 1vw;
-        min-height: 100vh;
+        height: 80vh;
     }
     h1 {
         text-align: center;
@@ -60,11 +59,15 @@
     }
     #input {
         position: fixed;
-        margin-top: 70vh;
+        margin-top: 82vh;
+    }
+    #output {
+        overflow: auto;
+        max-height: 100%;
     }
     input[type=text] {
         height: 20px;
-        width:  40vw;
+        width: 90%;
         border: 2px solid cyan;
         background-color: black;
         color: hotpink;
@@ -91,13 +94,14 @@
             min-height: 50vh;
         }
         #input {
-            margin-top: 43vh;
+            position: relative;
+            margin-top: 40vh;
         }
         #output {
             margin-right: 10vw;
         }
         input[type=text] {
-            width: 60vw;
+            width: 80vw;
         }
         input[type=submit] {
             min-width: 10vw;

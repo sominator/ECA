@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>Lore</h2>
         <div class="div-button" v-on:click="displayToggle = 'locations'" v-bind:class="{selected: displayToggle==='locations'}">
             <p>Key Locations</p>
         </div>

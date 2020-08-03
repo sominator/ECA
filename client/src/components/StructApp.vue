@@ -3,7 +3,6 @@
         <div id="game">
             <Game />
         </div>
-        <div id="border" />
         <div id="input">
             <Struct />
         </div>
@@ -32,27 +31,25 @@
         display: flex;
     }
     #game {
-        width: 50vw;
-        height: 100vh;
+        width: 80vw;
+        height: 90vh;
     }
     #input {
-        width: 50vw;
-        height: 100vh;
-    }
-    #border {
-        border-right: 2px solid cyan;
+        width: 20vw;
+        height: 90vh;
+        border-left: 2px solid cyan;
     }
     @media (max-width: 1000px) {
-        #app {
+        #struct-app {
             flex-direction: column;
         }
         #game {
             width: 100vw;
-            height: 50vh;
+            height: 80vh;
         }
         #input {
             width: 100vw;
-            height: 50vh;
+            height: 20vh;
         }
     }
 </style>

@@ -1,11 +1,11 @@
 <template>
     <div>
         <div id="buttons">
-            <button v-on:click="toggle = 'races'">Choose Race</button>
-            <button v-on:click="toggle = 'classes'">Choose Class</button>
-            <button v-on:click="toggle = 'archetypes'">Choose Archetype</button>
-            <button v-on:click="toggle = 'feats'">Choose Feats</button>
-            <button v-on:click="toggle = 'talents'">Choose Talents/Spells</button>
+            <button v-on:click="toggle = 'races'" v-bind:class="{selected: toggle ==='races'}">Race</button>
+            <button v-on:click="toggle = 'classes'" v-bind:class="{selected: toggle ==='classes'}">Class</button>
+            <button v-on:click="toggle = 'archetypes'" v-bind:class="{selected: toggle ==='archetypes'}">Archetype</button>
+            <button v-on:click="toggle = 'feats'" v-bind:class="{selected: toggle ==='feats'}">Feats</button>
+            <button v-on:click="toggle = 'talents'" v-bind:class="{selected: toggle ==='talents'}">Talents/Spells</button>
         </div>
         <div id="char-gen">
             <div id="races" v-show="toggle === 'races'">
@@ -210,20 +210,23 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    .selected {
+        background: hotpink;
+    }
     #buttons {
+        justify-content: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-bottom: 10px;
-        margin-left: 10px;
-        width: 100px;
-        position: fixed;
+        margin: 3px 0px 7px 0px;
     }
     button {
         background-color: cyan;
         border-radius: 10px;
         border: 0px;
-        height: 50px;
-        margin-bottom: 10px;
+        width: 100px;
+        height: 30px;
+        margin-right: 5px;
         font-weight: bold;
         outline: none;
         font-family: 'Trebuchet MS';
