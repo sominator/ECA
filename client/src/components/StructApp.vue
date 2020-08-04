@@ -1,9 +1,9 @@
 <template>
     <div id="struct-app">
         <div id="game">
-            <Game />
+
         </div>
-        <div id="input">
+        <div id="chat">
             <Struct />
         </div>
     </div>
@@ -11,13 +11,11 @@
 
 <script>
     import Struct from './Struct.vue';
-    import Game from './Game.vue';
 
     export default {
         name: 'StructApp',
         components: {
-            Struct,
-            Game
+            Struct
         }
     }
 </script>
@@ -31,13 +29,15 @@
         display: flex;
     }
     #game {
-        width: 80vw;
-        height: 90vh;
+        width: 60vw;
+        height: 80vh;
+        margin-left: 8vw;
+        border: 2px solid cyan;
     }
-    #input {
-        width: 20vw;
-        height: 90vh;
-        border-left: 2px solid cyan;
+    #chat {
+        width: 30vw;
+        height: 80vh;
+        border: 2px solid hotpink;
     }
     @media (max-width: 1000px) {
         #struct-app {

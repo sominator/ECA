@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <h1>Entromancy Companion App</h1>
+        <h1>Entromancy Companion App <span>BETA</span></h1>
         <div id="sidebar">
             <div class="div-button" v-on:click="displayToggle = 'lore'" v-bind:class="{selected: displayToggle==='lore'}">
                 <p>Lore</p>
@@ -8,25 +8,31 @@
             <div class="div-button" v-on:click="displayToggle = 'characters'" v-bind:class="{selected: displayToggle==='characters'}">
                 <p>Characters</p>
             </div>
+            <div class="div-button" v-on:click="displayToggle = 'factions'" v-bind:class="{selected: displayToggle==='factions'}">
+                <p>Factions</p>
+            </div>
             <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
                 <p>Struct</p>
             </div>
         </div>
         <Lore v-show="displayToggle === 'lore'" />
         <Characters v-show="displayToggle === 'characters'" />
-        <StructApp v-show="displayToggle === 'struct'" />
+        <Placeholder v-show="displayToggle === 'factions'" />
+        <Placeholder v-show="displayToggle === 'struct'" />
     </div>
 </template>
 
 <script>
     import Lore from "./Lore.vue";
     import Characters from "./Characters.vue";
+    import Placeholder from "./Placeholder.vue";
     import StructApp from "./StructApp.vue";
     export default {
         name: 'Home',
         components: {
             Lore,
             Characters,
+            Placeholder,
             StructApp
         },
         data: function () {

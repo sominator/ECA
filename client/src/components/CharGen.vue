@@ -6,6 +6,9 @@
             <button v-on:click="toggle = 'archetypes'" v-bind:class="{selected: toggle ==='archetypes'}">Archetype</button>
             <button v-on:click="toggle = 'feats'" v-bind:class="{selected: toggle ==='feats'}">Feats</button>
             <button v-on:click="toggle = 'talents'" v-bind:class="{selected: toggle ==='talents'}">Talents/Spells</button>
+            <button v-on:click="toggle = 'destinies'" v-bind:class="{selected: toggle ==='destinies'}">Destinies</button>
+            <button v-on:click="toggle = 'gear'" v-bind:class="{selected: toggle ==='gear'}">Gear</button>
+            <button v-on:click="toggle = 'cybernetics'" v-bind:class="{selected: toggle ==='cybernetics'}">Cybernetics</button>
         </div>
         <div id="char-gen">
             <div id="races" v-show="toggle === 'races'">
@@ -83,6 +86,7 @@
                     <Talent v-for="talent in classData.vanguard.archetypes.shadowstalker.talents" :talentData="talent" :key="talent.name" :talentChoice="characterData.talentChoice" @talentAdded="addTalent" @talentRemoved="removeTalent" />
                 </div>
             </div>
+            <Placeholder v-show="toggle === 'destinies' || toggle === 'gear' || toggle === 'cybernetics'" />
         </div>
     </div>
 </template>
@@ -94,6 +98,7 @@
     import Feat from "./Feat.vue";
     import Talent from "./Talent.vue";
     import Spell from "./Spell.vue";
+    import Placeholder from "./Placeholder.vue";
     import json from "../characterData.json";
 
     export default {
@@ -104,6 +109,7 @@
             Archetype,
             Feat,
             Talent,
+            Placeholder,
             Spell
         },
         data: function () {

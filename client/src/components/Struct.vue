@@ -59,7 +59,10 @@
     }
     #input {
         position: fixed;
-        margin-top: 82vh;
+        margin-top: 75vh;
+    }
+    form {
+        display: flex;
     }
     #output {
         overflow: auto;
@@ -67,7 +70,7 @@
     }
     input[type=text] {
         height: 20px;
-        width: 90%;
+        width: 20vw;
         border: 2px solid cyan;
         background-color: black;
         color: hotpink;

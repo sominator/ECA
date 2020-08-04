@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\client",
+    "\\client\\public",
     "\\client\\src",
     "\\client\\src\\components",
-    "\\client\\src\\game"
+    "\\client\\src\\game",
+    "\\client\\src\\game\\scenes"
   ],
-  "SelectedNode": "\\client\\src\\game\\game.js",
+  "SelectedNode": "\\client\\src\\components\\Game.vue",
   "PreviewInSolutionExplorer": false
 }

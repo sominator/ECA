@@ -22,5 +22,8 @@
         font-family: 'Trebuchet MS';
         text-align: center;
     }
+    span {
+        color: hotpink;
+    }
 </style>
 
