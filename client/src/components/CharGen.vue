@@ -241,9 +241,10 @@
         cursor: pointer;
         background-color: hotpink;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 1000px) {
         #buttons {
             flex-direction: row;
+            flex-wrap: wrap;
             position: relative;
             margin: auto;
             justify-content: center;
@@ -263,6 +264,7 @@
         button {
             margin-left: 2.5px;
             margin-right: 2.5px;
+            margin-bottom: 2.5px;
         }
     }
 </style>

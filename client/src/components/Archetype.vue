@@ -44,7 +44,7 @@
         border-radius: 5px;
         text-align: center;
         width: 200px;
-        height: 100px;
+        height: 150px;
         padding-left: 5px;
         margin: 5px 5px 5px 5px;
     }

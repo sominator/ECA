@@ -42,7 +42,7 @@
       "archetypes": {
         "nightpath": {
           "name": "Nightpath",
-          "description": "Master of shadow.",
+          "description": "Trained in the stealth-oriented spells of shadowmancy.",
           "spells": {
             "cloakOfShadows": {
               "name": "Cloak of Shadows",
@@ -88,7 +88,7 @@
         },
         "daypath": {
           "name": "Daypath",
-          "description": "Master of light.",
+          "description": "Trained in the protective spells of photomancy.",
           "spells": {
             "auraOfLight": {
               "name": "Aura of Light",
@@ -203,7 +203,7 @@
       "archetypes": {
         "gunslinger": {
           "name": "Gunslinger",
-          "description": "Master of dual pistols.",
+          "description": "Expert in the use of dual pistols.",
           "talents": {
             "doubleShot": {
               "name": "Double Shot",
@@ -234,7 +234,7 @@
         },
         "sharpshooter": {
           "name": "Sharpshooter",
-          "description": "Master of sniping.",
+          "description": "Expert in the use of long-ranged sniping.",
           "talents": {
             "fireAtWill": {
               "name": "Fire at Will",
@@ -334,7 +334,7 @@
       "archetypes": {
         "combatEngineer": {
           "name": "Combat Engineer",
-          "description": "Master of combat engineering.",
+          "description": "Versed in devestating combat technomancy.",
           "spells": {
             "fireDrill": {
               "name": "Fire Drill",
@@ -380,7 +380,7 @@
         },
         "netSpecialist": {
           "name": "Net Specialist",
-          "description": "Master of the network.",
+          "description": "Versed in mastery over the network.",
           "spells": {
             "blackHat": {
               "name": "Black Hat",
@@ -495,7 +495,7 @@
       "archetypes": {
         "arcanePitcher": {
           "name": "Arcane Pitcher",
-          "description": "Master of magic.",
+          "description": "Deployer of devestating ranged magic.",
           "spells": {
             "fourSeamFastball": {
               "name": "4-Seam Fastball",
@@ -541,7 +541,7 @@
         },
         "naturesHarbinger": {
           "name": "Nature's Harbinger",
-          "description": "Master of nature.",
+          "description": "Deployer of life-giving terramancy.",
           "spells": {
             "awakenTheBeast": {
               "name": "Awaken the Beast",
@@ -656,7 +656,7 @@
       "archetypes": {
         "assassin": {
           "name": "Assassin",
-          "description": "Master of assassins.",
+          "description": "Master of melee damage and subterfuge.",
           "talents": {
             "assassinsQuarry": {
               "name": "Assassin's Quarry",
@@ -687,7 +687,7 @@
         },
         "shadowstalker": {
           "name": "Shadowstalker",
-          "description": "Master of shadows.",
+          "description": "Master of mobility and stealth.",
           "talents": {
             "highwayRobbery": {
               "name": "Highway Robbery",
