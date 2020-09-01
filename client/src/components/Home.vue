@@ -14,11 +14,13 @@
             <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
                 <p>Struct</p>
             </div>
+            <div class="div-button" v-on:click="displayToggle = 'hacker-battles'" v-bind:class="{selected: displayToggle==='hacker-battles'}">
+                <p>Hacker Battles</p>
+            </div>
         </div>
         <Lore v-show="displayToggle === 'lore'" />
         <Characters v-show="displayToggle === 'characters'" />
-        <Placeholder v-show="displayToggle === 'factions'" />
-        <Placeholder v-show="displayToggle === 'struct'" />
+        <Placeholder v-show="displayToggle === 'factions' || displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
     </div>
 </template>
 
@@ -54,7 +56,7 @@
     .div-button {
         background: cyan;
         color: black;
-        width: 100px;
+        width: 120px;
         height: 30px;
         margin-bottom: 10px;
         padding-bottom: 20px;
