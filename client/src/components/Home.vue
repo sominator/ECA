@@ -14,13 +14,10 @@
             <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
                 <p>Struct</p>
             </div>
-            <div class="div-button" v-on:click="displayToggle = 'hacker-battles'" v-bind:class="{selected: displayToggle==='hacker-battles'}">
-                <p>Hacker Battles</p>
-            </div>
         </div>
         <Lore v-show="displayToggle === 'lore'" />
         <Characters v-show="displayToggle === 'characters'" />
-        <Placeholder v-show="displayToggle === 'factions' || displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
+        <Placeholder v-show="displayToggle === 'factions' || displayToggle === 'struct'" />
     </div>
 </template>
 
@@ -28,14 +25,12 @@
     import Lore from "./Lore.vue";
     import Characters from "./Characters.vue";
     import Placeholder from "./Placeholder.vue";
-    import StructApp from "./StructApp.vue";
     export default {
         name: 'Home',
         components: {
             Lore,
             Characters,
             Placeholder,
-            StructApp
         },
         data: function () {
             return {

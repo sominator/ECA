@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\public",
     "\\client\\src",
     "\\client\\src\\components"
   ],
-  "SelectedNode": "\\server.js",
+  "SelectedNode": "\\client\\src\\components\\CharGen.vue",
   "PreviewInSolutionExplorer": false
 }
