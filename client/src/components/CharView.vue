@@ -10,7 +10,7 @@
         </div>
         <div id="character">
             <h2>Race:
-                <span>{{characterData.raceChoice}}</span>
+                <span v-on:click="raceDescription(characterData.raceChoice)">{{characterData.raceChoice}}</span>
             </h2>
             <h2>Class:
                 <span>{{characterData.classChoice}}</span>
@@ -32,11 +32,30 @@
 </template>
 
 <script>
+    import json from "../characterData.json";
     export default {
         name: "CharView",
         props: {
             characterData: Object
-        }  
+        },
+        data: function () {
+            return {
+                classData: json.classData,
+                raceData: json.raceData
+            }
+        },
+        methods: {
+            raceDescription(str) {
+                console.log(this.raceData[this.camelize(str)].description);
+                
+            },
+            camelize(str) {
+                return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+                    if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
+                    return index === 0 ? match.toLowerCase() : match.toUpperCase();
+                })
+            }
+        }
     }
 </script>
 

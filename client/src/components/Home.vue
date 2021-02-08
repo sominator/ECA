@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <h1>Entromancy Companion App <span>BETA</span></h1>
+        <h1>Entromancy Companion App <span>ALPHA</span></h1>
         <div id="sidebar">
             <div class="div-button" v-on:click="displayToggle = 'lore'" v-bind:class="{selected: displayToggle==='lore'}">
                 <p>Lore</p>
