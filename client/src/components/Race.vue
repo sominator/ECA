@@ -12,23 +12,22 @@
         name: "Race",
         props: {
             raceData: Object,
-            raceChoice: String
+            raceChoice: String,
+            index: String
         },
         data: function () {
             return {
-                choice: "",
                 isActive: false
             }
         },
         methods: {
             chosen: function () {
-                this.choice = this.raceData.name;
-                this.$emit("raceChosen", this.choice);
+                this.$emit("raceChosen", this.index);
             }
         },
         watch: {
             raceChoice: function () {
-                if (this.raceChoice === this.choice) {
+                if (this.raceChoice === this.index) {
                     this.isActive = true;
                 } else {
                     this.isActive = false;

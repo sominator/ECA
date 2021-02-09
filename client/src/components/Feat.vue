@@ -13,27 +13,26 @@
         name: "Feat",
         props: {
             featData: Object,
-            featChoice: Array
+            featChoice: Array,
+            index: String
         },
         data: function () {
             return {
-                choice: "",
                 isActive: false
             }
         },
         methods: {
             chosen: function () {
-                this.choice = this.featData.name;
                 if (this.isActive) {
-                    this.$emit("featRemoved", this.choice);
+                    this.$emit("featRemoved", this.index);
                 } else {
-                    this.$emit("featAdded", this.choice);
+                    this.$emit("featAdded", this.index);
                 }
             }
         },
         watch: {
             featChoice: function () {
-                if (this.featChoice.includes(this.choice)) {
+                if (this.featChoice.includes(this.index)) {
                     this.isActive = true;
                 } else {
                     this.isActive = false;

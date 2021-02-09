@@ -2,30 +2,78 @@
     <div id="flex-container">
         <div id="image">
             <h3 v-if="characterData.classChoice===''">Choose a class to display your character.</h3>
-            <img v-if="characterData.classChoice==='NIGHT Agent'" src="../assets/NightAgent.png" />
-            <img v-if="characterData.classChoice==='Revolutionary'" src="../assets/Revolutionary.png" />
-            <img v-if="characterData.classChoice==='Technomancer'" src="../assets/Technomancer.png" />
-            <img v-if="characterData.classChoice==='Terramancer'" src="../assets/Terramancer.png" />
-            <img v-if="characterData.classChoice==='Vanguard'" src="../assets/Vanguard.png" />
+            <img v-if="characterData.classChoice==='nightAgent'" src="../assets/NightAgent.png" />
+            <img v-if="characterData.classChoice==='revolutionary'" src="../assets/Revolutionary.png" />
+            <img v-if="characterData.classChoice==='technomancer'" src="../assets/Technomancer.png" />
+            <img v-if="characterData.classChoice==='terramancer'" src="../assets/Terramancer.png" />
+            <img v-if="characterData.classChoice==='vanguard'" src="../assets/Vanguard.png" />
         </div>
         <div id="character">
-            <h2>Race:
-                <span v-on:click="raceDescription(characterData.raceChoice)">{{characterData.raceChoice}}</span>
+            <h2>
+                Race:
+                <span v-if="characterData.raceChoice !== ''">{{raceData[characterData.raceChoice].name}}</span>
             </h2>
-            <h2>Class:
-                <span>{{characterData.classChoice}}</span>
+            <h2>
+                Class:
+                <span v-if="characterData.classChoice !== ''">{{classData[characterData.classChoice].name}}</span>
             </h2>
-            <h2>Archetype:
-                <span>{{characterData.archetypeChoice}}</span>
+            <h2>
+                Archetype:
+                <span v-if="characterData.archetypeChoice !== ''">{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].name}}</span>
             </h2>
+            <h2>Ability Bonuses:</h2>
+            <ul v-if="characterData.classChoice !== ''">
+                <li>Strength: <span>+{{classData[characterData.classChoice].stats.abilities.strength}}</span></li>
+                <li>Agility: <span>+{{classData[characterData.classChoice].stats.abilities.agility}}</span></li>
+                <li>Will: <span>+{{classData[characterData.classChoice].stats.abilities.will}}</span></li>
+                <li>Personality: <span>+{{classData[characterData.classChoice].stats.abilities.personality}}</span></li>
+            </ul>
+            <h2>Skills:</h2>
+            <ul v-if="characterData.classChoice !== ''">
+                <li>Athletics: <span>+{{classData[characterData.classChoice].stats.skills.athletics}}</span></li>
+                <li>Awarenesss: <span>+{{classData[characterData.classChoice].stats.skills.awareness}}</span></li>
+                <li>Discernment: <span>+{{classData[characterData.classChoice].stats.skills.discernment}}</span></li>
+                <li>Drama: <span>+{{classData[characterData.classChoice].stats.skills.drama}}</span></li>
+                <li>Grappling: <span>+{{classData[characterData.classChoice].stats.skills.grappling}}</span></li>
+                <li>Hacking: <span>+{{classData[characterData.classChoice].stats.skills.hacking}}</span></li>
+                <li>Healing: <span>+{{classData[characterData.classChoice].stats.skills.healing}}</span></li>
+                <li>Knowledge: <span>+{{classData[characterData.classChoice].stats.skills.knowledge}}</span></li>
+                <li>Mancy: <span>+{{classData[characterData.classChoice].stats.skills.mancy}}</span></li>
+                <li>Nature: <span>+{{classData[characterData.classChoice].stats.skills.nature}}</span></li>
+                <li>Negotiation: <span>+{{classData[characterData.classChoice].stats.skills.negotiation}}</span></li>
+                <li>Stealth: <span>+{{classData[characterData.classChoice].stats.skills.stealth}}</span></li>
+                <li>Thievery: <span>+{{classData[characterData.classChoice].stats.skills.thievery}}</span></li>
+                <li>Tumbling: <span>+{{classData[characterData.classChoice].stats.skills.tumbling}}</span></li>
+                <li>Vehicles: <span>+{{classData[characterData.classChoice].stats.skills.vehicles}}</span></li>
+            </ul>
+            <h2>Combat:</h2>
+            <ul v-if="characterData.classChoice !== ''">
+                <li>Initiative: <span>+{{classData[characterData.classChoice].stats.initiative}}</span></li>
+                <li>HP: <span>{{classData[characterData.classChoice].stats.hp}}</span></li>
+                <li>Melee Attack: <span>{{classData[characterData.classChoice].stats.meleeAttack}}</span></li>
+                <li>Melee Damage: <span>{{classData[characterData.classChoice].stats.meleeDamage}}</span></li>
+                <li>Ranged Attack: <span>{{classData[characterData.classChoice].stats.rangedAttack}}</span></li>
+                <li>Ranged Damage: <span>{{classData[characterData.classChoice].stats.rangedDamage}}</span></li>
+                <li>Armor Class: <span>{{classData[characterData.classChoice].stats.ac}}</span></li>
+                <li>Spell Attack: <span>+{{classData[characterData.classChoice].stats.spellAttack}}</span></li>
+                <li>Spell DC: <span>{{classData[characterData.classChoice].stats.spellDC}}</span></li>
+            </ul>
             <h2>Feats:</h2>
-            <ul>
-                <li v-for="feat in characterData.featChoice" v-bind:key="feat">{{feat}}</li>
+            <ul v-if="characterData.featChoice !== []">
+                <li v-for="feat in characterData.featChoice" v-bind:key="feat"><span>{{classData[characterData.classChoice].feats[feat].name}}</span></li>
             </ul>
-            <h2>Talents/Spells:</h2>
-            <ul>
-                <li v-for="talent in characterData.talentChoice" v-bind:key="talent">{{talent}}</li>
-            </ul>
+            <div v-if="characterData.classChoice === 'nightAgent' || characterData.classChoice === 'technomancer' || characterData.classChoice === 'terramancer'">
+                <h2>Spells:</h2>
+                <ul v-if="characterData.talentChoice !== []">
+                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].spells[talent].name}}</span></li>
+                </ul>
+            </div>
+            <div v-else-if="characterData.classChoice === 'revolutionary' || characterData.classChoice === 'vanguard'">
+                <h2>Talents:</h2>
+                <ul v-if="characterData.talentChoice !== []">
+                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].talents[talent].name}}</span></li>
+                </ul>
+            </div>
         </div>
         
     </div>
@@ -42,18 +90,6 @@
             return {
                 classData: json.classData,
                 raceData: json.raceData
-            }
-        },
-        methods: {
-            raceDescription(str) {
-                console.log(this.raceData[this.camelize(str)].description);
-                
-            },
-            camelize(str) {
-                return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
-                    if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
-                    return index === 0 ? match.toLowerCase() : match.toUpperCase();
-                })
             }
         }
     }
@@ -89,7 +125,6 @@
     li {
         font-size: 22px;
         font-weight: bold;
-        color: hotpink;
         padding-bottom: 5px;
     }
     @media (max-width: 1200px) {

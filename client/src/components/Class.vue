@@ -12,23 +12,22 @@
         name: "Class",
         props: {
             classData: Object,
-            classChoice: String
+            classChoice: String,
+            index: String
         },
         data: function () {
             return {
-                choice: "",
                 isActive: false
             }
         },
         methods: {
             chosen: function () {
-                this.choice = this.classData.name;
-                this.$emit("classChosen", this.choice);
+                this.$emit("classChosen", this.index);
             }
         },
         watch: {
             classChoice: function () {
-                if (this.classChoice === this.choice) {
+                if (this.classChoice === this.index) {
                     this.isActive = true;
                 } else {
                     this.isActive = false;

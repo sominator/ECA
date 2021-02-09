@@ -12,23 +12,22 @@
         name: "Archetype",
         props: {
             archetypeData: Object,
-            archetypeChoice: String
+            archetypeChoice: String,
+            index: String
         },
         data: function () {
             return {
-                choice: "",
                 isActive: false
             }
         },
         methods: {
             chosen: function () {
-                this.choice = this.archetypeData.name;
-                this.$emit("archetypeChosen", this.choice);
+                this.$emit("archetypeChosen", this.index);
             }
         },
         watch: {
             archetypeChoice: function () {
-                if (this.archetypeChoice === this.choice) {
+                if (this.archetypeChoice === this.index) {
                     this.isActive = true;
                 } else {
                     this.isActive = false;
