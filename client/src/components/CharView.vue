@@ -60,36 +60,56 @@
             </ul>
             <h2>Feats:</h2>
             <ul v-if="characterData.featChoice !== []">
-                <li v-for="feat in characterData.featChoice" v-bind:key="feat"><span>{{classData[characterData.classChoice].feats[feat].name}}</span></li>
+                <li v-for="feat in characterData.featChoice" v-bind:key="feat" @mouseover="changeHover(feat, 'feat')" @mouseout="changeHover(null, null)"><span>{{classData[characterData.classChoice].feats[feat].name}}</span></li>
             </ul>
             <div v-if="characterData.classChoice === 'nightAgent' || characterData.classChoice === 'technomancer' || characterData.classChoice === 'terramancer'">
                 <h2>Spells:</h2>
                 <ul v-if="characterData.talentChoice !== []">
-                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].spells[talent].name}}</span></li>
+                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent" @mouseover="changeHover(talent, 'spell')" @mouseout="changeHover(null, null)"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].spells[talent].name}}</span></li>
                 </ul>
             </div>
             <div v-else-if="characterData.classChoice === 'revolutionary' || characterData.classChoice === 'vanguard'">
                 <h2>Talents:</h2>
                 <ul v-if="characterData.talentChoice !== []">
-                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].talents[talent].name}}</span></li>
+                    <li v-for="talent in characterData.talentChoice" v-bind:key="talent" @mouseover="changeHover(talent, 'talent')" @mouseout="changeHover(null, null)"><span>{{classData[characterData.classChoice].archetypes[characterData.archetypeChoice].talents[talent].name}}</span></li>
                 </ul>
             </div>
         </div>
-        
+        <div id="tooltip" v-if="characterData.classChoice !== ''">
+            <Feat :featData="classData[characterData.classChoice].feats[hoverDisplay]" v-if="hoverType === 'feat'" />
+            <Spell :spellData="classData[characterData.classChoice].archetypes[characterData.archetypeChoice].spells[hoverDisplay]" v-if="hoverType === 'spell'" />
+            <Talent :talentData="classData[characterData.classChoice].archetypes[characterData.archetypeChoice].talents[hoverDisplay]" v-if="hoverType === 'talent'" />
+        </div>
     </div>
 </template>
 
 <script>
     import json from "../characterData.json";
+    import Feat from "./Feat.vue";
+    import Spell from "./Spell.vue";
+    import Talent from "./Talent.vue";
     export default {
         name: "CharView",
+        components: {
+            Feat,
+            Spell,
+            Talent
+        },
         props: {
             characterData: Object
         },
         data: function () {
             return {
                 classData: json.classData,
-                raceData: json.raceData
+                raceData: json.raceData,
+                hoverDisplay: null,
+                hoverType: null
+            }
+        },
+        methods: {
+            changeHover: function (hoverDisplay, hoverType) {
+                this.hoverDisplay = hoverDisplay;
+                this.hoverType = hoverType;
             }
         }
     }
@@ -113,6 +133,12 @@
     #character {
         width: 50%;
     }
+    #tooltip {
+        position: fixed;
+        top: 10vh;
+        left: 30vw;
+        background-color: black;
+    }
     span {
         color: hotpink;
     }
@@ -126,7 +152,7 @@
         font-size: 22px;
         font-weight: bold;
         padding-bottom: 5px;
-    }
+    }    
     @media (max-width: 1200px) {
         #flex-container {
             flex-direction: column;
