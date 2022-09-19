@@ -11,6 +11,9 @@
         name: 'app',
         components: {
             Home
+        },
+        mounted() {
+            console.log(this.$store.state.count);
         }
     };
 </script>
