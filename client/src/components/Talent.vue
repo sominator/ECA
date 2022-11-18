@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="talent" v-bind:class="{selected: isActive}" v-on:click="chosen">
+        <div class="talent">
             <h3>{{talentData.name}}</h3>
             <p>Requirement: {{talentData.requirement}}</p>
             <p>{{talentData.description}}</p>
@@ -12,33 +12,7 @@
     export default {
         name: "Talent",
         props: {
-            talentData: Object,
-            talentChoice: Array
-        },
-        data: function () {
-            return {
-                choice: "",
-                isActive: false
-            }
-        },
-        methods: {
-            chosen: function () {
-                this.choice = this.talentData.name;
-                if (this.isActive) {
-                    this.$emit("talentRemoved", this.choice);
-                } else {
-                    this.$emit("talentAdded", this.choice);
-                }
-            }
-        },
-        watch: {
-            talentChoice: function () {
-                if (this.talentChoice.includes(this.choice)) {
-                    this.isActive = true;
-                } else {
-                    this.isActive = false;
-                }
-            }
+            talentData: Object
         }
     }
 </script>
@@ -49,7 +23,7 @@
         border-radius: 5px;
         text-align: left;
         width: 250px;
-        min-height: 320px;
+        min-height: 400px;
         padding-left: 5px;
         margin: 5px 5px 5px 5px;
     }

@@ -1,65 +1,101 @@
 <template>
     <div>
-        <div class="div-button" v-on:click="displayToggle = 'chargen'" v-bind:class="{selected: displayToggle==='chargen'}">
-            <p>Create Character</p>
+        <div id="buttons">
+            <button v-on:click="toggle = 'races'" v-bind:class="{selected: toggle ==='races'}">Races</button>
+            <button v-on:click="toggle = 'classes'" v-bind:class="{selected: toggle ==='classes'}">Classes</button>
+            <button v-on:click="toggle = 'destinies'" v-bind:class="{selected: toggle ==='destinies'}">Destinies</button>
         </div>
-        <div class="div-button" v-on:click="displayToggle = 'charview'" v-bind:class="{selected: displayToggle==='charview'}">
-            <p>View Character</p>
+        <div id="characters">
+            <div id="races" v-show="toggle === 'races'">
+                <Races />
+            </div>
+            <div id="classes" v-show="toggle === 'classes'">
+                <Classes />
+            </div>
+            <Placeholder v-show="toggle === 'destinies'" />
         </div>
-        <CharGen v-show="displayToggle === 'chargen'" @characterUpdated="updateCharacter"/>
-        <CharView v-show="displayToggle === 'charview'" :characterData="characterData"/>
     </div>
 </template>
 
 <script>
-    import CharGen from "./CharGen.vue";
-    import CharView from "./CharView.vue";
+    import Classes from "./Classes.vue";
+    import Races from "./Races.vue";
+    import Placeholder from "./Placeholder.vue";
 
     export default {
         name: "Characters",
         components: {
-            CharGen,
-            CharView
+            Classes,
+            Races,
+            Placeholder
         },
         data: function () {
             return {
-                displayToggle: "",
-                characterData: {
-                    raceChoice: "",
-                    classChoice: "",
-                    archetypeChoice: "",
-                    featChoice: [],
-                    talentChoice: []
-                }
-            }
-        },
-        methods: {
-            updateCharacter(characterData) {
-                this.characterData = characterData;
+                toggle: ""
             }
         }
     }
 </script>
 
 <style scoped>
-    .div-button {
-        display: inline-block;
-        background: cyan;
-        color: black;
-        width: 200px;
-        height: 30px;
-        margin: auto;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        line-height: 5px;
-        border-radius: 10px;
+    #characters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .div-button:hover{
-        background: hotpink;
-        cursor: pointer;
+    #races {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #classes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .selected {
         background: hotpink;
+    }
+    #buttons {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin: 3px 0px 7px 0px;
+    }
+    button {
+        background-color: cyan;
+        border-radius: 10px;
+        border: 0px;
+        width: 100px;
+        height: 30px;
+        margin-right: 5px;
+        font-weight: bold;
+        outline: none;
+        font-family: 'Trebuchet MS';
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: hotpink;
+    }
+    @media (max-width: 1000px) {
+        #buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            margin: auto;
+            justify-content: center;
+        }
+        #races {
+            margin: auto;
+        }
+        #classes {
+            margin: auto;
+        }
+        button {
+            margin-left: 2.5px;
+            margin-right: 2.5px;
+            margin-bottom: 2.5px;
+        }
     }
 </style>

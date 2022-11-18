@@ -1,61 +1,76 @@
 <template>
-    <div>
-        <div class="class" v-bind:class="{selected: isActive}" v-on:click="chosen">
-            <h3>{{classData.name}}</h3>
-            <p>{{classData.description}}</p>
+    <div id="class">
+        <div id="buttons">
+            <button v-on:click="toggle = 'feats'" v-bind:class="{selected: toggle === 'feats'}">Feats</button>
+            <button v-on:click="toggle = 'talents'" v-bind:class="{selected: toggle === 'talents'}">Talents/Spells</button>
+        </div>
+        <div v-if="toggle === 'feats'">
+            <Feats :featData="classData.feats" />
+        </div>
+        <div v-if="toggle === 'talents'">
+            <Talents :archetypeData="classData.archetypes" />
         </div>
     </div>
 </template>
 
 <script>
+    import Feats from "./Feats.vue";
+    import Talents from "./Talents.vue";
+
     export default {
         name: "Class",
+        components: {
+            Feats,
+            Talents
+        },
         props: {
             classData: Object,
-            classChoice: String
         },
-        data: function () {
+        data: function() {
             return {
-                choice: "",
-                isActive: false
-            }
-        },
-        methods: {
-            chosen: function () {
-                this.choice = this.classData.name;
-                this.$emit("classChosen", this.choice);
-            }
-        },
-        watch: {
-            classChoice: function () {
-                if (this.classChoice === this.choice) {
-                    this.isActive = true;
-                } else {
-                    this.isActive = false;
-                }
+                toggle: null
             }
         }
     }
 </script>
 
 <style scoped>
-    .class {
-        border: 3px solid cyan;
-        border-radius: 5px;
-        text-align: left;
-        width: 250px;
-        height: 270px;
-        padding-left: 5px;
-        margin: 5px 5px 5px 5px;
+    #buttons {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin: 3px 0px 7px 0px;
     }
-    .class:hover {
-        border-color: hotpink;
+
+    button {
+        background-color: cyan;
+        border-radius: 10px;
+        border: 0px;
+        width: 100px;
+        height: 30px;
+        margin-right: 5px;
+        font-weight: bold;
+        outline: none;
+        font-family: 'Trebuchet MS';
+    }
+
+    button:hover {
         cursor: pointer;
+        background-color: hotpink;
     }
+
     .selected {
-        border-color: hotpink;
+        background: hotpink;
     }
-    h3 {
-        text-align: center
+
+    @media (max-width: 1000px) {
+        #buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            margin: auto;
+            justify-content: center;
+        }
     }
 </style>

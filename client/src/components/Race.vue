@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="race" v-bind:class="{selected: isActive}" v-on:click="chosen">
+        <div class="race">
             <h3>{{raceData.name}}</h3>
             <p>{{raceData.description}}</p>
         </div>
@@ -11,29 +11,7 @@
     export default {
         name: "Race",
         props: {
-            raceData: Object,
-            raceChoice: String
-        },
-        data: function () {
-            return {
-                choice: "",
-                isActive: false
-            }
-        },
-        methods: {
-            chosen: function () {
-                this.choice = this.raceData.name;
-                this.$emit("raceChosen", this.choice);
-            }
-        },
-        watch: {
-            raceChoice: function () {
-                if (this.raceChoice === this.choice) {
-                    this.isActive = true;
-                } else {
-                    this.isActive = false;
-                }
-            }
+            raceData: Object
         }
     }
 </script>
@@ -44,16 +22,13 @@
         border-radius: 5px;
         text-align: left;
         width: 250px;
-        height: 455px;
+        height: 470px;
         padding-left: 5px;
         margin: 5px 5px 5px 5px;
     }
     .race:hover {
         border-color: hotpink;
         cursor: pointer;
-    }
-    .selected {
-        border-color: hotpink;
     }
     h3 {
         text-align: center

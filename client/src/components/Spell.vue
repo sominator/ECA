@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="spell" v-bind:class="{selected: isActive}" v-on:click="chosen">
+        <div class="spell">
             <h3>{{spellData.name}}</h3>
             <p>
                 Action: {{spellData.action}}<br />
@@ -17,33 +17,7 @@
     export default {
         name: "Spell",
         props: {
-            spellData: Object,
-            talentChoice: Array
-        },
-        data: function () {
-            return {
-                choice: "",
-                isActive: false
-            }
-        },
-        methods: {
-            chosen: function () {
-                this.choice = this.spellData.name;
-                if (this.isActive) {
-                    this.$emit("talentRemoved", this.choice);
-                } else {
-                    this.$emit("talentAdded", this.choice);
-                }
-            }
-        },
-        watch: {
-            talentChoice: function () {
-                if (this.talentChoice.includes(this.choice)) {
-                    this.isActive = true;
-                } else {
-                    this.isActive = false;
-                }
-            }
+            spellData: Object
         }
     }
 </script>
@@ -54,7 +28,7 @@
         border-radius: 5px;
         text-align: left;
         width: 250px;
-        min-height: 320px;
+        min-height: 490px;
         padding-left: 5px;
         margin: 5px 5px 5px 5px;
     }
