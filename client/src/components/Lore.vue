@@ -20,7 +20,7 @@
     import NPC from "./NPC.vue";
     import json from "../loreData.json";
     export default {
-        name: "Locations",
+        name: "Lore",
         components: {
             Location,
             NPC

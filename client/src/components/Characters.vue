@@ -12,7 +12,9 @@
             <div id="classes" v-show="toggle === 'classes'">
                 <Classes />
             </div>
-            <Placeholder v-show="toggle === 'destinies'" />
+            <div id="destinies" v-show="toggle === 'destinies'">
+                <Destinies />
+            </div>
         </div>
     </div>
 </template>
@@ -20,14 +22,14 @@
 <script>
     import Classes from "./Classes.vue";
     import Races from "./Races.vue";
-    import Placeholder from "./Placeholder.vue";
+    import Destinies from "./Destinies.vue";
 
     export default {
         name: "Characters",
         components: {
             Classes,
             Races,
-            Placeholder
+            Destinies
         },
         data: function () {
             return {
@@ -49,6 +51,11 @@
         justify-content: center;
     }
     #classes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #destinies {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

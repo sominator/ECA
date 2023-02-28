@@ -2,7 +2,13 @@
     <div>
         <div class="spell">
             <h3>{{spellData.name}}</h3>
-            <p>
+            <p v-if="spellData.entropy">
+                Action: {{spellData.action}}<br />
+                Range: {{spellData.range}}<br />
+                Duration: {{spellData.duration}}<br />
+                Entropy: {{spellData.entropy}}
+            </p>
+            <p v-else>
                 Action: {{spellData.action}}<br />
                 Range: {{spellData.range}}<br />
                 Duration: {{spellData.duration}}<br />

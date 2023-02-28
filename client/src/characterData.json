@@ -767,5 +767,197 @@
       "name": "Low Auric",
       "description": "Too Burly to Care. 'Freak.' 'Tusker.' 'Pig face.' Most humans think of you as stupid or violent, and you've experienced your fair share of derision. As the most imposing and phenotypically striking underrace, your path hasn't been easy, but has forged you into a sturdy opponent with an attitude to match. The other races can use you as cover, and if at any time you have less than half of your hit points remaining, you gain advantage on all Strength-based checks, including skill checks."
     }
+  },
+  "destinyData": {
+    "aurikarElite": {
+      "name": "Aurikar Elite",
+      "requirement": "Friendly or higher faction standing with Aurichome",
+      "description": "Guns and spells have their places, but you prefer to get your hands dirty. You’ve mastered the art of hand-tohand combat through training with King Thog’run’s special forces, and have sworn fealty to the crown as one of Aurichome’s elite defenders.",
+      "talents": {
+        "deftStrikes": {
+          "name": "Deft Strikes",
+          "requirement": "None",
+          "description": "Replace your melee attacks with unarmed strikes, keeping your attack modifier, but adding 1d6 to your melee damage when you hit."
+        },
+        "maestro": {
+          "name": "Maestro",
+          "requirement": "None",
+          "description": "Choose one of your known spells. Once per encounter, you can cast this spell at no cost, even if you are out of ceridium."
+        },
+        "prodigy": {
+          "name": "Prodigy",
+          "requirement": "None",
+          "description": "Add +4 to one skill of your choosing. In addition, once per encounter, you can gain advantage on a check involving that skill."
+        },
+        "speedRunner": {
+          "name": "Speed Runner",
+          "requirement": "None",
+          "description": "Your speed increases by 20 feet. You can move up sheer walls or other vertical surfaces as long as you end your movement on an horizontal surface."
+        },
+        "tumbleDry": {
+          "name": "Tumble Dry",
+          "requirement": "None",
+          "description": "Any time you’re required to roll an Agility check, you can roll a Tumbling skill check instead. If the check allows you to take half damage, you instead take no damage on a successful check, or half damage on a failed check."
+        }
+      }
+    },
+    "entromancer": {
+      "name": "Entromancer",
+      "requirement": "Friendly or higher faction standing with Unaligned",
+      "description": "You’ve spent time, energy, and no small amount of personal sacrifice chipping away at the mysteries of the universe. Ever so slowly, entropy begins to respond to your will.",
+      "spells": {
+        "bloodArrowStorm": {
+          "name": "Blood Arrow Storm",
+          "action": "Combat action",
+          "range": "30 feet",
+          "duration": "N/A",
+          "entropy": "1",
+          "description": "Cast droplets of blood at your target, stamping and growling in unison. Crimson bolts emerge to damage your target. Make a spell attack, dealing 2d12 damage if it hits."
+        },
+        "bloodWell": {
+          "name": "Blood Well",
+          "action": "Combat action",
+          "range": "30 feet",
+          "duration": "1 encounter",
+          "entropy": "1d6",
+          "description": "An organic target that you can see within range begins pouring blood as wounds appear on its body. At the beginning of each of its turns, it takes 1d6 damage, and every organic creature within 10 feet of it is healed by an equal amount of hit points. At the end of each of its turns, the target can make a Will check against your spell DC to attempt to end the effect."
+        },
+        "butterflyEffect": {
+          "name": "Butterfly Effect",
+          "action": "Combat action",
+          "range": "Self",
+          "duration": "1 encounter",
+          "entropy": "1d4",
+          "description": "You manipulate the tides of fate with unforeseen consequences. Once per round, when a creature that you can see - including yourself - makes a check of any kind, before the outcome of the check is determined, you may roll a d20, and choose whether the creature uses its roll or yours. If you do so, a creature of the GM’s choosing can do the same, once before the beginning of your next turn."
+        },
+        "entromancersBurden": {
+          "name": "Entromancer's Burden",
+          "action": "Move action",
+          "range": "Self",
+          "duration": "1 encounter",
+          "entropy": "1d4",
+          "description": "You call out in the voice of a raven, stomping on a raw egg. Hexagonal quicksilver covers your body, shielding you with chaos. When you are targeted by a ranged attack or a spell that requires an attack roll, the attack or spell has no effect on you. When your Entromancer’s Burden stops a spell or an attack this way, make a Mancy check, where the DC is equal to the ranged or spell attack attempt. If your Mancy check fails, your Entromancer’s Burden evaporates."
+        },
+        "sunderTheVoid": {
+          "name": "Sunder the Void",
+          "action": "Combat action",
+          "range": "30-foot line",
+          "duration": "1 round, until the beginning of your next turn",
+          "entropy": "1d6",
+          "description": "You put two fingers out to the side, slicing them in an oval. With your other hand, you throw seeds to the earth, letting a sharp whistle escape your lips. A tear in the universe appears in a 10-foot wide, 30-foot long line before you, dealing 4d6 damage to anyone within its path until the beginning of your next turn."
+        }
+      }
+    },
+    "infiltrator": {
+      "name": "Infiltrator",
+      "requirement": "None",
+      "description": "When a job requires subtlety, they call for an assassin. When it requires a ghost, they call you.",
+      "talents": {
+        "ghostInTheMachine": {
+          "name": "Ghost in the Machine",
+          "requirement": "None",
+          "description": "You cannot be tracked through the network, except by other Infiltrators who have the Hide and Seek talent. Additionally, you can take 1 minute to create an alternative digital identity on the network that can withstand scrutiny for the length of 1 encounter, assigning it features such as history, professions, known locations, faction standing, and so on."
+        },
+        "hatTrick": {
+          "name": "Hat Trick",
+          "requirement": "None",
+          "description": "All of your Hacking checks can be made with advantage, and you can hack a device or artificial creature in half the time usually required. This feature stacks with the spell effects of Black Hat and White Hat."
+        },
+        "hideAndSeek": {
+          "name": "Hide and Seek",
+          "requirement": "None",
+          "description": "You’re able to locate anyone on the network, at any time, if you’ve been within 30 feet of them and physically seen them with your own eyes. Additionally, if you suspect a creature is hidden within 60 feet of you, you can make an Awareness check, with advantage. If the result is higher than the target’s Stealth bonus, you discern their exact location."
+        },
+        "tacticalGenius": {
+          "name": "Tactical Genius",
+          "requirement": "None",
+          "description": "As a move action, you can choose a willing ally within 60 feet of you that can hear you. Your ally can immediately take a move action."
+        },
+        "unfairAdvantage": {
+          "name": "Unfair Advantage",
+          "requirement": "None",
+          "description": "If you’re able to study the layout of a location, either physically or through the network, for 1 hour, each creature of your choice that remains within 30 feet of you (including yourself) gains a +5 bonus to Stealth checks and can’t be tracked through the network within the confines of that location for the following 24 hours."
+        }
+      }
+    },
+    "inquisitor": {
+      "name": "Inquisitor",
+      "requirement": "Friendly or higher faction standing with NIGHT",
+      "description": "You’ve entered the elite ranks of NIGHT leadership, empowered with some of the most devastating – and manipulative – spells known to humankind.",
+      "spells": {
+        "controlPerson": {
+          "name": "Control Person",
+          "action": "Combat action",
+          "range": "30 feet",
+          "duration": "1 encounter",
+          "ceridium": "2",
+          "description": "Choose an organic creature that you can see within range. If the target fails a Will check against your spell DC, it becomes under your control and you create a telepathic link with it. Until the end of the spell, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. At the end of each of its turns, the creature can attempt its Will check again, and a successful check negates this effect."
+        },
+        "fireball": {
+          "name": "Fireball",
+          "action": "Combat action",
+          "range": "60 feet",
+          "duration": "N/A",
+          "ceridium": "2",
+          "description": "A flaming orb travels to a point you choose within range, exploding on impact. Each creature in a 30-foot-radius sphere centered on that point must make an Agility check against your spell DC. A target takes 6d6 damage on a failed check, or half as much damage on a successful one."
+        },
+        "mesmerize": {
+          "name": "Mesmerize",
+          "action": "Move action",
+          "range": "30 feet",
+          "duration": "1 round, until the end of your next turn",
+          "ceridium": "1",
+          "description": "You focus your magic on the mind of an opponent, confusing its thoughts. An organic creature that you can see within range must succeed on a Personality check against your spell DC. On a failure, it incurs disadvantage on attack rolls, ability and skill checks for the duration of the spell."
+        },
+        "phoenixRising": {
+          "name": "Phoenix Rising",
+          "action": "N/A",
+          "range": "Self",
+          "duration": "N/A",
+          "ceridium": "2",
+          "description": "As you fall, flames engulf you as you return to the fray. When you are reduced to 0 hit points, you can instantly activate this spell. You regain half of your total amount of hit points, are immune to all damage until the beginning of your next turn, and all creatures within 10 feet of you must make an Agility check against your spell DC, taking 4d8 damage on a failed check or half as much damage on a successful one."
+        },
+        "readThoughts": {
+          "name": "Read Thoughts",
+          "action": "Combat action",
+          "range": "60 feet",
+          "duration": "1 encounter",
+          "ceridium": "2",
+          "description": "Choose a target within range that can speak at least one language. For the duration of the spell, you gain advantage on Personality checks made against the target, and can hear the target’s thoughts. You initially learn the surface thoughts of the creature, such as what is most on its mind at that moment, and then gain insight into something that looms large in its mind – what it worries over, loves, or hates. A successful Will check against your spell DC allows the target to know that you’re listening."
+        }
+      }
+    },
+    "weaponMaster": {
+      "name": "Weapon Master",
+      "requirement": "None",
+      "description": "Some heroes are born; others are forged through discipline and forbearance. You have become a master of arms, dedicating your life to the study of weaponry.",
+      "talents": {
+        "circleSlash": {
+          "name": "Circle Slash",
+          "requirement": "None",
+          "description": "Once per round, if you successfully hit with a melee or ranged attack against a target, you can attempt an additional melee or ranged attack against a separate target that is adjacent to the first."
+        },
+        "defendTheWeak": {
+          "name": "Defend the Weak",
+          "requirement": "None",
+          "description": "Your ability to bolster morale in the thick of battle is unparalleled. Once per round, when an ally within 5 feet of you that you can see is reduced to 0 hit points, they are instead reduced to 1 hit point."
+        },
+        "quickRiposte": {
+          "name": "Quick Riposte",
+          "requirement": "None",
+          "description": "As a move action, you adopt a defensive posture until the beginning of your next turn. You gain a +4 bonus to your AC against all melee and ranged attacks made against you. If an attack misses you, you wound your opponent, inflicting your choice of either your base melee or ranged weapon damage, not including any bonuses."
+        },
+        "smashAndGrab": {
+          "name": "Smash & Grab",
+          "requirement": "None",
+          "description": "When you have advantage on an attack roll, you can forgo the advantage to attempt to disarm your target as part of your attack. The target must make a Strength check, with a DC equal to your attack roll. On a failed check, it drops an object of your choosing. The object lands at its feet and the target is unable to use it until it takes a move action to pick it back up. Your attack hits or misses the target’s AC and deals damage as it normally would."
+        },
+        "Virtuoso": {
+          "name": "Virtuoso",
+          "requirement": "None",
+          "description": "Your critical range extends to 19-20 for one ranged or melee weapon of your choice. If your critical range has already been extended by another bonus, it increases again by two points (from 19-20 to 17-20, 17-20 to 15-20, and so on). Additionally, whenever you roll a 1 on a damage die for an attack you make with that weapon, you can reroll the die, but must use the new result, even if it is another 1."
+        }
+      }
+    }
   }
 }

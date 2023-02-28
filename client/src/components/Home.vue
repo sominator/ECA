@@ -1,15 +1,12 @@
 <template>
     <div id="home">
-        <h1>Entromancy Compendium <span>ALPHA</span></h1>
+        <h1>Entromancy Compendium <span>App</span></h1>
         <div id="sidebar">
             <div class="div-button" v-on:click="displayToggle = 'characters'" v-bind:class="{selected: displayToggle==='characters'}">
                 <p>Characters</p>
             </div>
-            <div class="div-button" v-on:click="displayToggle = 'locations'" v-bind:class="{selected: displayToggle==='locations'}">
-                <p>Locations</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'npcs'" v-bind:class="{selected: displayToggle==='npcs'}">
-                <p>NPCs</p>
+            <div class="div-button" v-on:click="displayToggle = 'lore'" v-bind:class="{selected: displayToggle==='lore'}">
+                <p>Lore</p>
             </div>
             <div class="div-button" v-on:click="displayToggle = 'gear'" v-bind:class="{selected: displayToggle==='gear'}">
                 <p>Gear</p>
@@ -20,21 +17,24 @@
             <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
                 <p>Struct</p>
             </div>
+            <div class="div-button" v-on:click="displayToggle = 'hacker-battles'" v-bind:class="{selected: displayToggle==='hacker-battles'}">
+                <p>Hacker Battles</p>
+            </div>
         </div>
         <Characters v-show="displayToggle === 'characters'" />
-        <Locations v-show="displayToggle === 'locations'" />
-        <Placeholder v-show="displayToggle === 'npcs' || displayToggle === 'gear' || displayToggle === 'cybernetics' || displayToggle === 'struct'" />
+        <Lore v-show="displayToggle === 'lore'" />
+        <Placeholder v-show="displayToggle === 'gear' || displayToggle === 'cybernetics' || displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
     </div>
 </template>
 
 <script>
-    import Locations from "./Locations.vue";
+    import Lore from "./Lore.vue";
     import Characters from "./Characters.vue";
     import Placeholder from "./Placeholder.vue";
     export default {
         name: 'Home',
         components: {
-            Locations,
+            Lore,
             Characters,
             Placeholder,
         },
