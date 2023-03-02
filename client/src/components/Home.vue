@@ -8,11 +8,8 @@
             <div class="div-button" v-on:click="displayToggle = 'lore'" v-bind:class="{selected: displayToggle==='lore'}">
                 <p>Lore</p>
             </div>
-            <div class="div-button" v-on:click="displayToggle = 'gear'" v-bind:class="{selected: displayToggle==='gear'}">
-                <p>Gear</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'cybernetics'" v-bind:class="{selected: displayToggle==='cybernetics'}">
-                <p>Cybernetics</p>
+            <div class="div-button" v-on:click="displayToggle = 'equipment'" v-bind:class="{selected: displayToggle==='equipment'}">
+                <p>Equipment</p>
             </div>
             <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
                 <p>Struct</p>
@@ -23,19 +20,22 @@
         </div>
         <Characters v-show="displayToggle === 'characters'" />
         <Lore v-show="displayToggle === 'lore'" />
-        <Placeholder v-show="displayToggle === 'gear' || displayToggle === 'cybernetics' || displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
+        <Equipment v-show="displayToggle === 'equipment'" />
+        <Placeholder v-show="displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
     </div>
 </template>
 
 <script>
-    import Lore from "./Lore.vue";
     import Characters from "./Characters.vue";
+    import Lore from "./Lore.vue";
+    import Equipment from "./Equipment.vue";
     import Placeholder from "./Placeholder.vue";
     export default {
         name: 'Home',
         components: {
-            Lore,
             Characters,
+            Lore,
+            Equipment,
             Placeholder,
         },
         data: function () {

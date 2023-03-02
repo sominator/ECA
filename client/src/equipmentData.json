@@ -1,0 +1,295 @@
+{
+  "classEquipData": {
+    "ceridiumArmor": {
+      "name": "Ceridium Armor",
+      "description": "Reinforced ceridium plating, standard issue for all NIGHT Agents. DNA tagged to each individual NIGHT Agent."
+    },
+    "ceridiumOrb": {
+      "name": "Ceridium Orb",
+      "description": "Molded with the appropriate stitching to mimic off-speed pitches and breaking balls. Ceruchipenabled for immediate return to the point of release. Allows Terramancers to make ranged attacks, and is DNA tagged to each individual Terramancer."
+    },
+    "ceridiumPistol": {
+      "name": "Ceridium Pistol",
+      "description": "Silent, sleek, and accurate. Allows your character to make ranged attacks. DNA tagged to your character."
+    },
+    "dagger": {
+      "name": "Dagger",
+      "description": "Portable, even fashionable. Allows your character to make melee attacks."
+    },
+    "digitab": {
+      "name": "Digitab",
+      "description": "Handheld digital tablet that enables your character to access the network and make Hacking checks."
+    },
+    "espionageKit": {
+      "name": "Espionage Kit",
+      "description": "Includes a digitab and all of the accessories your character needs to excel at Drama, Hacking, and Thievery checks."
+    },
+    "lightArmor": {
+      "name": "Light Armor",
+      "description": "Provides the slimmest of protection but the maximum amount of breathing room for movement."
+    },
+    "mancyKit": {
+      "name": "Mancy Kit",
+      "description": "Includes a digitab and all of the accessories your character needs to excel at Healing, Mancy, and Nature checks."
+    },
+    "mediumArmor": {
+      "name": "Medium Armor",
+      "description": "Not quite ballistic-level protection, but it’ll do."
+    },
+    "nightblade": {
+      "name": "Nightblade",
+      "description": "Single-bladed curved sword reinforced with ceridium plating, and retractable to dagger size. Allows NIGHT Agents to make melee attacks, and DNA tagged to each individual NIGHT Agent."
+    },
+    "vehiclesKit": {
+      "name": "Vehicles Kit",
+      "description": "Includes a digitab and all of the accessories your character needs to excel at Negotiation, Thievery, and Vehicles checks."
+    }
+  },
+  "missionEquipData": {
+    "standardGear": {
+      "name": "Standard Gear",
+      "equipment": {
+        "ceridiumCapsule": {
+          "name": "Ceridium Capsule",
+          "description": "You have extra capsules of ceridium at your disposal. You start your mission with 4 additional ceridium."
+        },
+        "grenadeBelt": {
+          "name": "Grenade Belt",
+          "description": "As a combat action, you can make a ranged attack to throw a grenade up to 30 feet. Choose the type of grenade you want to throw, expending a use. The grenade explodes upon impact. The grenade belt has two uses. EMP: Each artificial creature within a 20-foot radius of the grenade’s detonation must make a Strength check (DC 13), taking 4d6 damage on a failed check, or half as much damage on a successful one. Fragmentation: Each creature within a 20-foot radius of the grenade’s detonation must make an Agility check (DC 13), taking 4d6 damage on a failed check, or half as much damage on a successful one. Thermal Smoke: Thermal smoke fills a 20-foot-radius sphere for the remainder of the encounter. Each creature in the area gains cover, and ranged attacks have disadvantage against targets within the area. A strong or supernatural wind can disperse the smoke after 1 round."
+        },
+        "medkit": {
+          "name": "Medkit",
+          "description": "As a combat action, you can expend one use of the medkit to make a Healing check, with advantage if Healing is one of your class skills. The result is the number of hit points regained, which you can distribute between yourself and each creature within your reach. The medkit has two uses."
+        },
+        "oxadrenalthalineSyringe": {
+          "name": "Oxadrenalthaline Syringe",
+          "description": "As a move action, you can use the Oxadrenalthaline syringe to revive a creature that you can touch that has 0 hit points, bringing it instantly back to half of its total hit points. The Oxadrenalthaline syringe has one use."
+        },
+        "redOxidiumInjector": {
+          "name": "Red Oxidium Injector",
+          "description": "Once per round, even if it’s not your turn, you can expend one use of the Red Oxidium injector to instantly gain a move action and advantage on your next melee attack roll. The Red Oxidium injector has three uses."
+        }
+      }
+    },
+    "advancedGear": {
+      "name": "Advanced Gear",
+      "equipment": {
+        "advancedWeaponry": {
+          "name": "Advanced Weaponry",
+          "description": "You wield a lethal weapon made by a monomolecular forge or with an experimental firing system. Choose one of your weapons for the mission. Whenever you roll for damage with it, you can reroll the damage dice and use either result."
+        },
+        "ballisticArmor": {
+          "name": "Ballistic Armor",
+          "description": "When you take damage from a ranged attack, you can roll a d8 and subtract the result from the damage. In addition, your maximum number of hit points increases by 5."
+        },
+        "exo-suit": {
+          "name": "Exo-Suit",
+          "description": "While wearing this exoskeleton, your gain an AC of 19 and have advantage on all Strength-based skill checks. Your Stealth checks have disadvantage and you cannot gain advantage on Stealth checks."
+        },
+        "personalAnti-GravSystem": {
+          "name": "Personal Anti-Grav System",
+          "description": "You gain a flying speed of 30 feet."
+        },
+        "targetingSystem": {
+          "name": "Targeting System",
+          "description": "You can spend a move action to gain advantage on your next attack roll against a creature that you can see within 30 feet of you. Additionally, you deal an extra 1d4 damage to the target if your attack hits."
+        }
+      }
+    },
+    "standardFactionGear": {
+      "name": "Standard Faction Gear",
+      "equipment": {
+        "aurichome-ceridiumCapacitor": {
+          "name": "Aurichome - Ceridium Capacitor",
+          "requirement": "Friendly faction standing with Aurichome",
+          "description": "As a move action, you can activate the capacitor. The next spell you cast does not cost you any ceridium. The capacitor has four uses."
+        },
+        "aurichome-kingsVoiceBroadcaster": {
+          "name": "Aurichome - King's Voice Broadcaster'",
+          "requirement": "Friendly faction standing with Aurichome",
+          "description": "As a move action, you can activate or deactivate this device to broadcast AR recordings of King Thog’run II. While in range, all net-enabled display and communication devices within 30 feet of the broadcaster emit Aurikar propaganda and cannot be used for other purposes."
+        },
+        "night-cerberusLenses": {
+          "name": "NIGHT - Cerberus Lenses",
+          "requirement": "Friendly faction standing with NIGHT",
+          "description": "If you observe a creature for at least 1 minute, you gain a +5 bonus to Discernment checks, with advantage, against them for the remainder of the encounter. You also learn the creature’s identity and criminal background, if any."
+        },
+        "night-vPenVisor": {
+          "name": "NIGHT - VPen Visor",
+          "requirement": "Friendly faction standing with NIGHT",
+          "description": "As a combat action, you can place the VPen visor on a grappled or incapacitated organic creature. Expend a use to subject the target to virtual penitentiary, preventing the creature from taking any actions. The target can make a Will check (DC 14) at the end of each of its turns, ending the effect on itself on a success. The visor has two uses."
+        },
+        "unaligned-blackMarketGoods": {
+          "name": "Unaligned - Black Market Goods",
+          "requirement": "Friendly faction standing with Unaligned",
+          "description": "You can equip an extra piece of Standard Gear per mission. You cannot equip two types of the same Standard Gear."
+        },
+        "unaligned-ceratoxin": {
+          "name": "Unaligned - Ceratoxin",
+          "requirement": "Friendly faction standing with Unaligned",
+          "description": "As a move action, you can inject yourself with ceratoxin. Until the end of the encounter, you can take an extra move or combat action on each of your turns. When the encounter ends, you must make a Strength check (DC 14). On a failure, you drop to 0 hit points. On a success, you take 3d6 damage. The ceratoxin has one use."
+        }
+      }
+    },
+    "advancedFactionGear": {
+      "name": "Advanced Faction Gear",
+      "equipment": {
+        "aurichome-aurikarStash": {
+          "name": "Aurichome - Aurikar Stash",
+          "requirement": "Allied faction standing with Aurichome",
+          "description": "Choose any Advanced Gear or Standard Gear. The equipment is hidden in a location of the GM’s choice somewhere in the mission. You know what the location is - such as “in a locker on basement level 3” or “in a trashcan next to the main entrance” - but you must still find it on your own."
+        },
+        "aurichome-orichalchiteStaff": {
+          "name": "Aurichome - Orichalchite Staff'",
+          "requirement": "Allied faction standing with Aurichome",
+          "description": "Your spell DC increases by 1. Once per encounter, when you see a creature within 60 feet of you casting a spell, if you succeed on a Mancy check contested by the creature’s Mancy check, the spell fails, and an amount of ceridium equal to the ceridium cost of the spell (if any) is temporarily stored in the staff. Before the end of the encounter, a creature holding the staff can use the stored ceridium."
+        },
+        "night-blastingCharge": {
+          "name": "NIGHT - Blasting Charge",
+          "requirement": "Allied faction standing with NIGHT",
+          "description": "As a move action, you can stick this explosive on a surface that you can touch. Choose the desired type of charge, expending a use. If you are within 150 feet of the charge, you can detonate it as a move action. The blasting charge has one use. Breach: Each creature within a 30-foot radius of the charge’s explosion must make an Agility check (DC 15), taking 6d10 damage on a failed check, or half as much damage on a successful one. The breach charge deals double damage to objects and structures. Stun: Each organic creature within a 30-foot radius of the charge’s explosion must succeed on a Strength check (DC 15) or become unable to take any actions until the end of the encounter. A creature can repeat the check at the end of each of its turns, ending the effect on itself with a success. Wizard Buster: Until the end of the encounter, each organic creature that attempts to cast a spell within a 30-foot radius of the charge’s explosion suffers from intense neural pain. If a creature tries to cast a spell, it must first succeed on a Will check (DC 15), else the spell fails and its requisite ceridium is wasted. A target suffering pain from the charge can make a Will check (DC 15) at the end of each of its turns. On a successful check, the pain ends."
+        },
+        "night-mind-jack": {
+          "name": "NIGHT - Mind-Jack",
+          "requirement": "Allied faction standing with NIGHT",
+          "description": "As a combat action, you can place the mind-jack on a grappled or incapacitated organic creature, forcing it to carry out some service or refrain from some action or course of activity as you command. The creature must be able to understand you. While mind-jacked, the creature takes 3d10 damage each time it acts in a manner directly counter to your instructions, but no more than once per encounter. You can issue any command you choose, short of an activity that would result in certain death, self-harm, or similar. Should you issue a suicidal command, the creature is free to ignore it without consequences. The mind-jack can be removed as a combat action with a successful Healing or Hacking (DC 15) check. If the check fails by 5 or more, the mind-jacked creature takes 3d10 damage."
+        },
+        "unaligned-holo-cloak": {
+          "name": "Unaligned - Holo-Cloak",
+          "requirement": "Allied faction standing with Unaligned",
+          "description": "At the beginning of each encounter, you gain advantage on Stealth checks, and all melee and ranged attacks made against you incur disadvantage. If you take damage, the cloak ceases to function until the end of the encounter."
+        },
+        "unaligned-toxinCanister": {
+          "name": "Unaligned - Toxin Canister",
+          "requirement": "Allied faction standing with Unaligned",
+          "description": "When you hit an organic creature with a melee or ranged attack, you can expend a use of the canister to poison Entromancy: A Cyberpunk Fantasy RPG 71 the creature, choosing the effect of the toxin. The toxin canister has four uses. Obscura: You are automatically hidden from the target and it cannot attempt to locate you until the end of its next turn. Reaper: Your attack is a critical hit. Slug: The target incurs disadvantage on attack rolls and its speed is halved until the end of its next turn."
+        }
+      }
+    },
+    "standardCybernetics": {
+      "name": "Standard Cybernetics",
+      "equipment": {
+        "audioSensors": {
+          "name": "Audio Sensors",
+          "description": "Your eardrums are equipped with sensors capable of perceiving a wide range of high or low frequency, such as ultrasound and infrasound. You have advantage on Awareness checks based on hearing."
+        },
+        "babel-unityChip": {
+          "name": "Babel-Unity Chip",
+          "description": "A translation software chip is implanted into your cranium, allowing you to understand all languages known to humankind. You can identify, understand, and speak any language you hear or read."
+        },
+        "bioluminescentGland": {
+          "name": "Bioluminescent Gland",
+          "description": "Bioengineered subdermal glands allow you to emit light directly from your body. You can decide to shed light in a 30-foot radius (no action required). The light can be colored as you like."
+        },
+        "biomonitoring": {
+          "name": "Biomonitoring",
+          "description": "Internal implants constantly monitor your physical condition, administering synthetic drugs to fortify your health. Your maximum number of hit points increases by 3 and Healing checks to revive you are made with advantage."
+        },
+        "cosmeticSurgery": {
+          "name": "Cosmetic Surgery",
+          "description": "Beauty may be in the eye of the beholder, but you’ve gone all in, however exotic or conventional that might be, spending many hours under the scalpel. You gain advantage on Personality checks where your physical attraction would matter, at the GM’s discretion."
+        },
+        "holo-weavingHand": {
+          "name": "Holo-Weaving Hand",
+          "description": "This cyberhand allows you to project a simple holographic display thanks to embedded micro-projectors. As a move action, you can create an animated hologram of an object, a creature, or some other visible phenomenon in a space that you can see within 30 Entromancy: A Cyberpunk Fantasy RPG 69 feet of you. The hologram can be no larger than a 10-foot cube. The hologram lasts as you long as you dedicate a move action to maintain it on your turn. The hologram is purely visual; it isn’t accompanied by sound, smell, or other sensory effects."
+        },
+        "larynxModulator": {
+          "name": "Larynx Modulator",
+          "description": "This module allows you to change the sound of your voice, even mimicking a voice that you have heard. A creature or device that hears the voice you make can tell it is an imitation with a successful Discernment check opposed by your Drama check, for which you have advantage."
+        },
+        "nanograft": {
+          "name": "Nanograft",
+          "description": "Your skin, hair, and eyes are covered with synthetic grafts, allowing you to change your look on a whim. You can make yourself look different, altering your skin, hair or eye color at will (no action required). If you wish, you can design colors and patterns, like tattoos, beyond the natural. You have advantage on Drama checks when attempting to disguise yourself."
+        },
+        "phenotypeReduction": {
+          "name": "Phenotype Reduction",
+          "description": "You’ve undergone extensive surgery and chemical treatment to physically appear like one other race of your choice. This change is cosmetic only, as you keep the benefits of your own race. An Awareness check (DC 15) is required to determine your true race."
+        },
+        "smugglingCache": {
+          "name": "Smuggling Cache",
+          "description": "You have a hidden compartment in a part of your body that has been hollowed out. You can retrieve or store an item from it as a move action. The cache can hold up to 5 pounds of material, not exceeding a volume of 1 cubic foot. Awareness checks made by others to find the cache are made with disadvantage."
+        }
+      }
+    },
+    "advancedCybernetics": {
+      "name": "Advanced Cybernetics",
+      "equipment": {
+        "atlas-modelArms": {
+          "name": "[Arms] Atlas-Model Arms",
+          "description": "Your arms are replaced with intimidating robotic arms. When you hit with a melee attack, add 1d6 to the attack’s damage.",
+          "enhanced": "Until the beginning of your next turn, your melee attack deals one extra die of its damage, in addition to the Atlas-Model Arms’ 1d6, when you hit with it."
+        },
+        "magusHands": {
+          "name": "[Arms] Magus' Hands",
+          "description": "Your arms are replaced with slick cyberarms that incorporate ceridium-laced spell conduits. Add +2 to the DCs of your spells, and when you roll damage for a spell you cast, you can reroll any damage die that has a result of 1.",
+          "enhanced": "Until the beginning of your next turn, all checks to resists the effect of your spells are made with disadvantage."
+        },
+        "omni-arms": {
+          "name": "[Arms] Omni-Arms",
+          "description": "Your arms are implanted with cybernetic muscles and microtools. You have advantage on Grappling and Thievery checks.",
+          "enhanced": "Your touch emits an electric charge, frying instantly any device with a Security Grade of Military or below. The device cannot be used until repaired. Artificial and organic creatures are unaffected."
+        },
+        "biometabolism": {
+          "name": "[Body-Skeletal] Biometabolism",
+          "description": "Several of your internal organs have been replaced by bio-implants, increasing your endurance and recovery. Your hit point maximum increases by 15.",
+          "enhanced": "You instantly regain 1d8 hit points. You can enhance this cybernetic while incapacitated."
+        },
+        "ghostwalker": {
+          "name": "[Body-Skeletal] Ghostwalker",
+          "description": "Through complex and lengthy surgical procedures, your skin has been implanted with light-reflecting nanites. Awareness checks made to see you have disadvantage, and you gain advantage on Stealth checks when attempting to hide.",
+          "enhanced": "Until the beginning of your next turn, any creature who targets you with an attack or a harmful spell must first succeed on an Awareness check (DC 14). On a failure, the creature must choose a new target or forgo the attack or spell."
+        },
+        "titanSkin": {
+          "name": "[Body-Skeletal] Titan Skin",
+          "description": "Armor plates have been grafted to your skeleton, and energy-dissipative membranes have been surgically implanted into your skin. You gain a +1 bonus to your AC, and any critical hit against you becomes a normal hit.",
+          "enhanced": "Until the beginning of your next turn, you gain immunity against all attacks or effects that deal 10 or less damage. You take damage as normal from single attacks or effects that deal more than 10 damage."
+        },
+        "asclepiusCortex": {
+          "name": "[Cranial] Asclepius Cortex",
+          "description": "A cortex of microchips and neural implants guide you through complex medical procedures. You gain advantage on Healing checks and can reanimate a creature as a move action. When you successfully reanimate a creature, it regains 1d6 hit points.",
+          "enhanced": "Until the end of your next turn, when you would normally roll one or more dice to restore hit points to a creature that has 0 hit points, you instead use the highest number possible for each die."
+        },
+        "cyberserkerChip": {
+          "name": "[Cranial] Cyberserker Chip",
+          "description": "You are implanted with adrenaline injectors and an aggression-enhancing chip. During the first round of each combat, you can take an extra combat action.",
+          "enhanced": "When you drop to 0 hit points, you can make a Will check (DC 5). If you succeed, you drop to 1 hit point instead. Each time you use the cybernetic in this way, the DC increases by 5 for the remainder of the mission."
+        },
+        "neuralTransmitter": {
+          "name": "[Cranial] Neural Transmitter",
+          "description": "Implanted transmitters and a neural cybernetic interface allow you to communicate with machines. You can attempt to hack or interact with any device or artificial creature within 60 feet of you, regardless of its accessibility.",
+          "enhanced": "When you trigger the lockdown protocol of a device or an artificial creature during a Hacking attempt, you can enhance your cybernetic to prevent the lockdown protocol."
+        },
+        "balorCybersense": {
+          "name": "[Eye] Balor Cybersense",
+          "description": "One of your eyes is replaced by this intimidating cybereye. You gain a +2 bonus to ranged attack rolls and you cannot have disadvantage on ranged attack rolls.",
+          "enhanced": "Until the beginning of your next turn, your ranged attacks ignore damage reduction. Damage immunity still applies."
+        },
+        "sigil-sight": {
+          "name": "[Eye] Sigil-Sight",
+          "description": "Your eyes are replaced with these experimental cybereyes, displaying an augmented reality overlay of the most likely immediate outcome. Once per round, you can roll a d4 and add the result to your attack roll, ability check, or skill check.",
+          "enhanced": "Choose a creature within your line of sight. You divine the first action it will take on its next turn, based on the current circumstances."
+        },
+        "wayfarerSystem": {
+          "name": "[Eye] Wayfarer System",
+          "description": "You are equipped with cybereyes that have bleeding edge sensors. You gain advantage on Awareness checks and can see in the dark within 60 feet of you.",
+          "enhanced": "You can see into and through solid matter for 1 minute. This vision has a radius of 60 feet. To you, solid objects within that radius appear transparent and do not prevent light from passing through them. Leadand ceridium-laced materials block your vision as they normally would."
+        },
+        "condorCyberlegs": {
+          "name": "[Legs] Condor Cyberlegs",
+          "description": "These cyberlegs can generate their own energy fields, propelling their owner and absorbing impact from falling. You can long jump up to 40 feet and high jump up to 30 feet, with or without a running start, and without needing to make a skill check.",
+          "enhanced": "Until the beginning of your next turn, you gain immunity to damage from falling."
+        },
+        "jupitersPillars": {
+          "name": "[Legs] Jupiter's Pillars",
+          "description": "These cyberlegs are equipped with ceridium conductors and reflective plating, deflecting magical energies. You halve all damage from spells.",
+          "enhanced": "When you are the only target of a spell, you can redirect its energy. Choose a creature within 30 feet of you that you can see. It becomes the new target of the spell."
+        },
+        "trailblazerProsthesis": {
+          "name": "[Legs] Trailblazer Prosthesis",
+          "description": "Light and powerful mechanical variants replace your natural legs. You gain advantage on Tumbling checks and Initiative.",
+          "enhanced": "Until the beginning of your next turn, your speed is doubled."
+        }
+      }
+    }
+  }
+}
