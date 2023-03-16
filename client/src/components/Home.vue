@@ -21,7 +21,8 @@
         <Characters v-show="displayToggle === 'characters'" />
         <Lore v-show="displayToggle === 'lore'" />
         <Equipment v-show="displayToggle === 'equipment'" />
-        <Placeholder v-show="displayToggle === 'struct' || displayToggle === 'hacker-battles'" />
+        <Hacking v-show="displayToggle === 'hacker-battles'"/>
+        <Placeholder v-show="displayToggle === 'struct'" />
     </div>
 </template>
 
@@ -29,6 +30,7 @@
     import Characters from "./Characters.vue";
     import Lore from "./Lore.vue";
     import Equipment from "./Equipment.vue";
+    import Hacking from "./Hacking.vue";
     import Placeholder from "./Placeholder.vue";
     export default {
         name: 'Home',
@@ -36,6 +38,7 @@
             Characters,
             Lore,
             Equipment,
+            Hacking,
             Placeholder,
         },
         data: function () {

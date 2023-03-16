@@ -1,0 +1,136 @@
+{
+  "hackingData": {
+    "objectives": {
+      "objective1": {
+        "name": "Objective 1",
+        "description": "Reach 10 bit points (BP)"
+      },
+      "objective2": {
+        "name": "Objective 2",
+        "description": "Spend 20 variables"
+      },
+      "objective3": {
+        "name": "Objective 3",
+        "description": "Execute {} five times"
+      },
+      "objective4": {
+        "name": "Objective 4",
+        "description": "Exchange functions with an opponent four times"
+      },
+      "objective5": {
+        "name": "Objective 5",
+        "description": "Play or cause 5 inactive functions"
+      }
+    },
+    "functions": {
+      "payload": {
+        "boolean": {
+          "name": "Boolean ()",
+          "description": "If there is another Boolean () in play during the Execute {} phase, lose 2 BP.  If there isn’t, gain 4 BP.",
+          "variables": "1"
+        },
+        "double": {
+          "name": "Double ()",
+          "description": "Double the amount of BP that you earn this round.",
+          "variables": "1"
+        },
+        "host": {
+          "name": "Host ()",
+          "description": "Gain a number of BP equal to the number of the socket in which this function is played.",
+          "variables": "1"
+        },
+        "ping": {
+          "name": "Ping ()",
+          "description": "Gain 2 BP. All of your opponents lose 1 BP.",
+          "variables": "1"
+        },
+        "scrape": {
+          "name": "Scrape ()",
+          "description": "Negate any variables that would be gained this round after this function is played. Gain 2 BP.",
+          "variables": "0"
+        }
+      },
+      "encrypt": {
+        "firewall": {
+          "name": "Firewall ()",
+          "description": "Prevent one of your opponents from gaining or losing BP this round.",
+          "variables": "1"
+        },
+        "echo": {
+          "name": "Echo ()",
+          "description": "Reveal the top 3 functions of a deck of your choice. Gain 1 BP.",
+          "variables": "1"
+        },
+        "float": {
+          "name": "Float ()",
+          "description": "Gain a number of variables equal to the number of the socket in which this function is played.",
+          "variables": "Special"
+        },
+        "probe": {
+          "name": "Probe ()",
+          "description": "Reveal one function at random from one of your opponents' hands. Gain 1 BP.",
+          "variables": "3"
+        },
+        "turnkey": {
+          "name": "Turnkey ()",
+          "description": "If another Turnkey () is in play during the Execute {} phase, gain 4 BP.",
+          "variables": "1"
+        }
+      },
+      "cloak": {
+        "defrag": {
+          "name": "Defrag ()",
+          "description": "Search the discard pile for a function of your choice, or select the top function from your deck.  Replace this function with it.",
+          "variables": "1"
+        },
+        "glitch": {
+          "name": "Glitch ()",
+          "description": "Deactivate one of your opponent's functions for this round, turning it into an inactive function.",
+          "variables": "1"
+        },
+        "handshake": {
+          "name": "Handshake ()",
+          "description": "Choose one of your opponent’s functions that is in play.  Exchange it with this function.",
+          "variables": "1"
+        },
+        "reInitialize": {
+          "name": "Re-Initialize ()",
+          "description": "Exchange this function with any inactive function that has been played, making the function active and gaining any benefits from it.",
+          "variables": "1"
+        },
+        "splice": {
+          "name": "Splice ()",
+          "description": "Remove one of your opponent’s functions, requiring them to replace it with another function in their hand.  If they have no functions remaining, replace it with the function at the top of their deck.",
+          "variables": "3"
+        }
+      }
+    },
+    "specializations": {
+      "ace": {
+        "name": "Ace",
+        "cost": "Special",
+        "description": "At the start of the game, remove 3 functions from your deck and set them to the side of your playing area, face up.  You can spend 5 variables to use any one of them instead of one of the functions in your hand, discarding the unused function."
+      },
+      "firestorm": {
+        "name": "Firestorm",
+        "cost": "10 variables",
+        "description": "Prevent all hackers from gaining or losing BP this round."
+      },
+      "interrupt": {
+        "name": "Interrupt",
+        "cost": "5 variables",
+        "description": "When an opponent plays a function, you can immediately require them to discard that function and replace it with the one at the top of their deck."
+      },
+      "overload": {
+        "name": "Overload",
+        "cost": "5 variables",
+        "description": "Lock one of your opponent’s function slots. Any function played into that slot is locked for the following round, and they draw one less function during their Initialize {} phase."
+      },
+      "reset": {
+        "name": "Reset",
+        "cost": "10 variables",
+        "description": "Choose a hacker to immediately discard the remainder of their hand, drawing an equal number of new functions from their deck."
+      }
+    }
+  }
+}
