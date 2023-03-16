@@ -54,6 +54,14 @@
       "name": "Alina Hadzic",
       "description": "Former relief pitcher and owner of a revolutionary-friendly tavern in the RichmondSunset District known as They Might Be Giant, Alina Hadzic is a veteran high auric Terramancer and Aurichome's official Consul for Human-Auric Relations."
     },
+    "andrew": {
+      "name": "Andrew Alyawarre",
+      "description": "An Australian human auromancer, Andrew Alyawarre was coerced by the Unaligned to kidnap Aurichome’s crown prince, allying himself with the auric nation after their help in recovering his sister, Celine."
+    },
+    "celine": {
+      "name": "Celine Alyawarre",
+      "description": " A teenage human chronomancer, Celine Alyawarre was abducted by the Unaligned during the events leading up to the Three Factions War and has since been traveling with her brother, Andrew."
+    },
     "damara": {
       "name": "Damara Drivas",
       "description": "Cunning, driven, and deadly, Damara Drivas is a human Inquisitor and NIGHT's most politically influential, public-facing figure next to the Inquisitor General Marguerite Liu."
@@ -62,9 +70,17 @@
       "name": "Eskander Aradowsi",
       "description": "Spymaster to the King, Eskander Aradowsi holds the dubious honor of being one of the first high auric NIGHT Agents, having recently made the jump to Aurichome after a mission gone south."
     },
+    "fazgha": {
+      "name": "Fazgha Hezdottr",
+      "description": "Queen of Aurichome, Fazgha Hezdottr is a low auric terramancer and the auric nation’s leader in exile after King Thog’run’s disappearance during the Three Factions War."
+    },
     "gloric": {
       "name": "Gloric Vunderfel",
       "description": "Gloric Vunderfel is a gnome Technomancer extraordinaire and King Thog'run's Chief of Technology, despite his long-standing ties with the Unaligned Sigil of Sparks."
+    },
+    "kwame": {
+      "name": "Kwame Daigan",
+      "description": "Kwame Daigan is a high auric shadowmancer and friend to Zzethromandus."
     },
     "madge": {
       "name": "Marguerite Liu",
@@ -93,6 +109,10 @@
     "karthax": {
       "name": "William D. Karthax",
       "description": "(Location Unknown) A war hero and the former Inquisitor General of NIGHT, William D. Karthax was indicted in absentia for collusion against NIGHT while attempting to manipulate both Aurichome and the Unaligned. Karthax was last seen escaping from the Pacific South NIGHT Headquarters with Agrid the Destroyer."
+    },
+    "zzethromandus": {
+      "name": "Zzethromandus",
+      "description": "Zzethromandus is an ancient shadow dragon and friend to Kwame Daigan."
     }
   }
 }

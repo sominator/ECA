@@ -3,6 +3,9 @@
         <div class="classEquip">
             <h3>{{classEquipData.name}}</h3>
             <p>{{classEquipData.description}}</p>
+            <p v-if="classEquipData.name.includes('*')">
+                *Included in <i><span>Entromancy: The Orichite Age</span></i>
+            </p>
         </div>
     </div>
 </template>

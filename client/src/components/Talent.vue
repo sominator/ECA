@@ -2,8 +2,13 @@
     <div>
         <div class="talent">
             <h3>{{talentData.name}}</h3>
-            <p>Requirement: {{talentData.requirement}}</p>
+            <p v-if="talentData.requirement">
+                Requirement: {{talentData.requirement}}
+            </p>
             <p>{{talentData.description}}</p>
+            <p v-if="talentData.name.includes('*')">
+                *Included in <i><span>Entromancy: The Orichite Age</span></i>
+            </p>
         </div>
     </div>
 </template>

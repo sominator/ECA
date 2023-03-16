@@ -15,6 +15,9 @@
                 Ceridium: {{spellData.ceridium}}
             </p>
             <p>{{spellData.description}}</p>
+            <p v-if="spellData.name.includes('*')">
+                *Included in <i><span>Entromancy: The Orichite Age</span></i>
+            </p>
         </div>
     </div>
 </template>

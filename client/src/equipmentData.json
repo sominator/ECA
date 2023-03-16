@@ -24,6 +24,10 @@
       "name": "Espionage Kit",
       "description": "Includes a digitab and all of the accessories your character needs to excel at Drama, Hacking, and Thievery checks."
     },
+    "integratedWeaponSystem": {
+      "name": "Integrated Weapon System (IWS)*",
+      "description": "Cybernetic claws and fangs, arm blades, laser eyes, arm-mounted cannons are all considered 'normal' transmutations of an IWS. Allows your character to make ranged (Devastator) or melee (Reaper) attacks."
+    },
     "lightArmor": {
       "name": "Light Armor",
       "description": "Provides the slimmest of protection but the maximum amount of breathing room for movement."
@@ -40,6 +44,10 @@
       "name": "Nightblade",
       "description": "Single-bladed curved sword reinforced with ceridium plating, and retractable to dagger size. Allows NIGHT Agents to make melee attacks, and DNA tagged to each individual NIGHT Agent."
     },
+    "songblade": {
+      "name": "Songblade*",
+      "description": "Greatsword empowered with the essence of your sound magic. Allows your character to make melee attacks."
+    },
     "vehiclesKit": {
       "name": "Vehicles Kit",
       "description": "Includes a digitab and all of the accessories your character needs to excel at Negotiation, Thievery, and Vehicles checks."
@@ -49,9 +57,25 @@
     "standardGear": {
       "name": "Standard Gear",
       "equipment": {
+        "ammoBelt": {
+          "name": "Ammo Belt*",
+          "description": "You carry special ammunition for your firearm. Choose a special type of ammo, expending a use. Ranged attacks made with your firearm gain the benefits of your chosen special ammo rule until the end of the encounter. You can have only one type of special ammunition active at a time. The ammo belt has two uses. Armor-Piercing Rounds: If your attack hits, you ignore the damage reduction held by the target. Damage immunity still applies. Inferno Rounds: If your attack hits, the target catches fire. Until the target takes a move action to douse the flame, it takes 1d6 damage at the start of each of its turns. Tracer Rounds: If your attack hits, you gain advantage on the next ranged attack you make against this target before the end of your next turn."
+        },
+        "ancientRelic": {
+          "name": "Ancient Relic*",
+          "description": "This mysterious relic dates back to the Orichite Age. Imbued with unknown powers, it is said to bend fate in your favor. When you roll a 1 or a 20 on any d20 roll, you gain 1 point of momentum that lasts until the end of the encounter."
+        },
+        "augmentaryComponents": {
+          "name": "Augmentary Components*",
+          "description": "When casting a spell, you can decide to empower it with the use of a rare orichalcum trinket. Choose the type of trinket you want to sacrifice, expending a use. You can only use one trinket per spell. The augmentary component has four uses. Trinket of Duality: When you cast a spell that targets only one creature and has a range greater than “self,” you can target a second creature within range with the same spell. Trinket of Haste: When you cast a spell that has a casting time of 1 combat action, you can instead cast the spell using 1 move action. Trinket of Reach: When you cast a spell that has a range of 5 feet or greater, you can double the range of the spell. When you cast a spell that has a range of “touch”, you can extend the range of the spell to 30 feet."
+        },
         "ceridiumCapsule": {
           "name": "Ceridium Capsule",
           "description": "You have extra capsules of ceridium at your disposal. You start your mission with 4 additional ceridium."
+        },
+        "droneCarrier": {
+          "name": "Drone Carrier*",
+          "description": "As a combat action, you can deploy a drone within 5 feet of you. Choose the type of drone you want between a mine drone, a spam-0 drone, or a spider drone (see “Chapter 10: Monsters” in the Entromancy core rulebook), expending a use of the drone carrier. The drone can move and attack independently and you control its actions. It has its own turn and actions, playing before or after you in the Initiative order. The drone carrier has two uses."
         },
         "grenadeBelt": {
           "name": "Grenade Belt",
@@ -60,6 +84,10 @@
         "medkit": {
           "name": "Medkit",
           "description": "As a combat action, you can expend one use of the medkit to make a Healing check, with advantage if Healing is one of your class skills. The result is the number of hit points regained, which you can distribute between yourself and each creature within your reach. The medkit has two uses."
+        },
+        "modifiedWeapon": {
+          "name": "Modified Weapon*",
+          "description": "Your weapon has been specifically designed for special operations. Choose one of your weapons and its modification type. The weapon benefits from this modification for the mission. A weapon can have only one modification active at a time. Concealed: Your weapon is compact and easy to hide. Scanners cannot detect it, and a search made to find it while concealed has disadvantage. Reliable: Your weapon is well tried and tested. When you receive a 1 for an attack roll with it, you can reroll the die and must use the new result. Suppressed: Your weapon is designed to strike silently. If you successfully hit a creature with your weapon from a hidden position, the attack deals an extra 1d6 damage."
         },
         "oxadrenalthalineSyringe": {
           "name": "Oxadrenalthaline Syringe",
@@ -78,6 +106,14 @@
           "name": "Advanced Weaponry",
           "description": "You wield a lethal weapon made by a monomolecular forge or with an experimental firing system. Choose one of your weapons for the mission. Whenever you roll for damage with it, you can reroll the damage dice and use either result."
         },
+        "anonymousSuit": {
+          "name": "Anonymous Suit*",
+          "description": "Your clothing incorporates layers of nano-active laced fiber, allowing them to counter surveillance systems and shift their appearance at will. While wearing the suit, you appear hazy and unrecognizable on security footage. In addition, as a combat action, you can completely change the look of your clothes, such as switching from a police uniform to a swimsuit in a matter of seconds. The anonymous suit has no mechanical e¥ect in terms of armor and does not o¥er protection beyond the scope of regular clothing."
+        },
+        "aruspexVisor": {
+          "name": "Aruspex Visor*",
+          "description": "Through these high-tech visor sunglasses you can perceive a vast array of waves, rays, and other phenomena invisible to the naked eyes. You can discern all sources of energy and atmospheric change within 60 feet of you (including heat or cold, ambient toxins, lasers, radiation, ceridium, magical fields, etc.). Additionally, you can automatically detect secret passages or hidden compartments within range, and gain advantage on all Awareness checks. Creatures attempting to hide from you have disadvantage on Stealth checks."
+        },
         "ballisticArmor": {
           "name": "Ballistic Armor",
           "description": "When you take damage from a ranged attack, you can roll a d8 and subtract the result from the damage. In addition, your maximum number of hit points increases by 5."
@@ -86,9 +122,21 @@
           "name": "Exo-Suit",
           "description": "While wearing this exoskeleton, your gain an AC of 19 and have advantage on all Strength-based skill checks. Your Stealth checks have disadvantage and you cannot gain advantage on Stealth checks."
         },
+        "orichalcumDisk": {
+          "name": "Orichalcum Disk*",
+          "description": "As a move action, you can empower this Orichite Age relic, spending up to 4 ceridium. You teleport up to 30 feet per ceridium spent to an unoccupied space that you can see."
+        },
         "personalAnti-GravSystem": {
           "name": "Personal Anti-Grav System",
           "description": "You gain a flying speed of 30 feet."
+        },
+        "portableSecurityCase": {
+          "name": "Portable Security Case*",
+          "description": "Your portable security case contains either a heavy turret or a trojan drone (see “Chapter 10: Monsters” in the Entromancy core rulebook). As a combat action, you can deploy the contents of the case within 5 feet of you, expending one use of it. The artificial creature can act independently, and you control its actions. It has its own turn and actions, playing before or after you in the Initiative order. The portable security case has one use."
+        },
+        "shockShield": {
+          "name": "Shock Shield*",
+          "description": "As a move action, you can position this shield to gain cover behind it. When a creature hits you with a melee attack while you have cover from the shield, the creature takes 1d6 retaliation damage. Once per encounter, you can cause the shield to emit a stunning discharge (this requires no action and can be done even outside of your own turn). All creatures within 5 feet of you must succeed on a Strength check (DC 14) or be unable to take actions until the end of their next turns. Artificial creatures incur disadvantage on this Strength check."
         },
         "targetingSystem": {
           "name": "Targeting System",
@@ -189,9 +237,21 @@
           "name": "Cosmetic Surgery",
           "description": "Beauty may be in the eye of the beholder, but you’ve gone all in, however exotic or conventional that might be, spending many hours under the scalpel. You gain advantage on Personality checks where your physical attraction would matter, at the GM’s discretion."
         },
+        "eideticMatrix": {
+          "name": "Eidetic Matrix*",
+          "description": "This cranial cybernetic adds visible diodes on the back and sides of your skull, drastically improving your cognitive capacities. You can perfectly recall anything you have seen or heard within the past year. In addition, you gain access to an extensive mental archive of information, though properly retrieving and sorting data from it takes time. Once per encounter, you can gain a +5 bonus to a Knowledge check, even if it’s in regard to something your character knows nothing about."
+        },
+        "grapplingWrist": {
+          "name": "Grappling Wrist*",
+          "description": "This synthetic hand includes a hidden compartment with a retractable grappling hook. Once per encounter, as a combat action, you can fire the grappling hook by attempting a ranged attack against a 5-foot square within range (DC 10). The hook has a reach of 60 feet and its cable can support up to 1,000 pounds. If you attempt to hit a creature with the hook, use its AC as the DC for your check. On a success, the target takes 1 damage and is Grappled, only being able to move in a direction that brings it closer to your current location."
+        },
         "holo-weavingHand": {
           "name": "Holo-Weaving Hand",
           "description": "This cyberhand allows you to project a simple holographic display thanks to embedded micro-projectors. As a move action, you can create an animated hologram of an object, a creature, or some other visible phenomenon in a space that you can see within 30 Entromancy: A Cyberpunk Fantasy RPG 69 feet of you. The hologram can be no larger than a 10-foot cube. The hologram lasts as you long as you dedicate a move action to maintain it on your turn. The hologram is purely visual; it isn’t accompanied by sound, smell, or other sensory effects."
+        },
+        "interfaceJack": {
+          "name": "Interface Jack*",
+          "description": "Your head is equipped with a neural jack that you can plug into any network-enabled device within 5 feet of you. Doing so requires a combat action, with automatic success. While jacked into the device, you can add 1d4 to any Awareness, Hacking, Knowledge or Vehicles check related to it. You can only be jacked into one device at a time. You can jack out of the device with a combat action. If the device is destroyed while you are jacked in, you are unable to take actions until the end of your next turn."
         },
         "larynxModulator": {
           "name": "Larynx Modulator",
@@ -205,15 +265,28 @@
           "name": "Phenotype Reduction",
           "description": "You’ve undergone extensive surgery and chemical treatment to physically appear like one other race of your choice. This change is cosmetic only, as you keep the benefits of your own race. An Awareness check (DC 15) is required to determine your true race."
         },
+        "pheroglandSkin": {
+          "name": "Pherogland Skin*",
+          "description": "Your skin is implanted with genetically modified pheromonal glands, allowing you to influence and distract those around you. Organic creatures within 10 feet of you incur disadvantage on all attempted Discernment checks made against you."
+        },
         "smugglingCache": {
           "name": "Smuggling Cache",
           "description": "You have a hidden compartment in a part of your body that has been hollowed out. You can retrieve or store an item from it as a move action. The cache can hold up to 5 pounds of material, not exceeding a volume of 1 cubic foot. Awareness checks made by others to find the cache are made with disadvantage."
+        },
+        "trachealRebreather": {
+          "name": "Tracheal Rebreather*",
+          "description": "This set of artificial lungs and integrated rebreather protects you from most airborne toxins and diseases. You can breathe underwater and do not su¥er from low oxygen environments, such as high altitude or polluted undercity. You gain advantage on checks made to resist the e¥ects of airborne toxins and gas agents."
         }
       }
     },
     "advancedCybernetics": {
       "name": "Advanced Cybernetics",
       "equipment": {
+        "aresWeaponSystem": {
+          "name": "[Arms] Ares Weapon System*",
+          "description": "These cutting edge cyberarms are a©xed with visible integrated weapons and guidance firing systems. Your ranged attacks ignore cover.",
+          "enhanced": "When enhancing this cybernetic, you can fire one of its integrated weapons. You can enhance this cybernetic only once per round. Flamethrower: A gout of flames shoots from your arms. Each creature within a 30-foot cone must make an Agility check (DC 14). A creature takes 2d8 damage on a failed check, or half as much damage on a successful one. Until a creature takes a move action to douse the flame, it takes 1d6 damage at the start of each of its turns. Micro-Missiles: A salvo of micro-missiles travels to a point you choose within 120 feet, exploding on impact. Each creature within a 15-foot-radius sphere centered on that point must make an Agility check (DC 14). A target takes 3d6 damage on a failed check, or half as much damage on a successful one."
+        },
         "atlas-modelArms": {
           "name": "[Arms] Atlas-Model Arms",
           "description": "Your arms are replaced with intimidating robotic arms. When you hit with a melee attack, add 1d6 to the attack’s damage.",
@@ -239,6 +312,11 @@
           "description": "Through complex and lengthy surgical procedures, your skin has been implanted with light-reflecting nanites. Awareness checks made to see you have disadvantage, and you gain advantage on Stealth checks when attempting to hide.",
           "enhanced": "Until the beginning of your next turn, any creature who targets you with an attack or a harmful spell must first succeed on an Awareness check (DC 14). On a failure, the creature must choose a new target or forgo the attack or spell."
         },
+        "spinalBioleech": {
+          "name": "[Body-Skeletal] Spinal Bioleech*",
+          "description": "Your spine is replaced by an experimental symbiotic synthesizer. Through an autophagic process, it redistributes power to other cybernetics. You can enhance a cybernetic by taking 1d6 damage instead of spending ceridium.",
+          "enhanced": "You supercharge your reflex center, causing an attack that would hit you to automatically miss. You can enhance this cybernetic only once per turn."
+        },
         "titanSkin": {
           "name": "[Body-Skeletal] Titan Skin",
           "description": "Armor plates have been grafted to your skeleton, and energy-dissipative membranes have been surgically implanted into your skin. You gain a +1 bonus to your AC, and any critical hit against you becomes a normal hit.",
@@ -259,10 +337,20 @@
           "description": "Implanted transmitters and a neural cybernetic interface allow you to communicate with machines. You can attempt to hack or interact with any device or artificial creature within 60 feet of you, regardless of its accessibility.",
           "enhanced": "When you trigger the lockdown protocol of a device or an artificial creature during a Hacking attempt, you can enhance your cybernetic to prevent the lockdown protocol."
         },
+        "vigiloCranium": {
+          "name": "[Cranial] Vigilo Cranium*",
+          "description": "This cranial implant monitors your brainwaves patterns and injects chemical countermeasures against foreign intrusion, be they truth serums or mind-bending magic. You gain advantage on Will checks and can automatically tell when your thoughts or emotions are being altered by exterior means. Additionally, you also no longer need to sleep.",
+          "enhanced": "You end one mental e¥ect on yourself that is causing you to be controlled, unable to take actions, or is otherwise altering your mental state."
+        },
         "balorCybersense": {
           "name": "[Eye] Balor Cybersense",
           "description": "One of your eyes is replaced by this intimidating cybereye. You gain a +2 bonus to ranged attack rolls and you cannot have disadvantage on ranged attack rolls.",
           "enhanced": "Until the beginning of your next turn, your ranged attacks ignore damage reduction. Damage immunity still applies."
+        },
+        "opticalEyebot": {
+          "name": "[Eye] Optical Eyebot*",
+          "description": "This singular cybereye is in fact a miniature eyebot drone connected to your optic system that can be independently deployed. While the eyebot is in your eye socket, you gain advantage on Awareness checks based on sight, and can bypass any retinal security scan.",
+          "enhanced": "You detach your eyebot to hover within 5 feet of you, giving it the abilities and features of a spider drone (see “Chapter 10: Monsters” in the Entromancy core rulebook). The eyebot can move and attack independently and you control its actions. It has its own turn and actions, playing before or after you in the Initiative order. It can also relay live and archived video footage to you. If the eyebot is destroyed, the cybernetic creates a new one at the end of the encounter."
         },
         "sigil-sight": {
           "name": "[Eye] Sigil-Sight",
@@ -283,6 +371,11 @@
           "name": "[Legs] Jupiter's Pillars",
           "description": "These cyberlegs are equipped with ceridium conductors and reflective plating, deflecting magical energies. You halve all damage from spells.",
           "enhanced": "When you are the only target of a spell, you can redirect its energy. Choose a creature within 30 feet of you that you can see. It becomes the new target of the spell."
+        },
+        "ocelotCyberlegs": {
+          "name": "[Legs] Ocelot Cyberlegs*",
+          "description": "These balanced and multi-segmented cyberlegs can dynamically shift weight and generate kinetic energy, adapting to any situation. You gain advantage on Stealth checks made to move silently, regardless of the surface you are walking on, such as broken glass, metal, and so forth. You also do not trigger security systems that detect changes in pressure based on weight or movement.",
+          "enhanced": "Until the beginning of your next turn, you can move up, down, and across vertical surfaces, including upside down along ceilings, as well as across any liquid surface–such as water, acid, mud, snow, quicksand, or lava–as if it were harmless solid ground."
         },
         "trailblazerProsthesis": {
           "name": "[Legs] Trailblazer Prosthesis",

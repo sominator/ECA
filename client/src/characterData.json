@@ -1,5 +1,280 @@
 {
   "classData": {
+    "auromancer": {
+      "name": "Auromancer",
+      "description": "Auromancers blend melee and magic, utilizing the power of sound to deal devastating damage and generate protective shields.",
+      "image": "Auromancer.png",
+      "stats": {
+        "abilities": {
+          "strength": 2,
+          "agility": 2,
+          "will": 0,
+          "personality": 4
+        },
+        "initiative": 2,
+        "ac": 16,
+        "hp": 24,
+        "ceridium": 8,
+        "meleeAttack": 4,
+        "meleeDamage": "1d8+2",
+        "rangedAttack": 4,
+        "rangedDamage": "1d6+2",
+        "spellAttack": 6,
+        "spellDC": 14,
+        "skills": {
+          "athletics": 2,
+          "awareness": 0,
+          "discernment": 4,
+          "drama": 6,
+          "grappling": 2,
+          "hacking": 0,
+          "healing": 2,
+          "knowledge": 2,
+          "mancy": 2,
+          "nature": 4,
+          "negotiation": 6,
+          "stealth": 2,
+          "thievery": 2,
+          "tumbling": 2,
+          "vehicles": 0
+        }
+      },
+      "archetypes": {
+        "nightpath": {
+          "name": "Bladesinger",
+          "description": "Specialized in devestating combat spells.",
+          "spells": {
+            "litanyOfWar": {
+              "name": "Litany of War*",
+              "action": "Move action",
+              "range": "Self",
+              "duration": "N/A",
+              "ceridium": "2",
+              "description": "You recite a magical litany, empowering your allies. All allies within 60 feet of you that can hear you gain 1 point of momentum that lasts until the end of the encounter."
+            },
+            "singingBlade": {
+              "name": "Singing Blade*",
+              "action": "Move action",
+              "range": "Self",
+              "duration": "1 encounter",
+              "ceridium": "1",
+              "description": "When you make an attack with your songblade, you can decide to make a spell attack instead of a melee attack. Your songblade deals an extra +4 damage when it hits."
+            },
+            "sonicBoom": {
+              "name": "Sonic Boom*",
+              "action": "Combat action",
+              "range": "Self",
+              "duration": "N/A",
+              "ceridium": "2",
+              "description": "You strike the ground with your songblade, unleashing a wave of sonic energy. All creatures within 20 feet of you must make an Agility check against your spell DC, taking 3d6 damage on a failed check or half as much damage on a successful one."
+            },
+            "songShield": {
+              "name": "Song Shield*",
+              "action": "Move action",
+              "range": "Self",
+              "duration": "1 encounter",
+              "ceridium": "1",
+              "description": "You protect yourself with a shield of sonic energy that has 10 hit points. Whenever you take damage, the shield takes the damage instead. If the shield is reduced to 0 hit points from an attack, you take any remaining damage. When you cast a spell, the shield regains a number of hit points equal to three times the ceridium cost of the spell."
+            },
+            "vibrantStrike": {
+              "name": "Vibrant Strike*",
+              "action": "Combat action",
+              "range": "Self",
+              "duration": "N/A",
+              "ceridium": "1",
+              "description": "Empower your strike with vibrant energy, making a melee attack with your songblade. If it hits, you deal your normal melee damage plus 2d8 extra damage, and the target is pushed up to 10 feet away from you."
+            }
+          }
+        },
+        "daypath": {
+          "name": "Siren",
+          "description": "Specialized in mesmerizing aural spells.",
+          "spells": {
+            "bansheesWail": {
+              "name": "Banshee's Wail*",
+              "action": "Combat action",
+              "range": "Self (30-foot cone)",
+              "duration": "N/A",
+              "ceridium": "2",
+              "description": "You screech like a banshee. Each creature within a 30-foot cone must make a Will check against your spell DC. A target takes 3d8 damage on a failed check, or half as much damage on a successful one. If the check is failed by 10 or more, the target is reduced to 0 hit points."
+            },
+            "dissonantHumming": {
+              "name": "Dissonant Humming*",
+              "action": "Combat action",
+              "range": "60 feet",
+              "duration": "N/A",
+              "ceridium": "1",
+              "description": "Your humming resonates within a creature that can hear you within range. A target takes 2d6 damage on a failed check, or half as much damage on a successful one. Artificial creatures take double damage from this spell."
+            },
+            "forgetfulWhisper": {
+              "name": "Forgetful Whisper*",
+              "action": "Combat action",
+              "range": "10 feet",
+              "duration": "N/A",
+              "ceridium": "1",
+              "description": "You magically whisper to an organic creature that can hear you within range. If the target fails a Will check against your spell DC, it forgets what has happened during the current encounter as well as the previous one. No new memories are formed during this encounter, and if pressed at a later time, the target can realize they are missing memories by making a Will check against your spell DC."
+            },
+            "sirensCall": {
+              "name": "Siren's Call*",
+              "action": "Combat action",
+              "range": "Self (60-foot cone)",
+              "duration": "1 round, until the end of your next turn",
+              "ceridium": "2",
+              "description": "You chant like the sirens of legends. Each organic creature in a 60-foot cone must make a Personality check against your spell DC. On a failed check, a target must use two move actions to move towards you on its next turn. If a target reaches you in one move action, it does nothing else for the rest of its turn."
+            },
+            "soundOfSilence": {
+              "name": "Sound of Silence*",
+              "action": "Move action",
+              "range": "Self (20-foot sphere)",
+              "duration": "1 encounter",
+              "ceridium": "2",
+              "description": "No sound can be created within or pass through a 20-foot-radius sphere centered on you. The sphere moves with you, remaining centered on you."
+            }
+          }
+        }
+      },
+      "feats": {
+        "lull": {
+          "name": "Lull*",
+          "description": "After a combat encounter, you and all of your allies that have at least 1 hit point remaining regain 2d6 hit points. This feat can restore a creature to no more than half of its hit point maximum."
+        },
+        "nightingale": {
+          "name": "Nightingale*",
+          "description": "You have the voice of an angel, bewitching others as you speak. If you speak to an organic creature for at least 1 minute, you gain advantage on all Personality checks you make against it, and it incurs disadvantage on Awareness checks made to perceive any creature other than you, until your conversation ends."
+        },
+        "pitchPerfect": {
+          "name": "Pitch Perfect*",
+          "description": "You have uncanny hearing and can hear ultrasonic frequencies. You gain +5 to all hearing-based Awareness checks and can perceive your surroundings and creatures through echolocation within 60 feet of you."
+        },
+        "synchronicHarmony": {
+          "name": "Synchronic Harmony*",
+          "description": "Your bolstering presence unites all. Once per round, when an ally within 30 feet of you makes a skill check or attack roll, you can grant them advantage on that roll."
+        },
+        "thunderingStrike": {
+          "name": "Thundering Strike*",
+          "description": "When you miss with an attack, you accumulate sonic energy, increasing the damage of your next attack that hits by 1d6, up to an extra 4d6. If you cast a spell that inflicts damage, you can decide to apply that extra damage to the spell’s damage instead. Unused accumulated energy dissipates at the end of the encounter."
+        }
+      }
+    },
+    "bionic": {
+      "name": "Bionic",
+      "description": "Bionics are individuals that have heavily enhanced their body with cybernetics, genetic therapies, and pharmaceuticals. It’s common in ceridium-fueled society to find people with at least some modest type of augmentation that enhances their lifestyles, but a Bionic brings this trend to an entirely new level.",
+      "image": "Bionic.png",
+      "stats": {
+        "abilities": {
+          "strength": 3,
+          "agility": 3,
+          "will": 2,
+          "personality": 0
+        },
+        "initiative": 3,
+        "ac": 17,
+        "hp": 27,
+        "ceridium": 5,
+        "meleeAttack": 5,
+        "meleeDamage": "1d8+3",
+        "rangedAttack": 5,
+        "rangedDamage": "1d8+3",
+        "spellAttack": 4,
+        "spellDC": 12,
+        "skills": {
+          "athletics": 5,
+          "awareness": 2,
+          "discernment": 0,
+          "drama": 0,
+          "grappling": 5,
+          "hacking": 4,
+          "healing": 2,
+          "knowledge": 2,
+          "mancy": 2,
+          "nature": 0,
+          "negotiation": 0,
+          "stealth": 5,
+          "thievery": 3,
+          "tumbling": 3,
+          "vehicles": 5
+        }
+      },
+      "archetypes": {
+        "devastator": {
+          "name": "Devastator",
+          "description": "Expert in the use of offensive cybernetics.",
+          "talents": {
+            "entrench": {
+              "name": "Entrench*",
+              "description": "When in cover, you gain an additional +1 bonus to your AC and you halve damage from ranged attacks."
+            },
+            "demolitionMan": {
+              "name": "Demolition Man*",
+              "description": "You’re an expert at using explosive devices and love making an entrance with a splash. You begin each mission with either an extra Grenade Belt or Blasting Charge (selectable at each mission start). Additionally, whenever you deal damage with an explosive device, you can roll the damage twice and use either total."
+            },
+            "devastatorSalvo": {
+              "name": "Devastator Salvo*",
+              "description": "You redirect subsystem power to your Devastator IWS, supercharging it. Once per encounter, when you hit a creature with a ranged attack, you can keep attacking it until you miss, reach the maximum number of attacks, or the creature is reduced to 0 hit points. You can make extra attacks up to your total number of cybernetics. Each successive attack deals extra damage equal to your total number of cybernetics."
+            },
+            "killZone": {
+              "name": "Kill Zone*",
+              "requirement": "Suppressive Fire",
+              "description": "When an enemy creature enters your suppression area for the first time on a turn or begins its turn within it, you can make a ranged attack against it. The attack deals extra damage equal to your total number of cybernetics."
+            },
+            "suppressiveFire": {
+              "name": "Suppressive Fire*",
+              "description": "Using a combat action, you fire unrelentingly at an area within 60 feet of you that you can see, suppressing a 15-foot-radius sphere until the start of your next turn. An enemy creature in the suppressed area has disadvantage on its attack rolls and its speed is halved."
+            }
+          }
+        },
+        "reaper": {
+          "name": "Reaper",
+          "description": "Expert in the use of defensive and utility cybernetics.",
+          "talents": {
+            "cyberCommando": {
+              "name": "Cyber-Commando*",
+              "description": "Your body is the state of the art when it comes to infiltration and survival augmentations. You gain a climbing and swimming speed equal to your speed. Additionally, you can breathe underwater, and when you take a move action to Hide, you can also move up to your speed after hiding as part of the same move action."
+            },
+            "energyShield": {
+              "name": "Energy Shield*",
+              "description": "As a combat action, you can deploy a personal energy shield that lasts until the beginning of your next turn. You gain cover and halve damage from ranged attacks while behind the shield. Additionally, while your energy shield is active, an allied creature can use you as cover. When doing so, the ally also halves damage from ranged attacks."
+            },
+            "mountingDefense": {
+              "name": "Mounting Defense*",
+              "description": "When you are hit by an attack, you increase your AC by 1 until the start of your next turn. This bonus is cumulative up to your total number of cybernetics."
+            },
+            "reaperStrike": {
+              "name": "Reaper Strike*",
+              "description": "You fully deploy your Reaper IWS, ready to hack and slash. Once per round, when you hit a target with a melee attack, you can choose to apply a special e¥ect to that attack. The attack deals an additional 1d6 damage, and you choose one of the following e¥ects: CRUSH – You push the target 5 feet away from you. PIERCE – You can reroll one of the attack’s damage dice. You must use the new result. SLASH – You reduce the speed of the target by 10 feet until the beginning of your next turn."
+            },
+            "spearHead": {
+              "name": "Spear Head*",
+              "description": "Once per round, if a creature makes an attack against you or an ally that you can see, you can immediately move up to your speed towards the creature. If you end your movement within 5 feet of the creature, you can make a melee attack against it."
+            }
+          }
+        }
+      },
+      "feats": {
+        "adaptiveModding": {
+          "name": "Adaptive Modding*",
+          "description": "At the start of each mission you can exchange one of your cybernetics for another one. If you exchange an Advanced Cybernetic, it must be of the same Body Mod as the previous one (ex: [Arms] Atlas Model-Arms would be exchangeable with [Arms] Magus’ Hands)."
+        },
+        "cyberFlesh": {
+          "name": "Cyberflesh*",
+          "description": "You gain two Standard Cybernetics. These cybernetics are in addition to those available to you through mission progress."
+        },
+        "cybergod": {
+          "name": "Cybergod*",
+          "requirement": "Cyberflesh.",
+          "description": "You gain one Advanced Cybernetic. This cybernetic is in addition to those available to you through mission progress."
+        },
+        "cyborg": {
+          "name": "Cyborg*",
+          "description": "Your body is augmented by a combination of bionic organs and pharmaceutical implants. You gain hit points equal to your total number of cybernetics, including any cybernetics that you gain after purchasing this feat. Additionally, at the end of an encounter, if one or more artificial creatures were destroyed, you can use their remains to repair your damaged body. Doing so allows you to regain hit points equal to 1d4 + your total number of cybernetics."
+        },
+        "twinLinkedCore": {
+          "name": "Twin-Linked Core*",
+          "requirement": "Cybergod or Advanced Cybernetics available.",
+          "description": "Once per encounter, you can enhance an Advanced Cybernetic at no cost. Additionally, whenever you enhance one of your Advanced Cybernetics by using ceridium, you can enhance another one simultaneously at no cost."
+        }
+      }
+    },
     "nightAgent": {
       "name": "NIGHT Agent",
       "description": "NIGHT Agents are special agents of the highest order, members of a paramilitary force that is called upon to enforce peace among aurics and humans - sometimes using extreme measures. As a NIGHT Agent, you're skilled in espionage and magical combat, and will have to decide between the paths of shadowmancy and photomancy for your archetype.",
@@ -50,7 +325,7 @@
               "range": "Self",
               "duration": "1 encounter",
               "ceridium": "2",
-              "description": "Cloak yourself in shadows, adding +5 to all Stealth skill checks. Hostile creatures within 10 feet of you incur disadvantage on all attack rolls"
+              "description": "Cloak yourself in shadows, adding +5 to all Stealth skill checks. Hostile creatures within 10 feet of you incur disadvantage on all attack rolls."
             },
             "doubleTrouble": {
               "name": "Double Trouble",
@@ -136,27 +411,22 @@
       "feats": {
         "intoTheFray": {
           "name": "Into the Fray",
-          "requirement": "None",
           "description": "When you take two move actions during your turn, you can attempt a melee attack if you end your second move action within 5 feet of a creature."
         },
         "nightTraining": {
           "name": "NIGHT Training",
-          "requirement": "None",
           "description": "Your deeds and training in the NIGHT organization have gained you a certain political cachet and allow you to pick up cues that most would miss. You have advantage on Awareness checks to spot a hidden creature, and on Discernment checks to determine whether a creature is lying. Additionally, you can use your political sway to gain advantage on all Negotiation checks when you're dealing with law enforcement."
         },
         "preemptiveStrike": {
           "name": "Preemptive Strike",
-          "requirement": "None",
           "description": "Once per round, if a creature attempts to make an attack against you, you can immediately retaliate with a melee attack if you are within 5 feet of it. Your attack is made before the creature's attack."
         },
         "stunningDefense": {
           "name": "Stunning Defense",
-          "requirement": "None",
           "description": "Once per round, when a creature hits you with a melee or ranged attack, you can halve the attack's damage against you."
         },
         "swordMastery": {
           "name": "Sword Mastery",
-          "requirement": "None",
           "description": "Your skill with the nightblade has become such that it defies logic and reason. When attempting a melee attack with your nightblade, you ignore any damage reduction or immunity held by your target."
         }
       }
@@ -207,27 +477,22 @@
           "talents": {
             "doubleShot": {
               "name": "Double Shot",
-              "requirement": "None",
               "description": "Once per round, roll a 1d6. If the result is a 5 or higher, you can make an additional ranged attack this turn."
             },
             "highNoon": {
               "name": "High Noon",
-              "requirement": "None",
               "description": "Once per round, if one of your ranged attacks hits a target, and there is another target adjacent to the first one that you can see, you can make a separate ranged attack against the second target."
             },
             "privateEscort": {
               "name": "Private Escort",
-              "requirement": "None",
               "description": "You gain a +5 bonus on Vehicles skill checks when traveling with at least one more passenger. Additionally, once per round, if you or one of your passengers is hit by a ranged attack, you can make a Vehicles check (DC 10 or at the GM's discretion). If you succeed, halve the attack's damage."
             },
             "quickDraw": {
               "name": "Quick Draw",
-              "requirement": "None",
               "description": "Your ranged attacks have advantage against targets against which you have a higher Initiative."
             },
             "runAndGun": {
               "name": "Run and Gun",
-              "requirement": "None",
               "description": "There's always room for acrobatics, especially during a firefight. Once per round, you can attempt a Tumbling check (DC 10 or at the GM's discretion) to combine a move action with a ranged attack. On a success, you can take an extra move action after your ranged attack. On a failure, you spend your move action as you normally would."
             }
           }
@@ -238,7 +503,6 @@
           "talents": {
             "fireAtWill": {
               "name": "Fire at Will",
-              "requirement": "None",
               "description": "You lay down suppressive fire, forcing your target to stay put - or else. Once per round, when you hit a target with a ranged attack, you gain advantage on ranged attack rolls against that target until the end of your next turn. If the target attempts to take a move action on its turn, you can immediately make a ranged attack against it, with advantage, as well."
             },
             "shootToKill": {
@@ -248,17 +512,14 @@
             },
             "snipe": {
               "name": "Snipe",
-              "requirement": "None",
               "description": "Spend a move action, aiming at a target. Until the beginning of your next turn, add +2 to your ranged attack roll and damage against that target and extend your critical range against that target to 19-20."
             },
             "sprayAndPray": {
               "name": "Spray and Pray",
-              "requirement": "None",
               "description": "Sometimes a hammer will do when a screwdriver won't. Roll 1d4 and subtract the result from your attack roll, adding it to your damage roll."
             },
             "tacticalSupport": {
               "name": "Tactical Support",
-              "requirement": "None",
               "description": "You gain advantage on Initiative. Whenever you roll Initiative, you can pick one of the rolls for yourself, and an ally that can hear you can replace their Initiative roll with the other."
             }
           }
@@ -267,27 +528,22 @@
       "feats": {
         "fullMatrices": {
           "name": "Full Matrices",
-          "requirement": "None",
           "description": "Your honed reflexes and uncanny sense of danger have saved you more than once. Once per round, when an attack hits you, make a Tumbling check, with a DC equal to the attack roll of your target. If you succeed, you take half damage, rather than full damage, from the attack."
         },
         "knowledgeIsPower": {
           "name": "Knowledge is Power",
-          "requirement": "None",
           "description": "You've had to study all manner of opponents to ensure your survival. Once per round, you can make a Negotiation check against a target's AC. If you succeed, you have advantage on attack rolls against that target until the beginning of your next turn."
         },
         "revolutionaryConnections": {
           "name": "Revolutionary Connections",
-          "requirement": "None",
           "description": "Your networking has made the most impossible of connections probable. Double your skill bonus for all Negotiation checks with factions for which you have at least Neutral standing."
         },
         "secondChance": {
           "name": "Second Chance",
-          "requirement": "None",
           "description": "Once per mission, if the damage from a creature's attack will reduce your hit points to 0 or below, reduce your hit points to 1 instead."
         },
         "thousandYardStare": {
           "name": "Thousand Yard Stare",
-          "requirement": "None",
           "description": "If you have advantage on a ranged attack, you can forgo the advantage to double your damage for that attack."
         }
       }
@@ -428,7 +684,6 @@
       "feats": {
         "deviousPrototype01": {
           "name": "Devious Prototype 0.1",
-          "requirement": "None",
           "description": "You begin building the framework for a companion weapon, taking the form of a mobile turret, drone, or similar device. At the start of each mission, you can decide how you've modified your prototype by choosing between Assault, Defender, Explorer or Medical (consult the 'Devious Prototype' section on Page 36). The Devious Prototype can move and attack independently of its master, and can take basic actions on your behalf, such as delivering spells with the touch requirement. It has its own turn and actions, playing before or after you in the Initiative order. It can also transmit your voice and relay live and archived video footage to you. Unless indicated otherwise in its statblock, the Devious Prototype has an AC of 10, 10 hit points, and its own ability bonuses. Unless empowered by other spells, it can make a ranged attack once per round as a combat action. Its speed is indicated in its statblock, based on the type of prototype you choose."
         },
         "deviousPrototype02": {
@@ -448,7 +703,6 @@
         },
         "pinballWizard": {
           "name": "Pinball Wizard",
-          "requirement": "None",
           "description": "Your constant tinkering with spells allows you to broaden their effectiveness once in a while. Once per round, you can add one target within range to any single-target Technomancy spell you cast, doubling the ceridium cost for that spell."
         }
       }
@@ -589,12 +843,10 @@
       "feats": {
         "arcaneWard": {
           "name": "Arcane Ward",
-          "requirement": "None",
           "description": "Your understanding of magic allows you to better defend yourself against it. You gain advantage on checks made against spells and other magical effects."
         },
         "holisticHealer": {
           "name": "Holistic Healer",
-          "requirement": "None",
           "description": "Your intuitive understanding of all life grants you advantage on Healing checks, and you can add your Nature skill bonus to your Healing checks in addition to any other bonuses. Whenever you use a spell to restore hit points to a creature, the creature regains an additional 1d6 hit points."
         },
         "reflectiveWard": {
@@ -604,12 +856,10 @@
         },
         "strengthOfTheEarth": {
           "name": "Strength of the Earth",
-          "requirement": "None",
           "description": "You've entrenched yourself into the natural world, occasionally being able to draw magic from the earth itself. When you cast a spell, roll a d6. On a 5 or higher, you regain the ceridium cost of the spell."
         },
         "teamSpirit": {
           "name": "Team Spirit",
-          "requirement": "None",
           "description": "You know from experience that while one wolf is scary, an entire wolf pack is terrifying. Once per round, when an ally within your range hits a target that you can see, you can make a ranged attack against the same target."
         }
       }
@@ -660,7 +910,6 @@
           "talents": {
             "assassinsQuarry": {
               "name": "Assassin's Quarry",
-              "requirement": "None",
               "description": "You've trained yourself to block out all distractions as you close in on your prey. Once per encounter, choose one creature that you can see within 60 feet of you. The first time each turn that you hit that target with a melee attack, it takes an extra 1d6 damage from the attack. If you reduce your quarry to 0 hit points, you can immediately take an extra move and combat action, even if you've already taken a move and combat action this turn."
             },
             "bloodInTheWater": {
@@ -670,12 +919,10 @@
             },
             "faceInTheCrowd": {
               "name": "Face in the Crowd",
-              "requirement": "N/A",
               "description": "You've learned that the best way to remain unseen is by blending in. You gain a +6 bonus on all Drama checks when attempting to appear inconspicuous, impersonate someone, or utilize a disguise."
             },
             "killOrBeKilled": {
               "name": "Kill or Be Killed",
-              "requirement": "None",
               "description": "You leave nothing to chance. If you're able to observe a creature for 1 round before engaging in combat, your first melee attack against that creature automatically hits for critical damage."
             },
             "stareDown": {
@@ -691,27 +938,22 @@
           "talents": {
             "highwayRobbery": {
               "name": "Highway Robbery",
-              "requirement": "None",
               "description": "Once per round, when you hit with a melee attack, you can make a Stealth check, contested against the target's Awareness check. If you succeed, you have advantage on attack rolls against that target until the end of your next turn."
             },
             "hitAndRun": {
               "name": "Hit and Run",
-              "requirement": "None",
               "description": "Once per round, when you reduce a creature to 0 hit points, you can take an extra move action. If you finish this move action within 5 feet of a hostile creature, you can make a melee attack."
             },
             "sandInTheEyes": {
               "name": "Sand in the Eyes",
-              "requirement": "None",
               "description": "If you have advantage on a melee attack, you can forgo the advantage and make a regular attack roll to attempt to stun an organic creature. If you hit, you deal damage as you normally would, and the target must succeed on a Will check with a DC equal to your attack roll. On a failure, the target cannot take combat actions until the beginning of your next turn."
             },
             "smokeAndMirrors": {
               "name": "Smoke and Mirrors",
-              "requirement": "None",
               "description": "When you make a Stealth check in obscured terrain, such as smoke, mist, rain, or snow, you gain a +5 circumstantial bonus to the check."
             },
             "vanish": {
               "name": "Vanish",
-              "requirement": "None",
               "description": "Once per encounter, if an attack would reduce you to 0 hit points, make a Stealth check. If the result is greater than or equal to the attack roll that hit you, you can negate all of the incoming damage and immediately take a move action."
             }
           }
@@ -720,22 +962,18 @@
       "feats": {
         "compromisingStrike": {
           "name": "Compromising Strike",
-          "requirement": "None",
           "description": "Your ability to utilize distractions allows you to deal more damage in melee combat. Add 1d8 damage to any melee attack performed against a target that is already engaged in melee combat with another character, or to any melee attack for which you have advantage, including attacks made from Stealth."
         },
         "scoundrelsLuck": {
           "name": "Scoundrel's Luck",
-          "requirement": "None",
           "description": "At the start of a mission, roll three d20s and record each result. Throughout the mission, you can replace any check made by you or a creature that you can see with one of these rolls. You must declare your intention to do so before the roll occurs, and you can replace a roll in this way only once per round. Each roll can only be used once."
         },
         "shadowDealer": {
           "name": "Shadow Dealer",
-          "requirement": "None",
           "description": "Your connections open doors that appear locked to others. Treat your faction standing with each faction as one level higher than your faction points would indicate, even if doing so grants you Allied faction standing with more than one faction."
         },
         "sprintAttack": {
           "name": "Sprint Attack",
-          "requirement": "None",
           "description": "When opportunity strikes, you're quick to comply. Once per round, you can take a double move action and still take a combat action."
         },
         "unendingFlow": {
@@ -766,6 +1004,10 @@
     "lowAuric": {
       "name": "Low Auric",
       "description": "Too Burly to Care. 'Freak.' 'Tusker.' 'Pig face.' Most humans think of you as stupid or violent, and you've experienced your fair share of derision. As the most imposing and phenotypically striking underrace, your path hasn't been easy, but has forged you into a sturdy opponent with an attitude to match. The other races can use you as cover, and if at any time you have less than half of your hit points remaining, you gain advantage on all Strength-based checks, including skill checks."
+    },
+    "troll": {
+      "name": "Troll*",
+      "description": "Not Just a Pretty Face. Your genetic makeup provides for an even more extreme reaction to ceridium exposure than that of low aurics. You tower over most other humanoids, with menacing tusks that instill even the most hardy opponents with fear. The other races can use you as cover, and you gain advantage on all Negotiation checks made to intimidate a creature by drawing attention to your size. Additionally, you gain advantage on all contested Grapple checks made to resist another creature’s attempt to Grapple you."
     }
   },
   "destinyData": {
@@ -776,28 +1018,70 @@
       "talents": {
         "deftStrikes": {
           "name": "Deft Strikes",
-          "requirement": "None",
           "description": "Replace your melee attacks with unarmed strikes, keeping your attack modifier, but adding 1d6 to your melee damage when you hit."
         },
         "maestro": {
           "name": "Maestro",
-          "requirement": "None",
           "description": "Choose one of your known spells. Once per encounter, you can cast this spell at no cost, even if you are out of ceridium."
         },
         "prodigy": {
           "name": "Prodigy",
-          "requirement": "None",
           "description": "Add +4 to one skill of your choosing. In addition, once per encounter, you can gain advantage on a check involving that skill."
         },
         "speedRunner": {
           "name": "Speed Runner",
-          "requirement": "None",
           "description": "Your speed increases by 20 feet. You can move up sheer walls or other vertical surfaces as long as you end your movement on an horizontal surface."
         },
         "tumbleDry": {
           "name": "Tumble Dry",
-          "requirement": "None",
           "description": "Any time you’re required to roll an Agility check, you can roll a Tumbling skill check instead. If the check allows you to take half damage, you instead take no damage on a successful check, or half damage on a failed check."
+        }
+      }
+    },
+    "chronomancer": {
+      "name": "Chronomancer",
+      "requirement": "Friendly or higher faction standing with a faction",
+      "description": "Through your hands flows the power to shape and control time; your mind must be sharp if you hope to bend eternity to your will. As you hum and chant words of ancient power, the sands of time shift and answer your call, rewriting reality and the fluid timeline of events.",
+      "spells": {
+        "controlPerson": {
+          "name": "Augury*",
+          "action": "Combat action",
+          "range": "Self",
+          "duration": "N/A",
+          "ceridium": "2",
+          "description": "You peer beyond the veil of time, receiving a vision of the past or possible future. You provoke a vision by focusing on a subject: a person, place, or object. This vision gives you a sudden hint that aids you in some way, like a window into past events or a premonition of what may come. Such a vision may manifest as seeing yourself walking into a trap, or perceiving the face of an ally that you have yet to meet, or a precognition of a murder that will happen. If the vision proves relevant, you gain advantage on all Personality and Will-based checks, including skill checks, until the end of the encounter it involves."
+        },
+        "bulletTime": {
+          "name": "Bullet Time*",
+          "action": "Move action",
+          "range": "Self or 30 feet",
+          "duration": "1 round, until the end of your next turn",
+          "ceridium": "2",
+          "description": "You attune an ally with the flow of time. Choose a creature within range. The creature can take an extra move action and combat action on its turn. In addition, the creature’s speed is doubled, and it gains a +1 bonus to its AC."
+        },
+        "lostInTime": {
+          "name": "Lost in Time*",
+          "action": "Combat action",
+          "range": "30 feet",
+          "duration": "1 encounter",
+          "ceridium": "2",
+          "description": "A target that you can see within range is trapped out of time, vanishing for the duration. When the effect ends, the target reappears in the space it left or in an unoccupied space nearest to that space if it’s occupied. At the end of each of its turns, the target can make a Will check against your spell DC to attempt to end the eect."
+        },
+        "rehearsal": {
+          "name": "Rehearsal*",
+          "action": "Special (the casting of this spell requires no action)",
+          "range": "Self",
+          "duration": "N/A",
+          "ceridium": "Special (costs 1-4 ceridium to cast)",
+          "description": "You rewind time, rewriting its flow. You can cast this spell anytime during your turn. When you cast the spell, choose one of the options below for its eect, and spend the indicated cost in ceridium. You are the only one aware that time has been altered. Make Perfect (1 ceridium): When you roll a d20, you can cast this spell to roll an additional d20. You can choose to do so after you roll the die, but before the outcome is determined. You choose which of the d20s is used to determine the result of the roll. Rewind (2 ceridium): You rewind yourself immediately to the start of a combat or move action you just took, undoing its outcome. For all purposes, this action never occurred, including any loss of ceridium, equipment, or hit points (you still spend the ceridium cost of this spell). Uncanny Foresight (4 ceridium): You open a portal in time to gain a piece of gear that you forgot to take with you at the beginning of the mission or have otherwise misplaced. This gear must be available to you (see gear availability in Chapter 6: Equipment [p. 67] of the Entromancy core rulebook). If the gear normally has multiple uses, it has only 1 use left."
+        },
+        "timeCapsule": {
+          "name": "Time Capsule*",
+          "action": "Combat action",
+          "range": "Self (15-foot radius hemisphere",
+          "duration": "1 encounter",
+          "ceridium": "2",
+          "description": "You create an impenetrable and immobile time bubble around yourself. Creatures and objects are barred from passing through it. Spells and other magical eects can’t extend through the bubble or be cast through it. No time passes outside the bubble, while time flows as normal within it. The spell ends if you step outside the bubble, or if you use a move action to end it."
         }
       }
     },
@@ -855,27 +1139,22 @@
       "talents": {
         "ghostInTheMachine": {
           "name": "Ghost in the Machine",
-          "requirement": "None",
           "description": "You cannot be tracked through the network, except by other Infiltrators who have the Hide and Seek talent. Additionally, you can take 1 minute to create an alternative digital identity on the network that can withstand scrutiny for the length of 1 encounter, assigning it features such as history, professions, known locations, faction standing, and so on."
         },
         "hatTrick": {
           "name": "Hat Trick",
-          "requirement": "None",
           "description": "All of your Hacking checks can be made with advantage, and you can hack a device or artificial creature in half the time usually required. This feature stacks with the spell effects of Black Hat and White Hat."
         },
         "hideAndSeek": {
           "name": "Hide and Seek",
-          "requirement": "None",
           "description": "You’re able to locate anyone on the network, at any time, if you’ve been within 30 feet of them and physically seen them with your own eyes. Additionally, if you suspect a creature is hidden within 60 feet of you, you can make an Awareness check, with advantage. If the result is higher than the target’s Stealth bonus, you discern their exact location."
         },
         "tacticalGenius": {
           "name": "Tactical Genius",
-          "requirement": "None",
           "description": "As a move action, you can choose a willing ally within 60 feet of you that can hear you. Your ally can immediately take a move action."
         },
         "unfairAdvantage": {
           "name": "Unfair Advantage",
-          "requirement": "None",
           "description": "If you’re able to study the layout of a location, either physically or through the network, for 1 hour, each creature of your choice that remains within 30 feet of you (including yourself) gains a +5 bonus to Stealth checks and can’t be tracked through the network within the confines of that location for the following 24 hours."
         }
       }
@@ -929,32 +1208,26 @@
     },
     "weaponMaster": {
       "name": "Weapon Master",
-      "requirement": "None",
       "description": "Some heroes are born; others are forged through discipline and forbearance. You have become a master of arms, dedicating your life to the study of weaponry.",
       "talents": {
         "circleSlash": {
           "name": "Circle Slash",
-          "requirement": "None",
           "description": "Once per round, if you successfully hit with a melee or ranged attack against a target, you can attempt an additional melee or ranged attack against a separate target that is adjacent to the first."
         },
         "defendTheWeak": {
           "name": "Defend the Weak",
-          "requirement": "None",
           "description": "Your ability to bolster morale in the thick of battle is unparalleled. Once per round, when an ally within 5 feet of you that you can see is reduced to 0 hit points, they are instead reduced to 1 hit point."
         },
         "quickRiposte": {
           "name": "Quick Riposte",
-          "requirement": "None",
           "description": "As a move action, you adopt a defensive posture until the beginning of your next turn. You gain a +4 bonus to your AC against all melee and ranged attacks made against you. If an attack misses you, you wound your opponent, inflicting your choice of either your base melee or ranged weapon damage, not including any bonuses."
         },
         "smashAndGrab": {
           "name": "Smash & Grab",
-          "requirement": "None",
           "description": "When you have advantage on an attack roll, you can forgo the advantage to attempt to disarm your target as part of your attack. The target must make a Strength check, with a DC equal to your attack roll. On a failed check, it drops an object of your choosing. The object lands at its feet and the target is unable to use it until it takes a move action to pick it back up. Your attack hits or misses the target’s AC and deals damage as it normally would."
         },
         "Virtuoso": {
           "name": "Virtuoso",
-          "requirement": "None",
           "description": "Your critical range extends to 19-20 for one ranged or melee weapon of your choice. If your critical range has already been extended by another bonus, it increases again by two points (from 19-20 to 17-20, 17-20 to 15-20, and so on). Additionally, whenever you roll a 1 on a damage die for an attack you make with that weapon, you can reroll the die, but must use the new result, even if it is another 1."
         }
       }

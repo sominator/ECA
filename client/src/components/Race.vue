@@ -3,6 +3,9 @@
         <div class="race">
             <h3>{{raceData.name}}</h3>
             <p>{{raceData.description}}</p>
+            <p v-if="raceData.name.includes('*')">
+            *Included in <i><span>Entromancy: The Orichite Age</span></i>
+            </p>
         </div>
     </div>
 </template>

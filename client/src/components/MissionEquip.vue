@@ -9,6 +9,9 @@
             <p v-if="missionEquipData.enhanced">
                 Enhanced: {{missionEquipData.enhanced}}
             </p>
+            <p v-if="missionEquipData.name.includes('*')">
+                *Included in <i><span>Entromancy: The Orichite Age</span></i>
+            </p>
         </div>
     </div>
 </template>
