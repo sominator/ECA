@@ -1,0 +1,345 @@
+{
+  "structData": {
+    "globalObjective": {
+      "name": "Global Objective",
+      "module2": {
+        "1": "Scope the Scene. You’re required to investigate a new Oxidium storefront as a potential safehouse. Secure it with as much stealth as you can muster.",
+        "2": "Warp the Wetwork. A rival seeks to eliminate a group of mercenaries that has become a thorn in their side. Ensure the rival is unsuccessful in their attempt.",
+        "3": "Smash and Grab. A local kingpin is in possession of a ceridium artifact that you’ve been tasked with liberating - by any means necessary.",
+        "4": "Show, but Don’t Tell. You’ve been asked to enable augmented reality displays around the district with propaganda digads, to further foment a heated political rivalry.",
+        "5": "Ghost the Machines. The drones of a local facility have reportedly been acting of their own accord. Investigate and neutralize as necessary.",
+        "6": "Rouse the Rabble. Civic unrest is bad for the status quo, and you’ve been tasked with stirring the pot. Infiltrate the nearby revolutionary cell and force their hand.",
+        "7": "Geek the Mancer. Rumors abound of a mage that has been summoning ceridium-twisted horrors from the depths of the void.  Unearth their operation and eliminate any threats.",
+        "8": "Find the Half Auric. A half auric dignitary has gone missing, and there will be hell to pay if they don’t reappear soon. Investigate their disappearance and return them to safety.",
+        "9": "Canvas the Undercity. An underrace township has been harboring a known fugitive, and it’s up to you to retrieve them for questioning.",
+        "10": "Rally the Ragers.  A distraction is required to disrupt a rival contraband exchange. Riling up a group of ragers should do.",
+        "11": "Watch and Learn.  A secret meeting between opposing factions is about to occur in an abandoned area of town.  Find out what transpires and report back - but don’t let your presence be known.",
+        "12": "Secure the Source.  A naturally-occuring source of ceridium, known as blue orichalcum, has been located.  Secure it from the grasp of all potential rivals."
+      },
+      "module3": {
+        "initialization": {
+          "1": "Stock the Stores. You’re tasked with stockpiling arms and armaments for the coming time travel. Locate and obtain a cache of contraband weapons - by any means necessary.",
+          "2": "Save the Scientists. A rival group has kidnapped several of the leading ceridium researchers in the area, whose work is crucial in ensuring the time portal is opened correctly.  Secure their notes, and if possible, the scientists themselves.",
+          "3": "Guard the Geomancers. The time portal isn’t going to build itself, and a team of geomancers has been hired to construct the blue orichalcum-laced stone gateway. Despite attempts to keep the location secret, you’ve been hired to ensure their work isn’t disturbed by an opposing faction - or worse.",
+          "4": "Can the Cultists. A group of chronomancer wannabes have set up shop, disseminating falsehoods and unrest among the locals.  Handle them before they can do any real damage."
+        },
+        "compilation": {
+          "1": "Count the Ceridium. Your benefactors have secured enough ceridium and blue orichalcum to begin enchanting the chronomancy portal, but one of the reserves has gone missing. Obtain it without delay, dealing with anything - or anyone - that stands in your way with utmost haste.",
+          "2": "Destroy the Drones. The technomancy required to power the time portal has caused drones in the area to start behaving erratically, and in some cases, with violence. Defend the location from the aggressive machines.",
+          "3": "Place the Phylactery. A countercharm is required to anchor a path back from the Orichite Age, but the necessary location is in enemy territory. Install the phylactery drawing as little attention to yourself as possible.",
+          "4": "Restore the Reserves. Something’s gone awry with the ceridium grid that will power all operations related to the chronomancy portal.  Find out what the problem is, and fix it."
+        }
+      },
+      "module4": {
+        "execution": {
+          "1": "Acquire the Alchemancy. The world may be ending, but there’s still knowledge to be gained. An ancient tome on alchemancy is rumored to have phased between epochs; locate it for safekeeping until this all blows over.",
+          "2": "Control the Chaos. A group of ceridium scientists are attempting to study the time rifts while they’re open, but they can’t do much without protection. Escort them to the location and make sure their research is undisturbed.",
+          "3": "Catch the Counterspies.  A rogue group of agents is making off with a blue orichalcum device that could be valuable, and powerful.  Catch them before they disappear with it.",
+          "4": "Stow the Stash. It’s become apparent that blue orichalcum is orders of magnitude more powerful than its synthetic counterpart in ceridium. Secure as much of it as possible while the rest of the world is occupied with armageddon."
+        },
+        "restoration": {
+          "1": "Root out the Rebels. A rogue group of agents are doing everything they can to disrupt the process of closing the time rifts. Make certain they don’t get in the way.",
+          "2": "Battle the Beasts. All manner of ancient beasts are running rampant throughout the area, making attempts to close the time rifts impossibly difficult.  Turn back the tide to allow the mancers at work to ply their craft.",
+          "3": "Tear Down the Threshold. One of the originally constructed chronomancy portals is a hub of activity, and needs to be destroyed. Do what needs to be done.",
+          "4": "Subvert the Sorcerers. The chaos magician Enrid Ogreson and his Masters of Time are at the heart of the Orichite Age chronomancy that continues to pull time in opposing directions.  Stop the entromancer and his lieutenants before they can do even more damage to the time stream."
+        }
+      }
+    },
+    "factionObjective": {
+      "name": "Faction Objective",
+      "module2": {
+        "1": "Show Mercy. Your faction is attempting to extend an olive branch towards a rival faction.  Neutralize a situation with a member or group of the opposing faction that could lead to hostility, if it weren’t for your quick thinking and aptitude for negotiation.",
+        "2": "Sow Chaos. If your faction can’t completely control a resource, perhaps limiting that resource from the grasp of the other factions will do just as well.  Hamper another faction’s access to a resource by disrupting it in some way.",
+        "3": "Gain Footing. The balance of power between factions tips easily, and you can be the archetype of change.  Gain control of a resource, group, or location that further bolsters your faction’s positioning in the region.",
+        "4": "Turn Coat. Nothing stings a faction more than a defector’s betrayal.  Turning a rival faction member to your cause, however briefly, will go a long way towards enhancing your status.",
+        "5": "Double Agent. Misdirection can be a powerful tool, and you’re the pebble that will set off a ripple of misinformation on the network and beyond. Pose as a member of a rival faction in a pivotal interaction to initiate the deception.",
+        "6": "Scrape Nets. Your faction’s network has been compromised, and it won’t take time for the vultures to circle. Re-establish control by making allies that can help, or fix the problem yourself."
+      },
+      "module3": {
+        "1": "Dodge the Defectors. A rival faction has garnered support from a splinter group that was once aligned with your faction. They’ve been ordered to stop you at all costs, but your benefactors have proven to have little patience for delays.",
+        "2": "Sabotage the Supply Chain. Your faction can buy time to organize themselves by making sure others aren’t getting the materials they need. Interrupt a convoy of supplies, recovering as much of them as you can for your faction.",
+        "3": "Assess the Algorithm. An independent entity has developed a new program that is reported to speed up the technomancy interface required to generate the time portal. It’s being stored on an off-network mainframe in another faction’s territory, requiring you to head behind enemy lines to investigate.",
+        "4": "Bolster the Barricade. A defense network has been established around your faction’s chronomancy portal, but there’s been a breach not far from your location. Reinforcements have been called in, yet it’s only a matter of time before they’re overwhelmed."
+      },
+      "module4": {
+        "aurichome": {
+          "1": "Kidnap the King. Thog’run II has been located in the depths of one of Enrid Ogreson’s Orichite Age prisons, now melded in time with your location in the Bay Area.  Extract the sovereign of Aurichome and return him to the throne.",
+          "2": "Parse the Parchments. An ancient orichite library has appeared, with scrolls that detail magics and histories long forgotten. Determine which of them will be useful for the current time, and protect them from potential rival investigators.",
+          "3": "Chart the Challengers. Queen Fazgha’s memory is long, and her retribution unforgiving. Espy the would-be challengers to Aurichome’s safety during this tremulous time, making note of their activities for future retaliation.",
+          "4": "Contact the Crown. The impossible opportunity to parley with the orichite queen Khesta Ogreson is now only improbable. Make way to her court through one of the rifts and determine if an alliance through time can be established."
+        },
+        "night": {
+          "1": "Retrieve the Rogue. The rogue agent Damara Drivas is to be court martialed for her crimes during the Three Factions War. Ascertain the inquisitor’s whereabouts in the Orichite Age and bring her in for questioning.",
+          "2": "Knick the Nightblades. A storehouse of nightblades, similar to the ones used by NIGHT agents but several times more powerful, has been located in the Orichite Age. Find and secure them from all rivals.",
+          "3": "Create the Capsule.  You’ve been equipped with a ceridium core and shell that can capture the essence of a chronomancy rift, to be studied later.  Create the time capsule covertly, given that any news of your activity will not be taken kindly by the other factions.",
+          "4": "Barricade the Base. Portions of the Pacific South NIGHT headquarters have been phasing in and out of time, reappearing in other locations. Keeping NIGHT secrets safe is of utmost importance, and you’re required to protect your given location from the inevitable larceners."
+        },
+        "unaligned": {
+          "1": "Entreat the Entromancer. It’s rumored that Agrid the Destroyer, once employed by the Unaligned and thought to have met his demise at the hands of Eskander Aradowsi, has reappeared in the Orichite Age. Find the entromancer and see if he can be brought back into the fold.",
+          "2": "Rescue the Residents. The Unaligned are still reeling from their association with Karthax’s xenophobic antics.  Staging a civilian rescue mission from the chronomancy rifts would be a small but important step towards clearing the faction’s name.",
+          "3": "Gather the Gemstones. Now is the time to procure the magical implements and fetishes of the past. Ascertain the location of a rumored cache of gems and retrieve it before our opponents can do the same.",
+          "4": "Seed the Storyline. While the rest of the world is focused on the present, the Unaligned can begin spinning the narrative for the future. Hack into the news media network mainframe to start seeding the stories that will shape the months to come."
+        }
+      }
+    },
+    "factionPoints": {
+      "name": "Faction Points",
+      "module2": {
+        "1": "You gain 1d4 faction points for the relevant faction by completing the task, but lose 1d4 faction points with all other factions.",
+        "2-3": "You gain 1d4 faction points for the relevant faction by completing the task, but lose 1d4 faction points with another faction that is involved.",
+        "4-6": "You gain 1d4 faction points for the relevant faction by completing the task."
+      }
+    },
+    "locations": {
+      "name": "Locations",
+      "module2": {
+        "1-2": "Aurichome",
+        "3-4": "Columbus-Farrow",
+        "5-6": "Downtown",
+        "7-8": "East Bay",
+        "9-10": "Golden Gate Bridge",
+        "11-12": "New Castro",
+        "13": "Pacific South NIGHT Headquarters",
+        "14-15": "Presidio",
+        "16-17": "Richmond-Sunset District",
+        "18-19": "Santa Clara",
+        "20": "Sparks, NV"
+      }
+    },
+    "encounters": {
+      "name": "Encounters",
+      "module2": {
+        "1-5": "You attempt a feat of athleticism to reach a goal.  Implement the Skill Difficulty interface and make an Athletics check.",
+        "6-10": "You attempt to discern an unseen phenomenon with your senses. Implement the Skill Difficulty interface and make an Awareness check.",
+        "11-15": "You attempt to intuit a deeper meaning underlying something you’re seeing or being told.  Implement the Skill Difficulty interface and make a Discernment check.",
+        "16-20": "You attempt to put on a show, employ a disguise, or make art out of the mundane.  Implement the Skill Difficulty interface and make a Drama check.",
+        "21-25": "You attempt to wrest, wrestle, or redirect physical energy in some way. Implement the Skill Difficulty interface and make a Grappling check.",
+        "26-30": "You attempt to ply your trade on the network, in a sector where you’re undoubtedly unwelcome.  Implement the Skill Difficulty interface and make a Hacking check.",
+        "31-35": "You attempt to mend wounds or restore health in some way.  Implement the Skill Difficulty interface and make a Healing check.",
+        "36-40": "You attempt to impose your lore, history, or philosophy on a situation to gain an advantage.  Implement the Skill Difficulty interface and make a Knowledge check.",
+        "41-45": "You attempt to implement your experience in the arcane arts to positive effect. Implement the Skill Difficulty interface and make a Mancy check.",
+        "46-50": "You attempt to interact with animals, find a path, or read the stars.  Implement the Skill Difficulty interface and make a Nature check.",
+        "51-55": "You attempt to use your personality to intimidate, persuade, or otherwise bend others to your will.  Implement the Skill Difficulty interface and make a Negotiation check.",
+        "56-60": "You attempt to become one with the shadows, moving silently or out of sight.  Implement the Skill Difficulty interface and make a Stealth check.",
+        "61-65": "You attempt to pick locks, pick pockets, or pick your way around deadly traps. Implement the Skill Difficulty interface and make a Thievery check.",
+        "66-70": "You attempt to make good use of your acrobatic or parkour ability.  Implement the Skill Difficulty interface and make a Tumbling check.",
+        "71-75": "You attempt to make a mad dash through the city in a cruiser chase, or navigate the stars with a cerucopter or other machine.  Implement the Skill Difficulty interface and make a Vehicles check.",
+        "76-85": "You encounter an NPC whose objectives may be aligned - or in conflict - with your own. Implement the NPCs interface.",
+        "86-100": "Your actions have not gone unnoticed, and you enter combat with a hostile force. Implement the Combat Difficulty interface."
+      }
+    },
+    "skillDifficulty": {
+      "name": "Skill Difficulty",
+      "module2": {
+        "1-2": "Simple: DC 5",
+        "3-5": "Below Average: DC 8",
+        "6-9": "Average: DC 10",
+        "10-14": "Above Average: DC 15",
+        "15-18": "Expert: DC 18",
+        "19-20": "Master: DC 20"
+      }
+    },
+    "outcome": {
+      "name": "Outcome",
+      "module2": {
+        "success": {
+          "1": "Your character succeeds at their attempt, with no additional positive outcome.",
+          "2-3": "Your character succeeds at their attempt, and regains 1d4 ceridium. ",
+          "4-5": "Your character succeeds at their attempt, and discovers a piece of Standard Gear  that they can immediately equip.",
+          "6": "Your character succeeds at their attempt, and discovers a piece of Advanced Gear that they can immediately equip.",
+          "7": "Your character succeeds at their attempt, and discovers a piece of Standard Faction Gear, for which they have the appropriate faction standing to equip, or a piece of Advanced Gear.",
+          "8": "Your character succeeds at their attempt, and either gains a faction point with a faction of their choice, or discovers a piece of Advanced Faction Gear, for which they have the appropriate faction standing to equip."
+        },
+        "failure": {
+          "1": "Your character fails at their attempt, and the worst possible outcome occurs.",
+          "2": "Your character fails at their attempt, and loses a faction point with one of the factions involved in the encounter.",
+          "3-5": "Your character fails at their attempt, and it causes an unforeseen negative consequence to occur.",
+          "6-7": "Your character fails at their attempt, but may try again. ",
+          "8": "Your character fails at their attempt, but an unexpected positive outcome occurs."
+        }
+      }
+    },
+    "npcs": {
+      "name": "NPCs",
+      "module2": {
+        "1-3": "Aida Noire",
+        "4-7": "Alina 'The Pitcher' Hadzic",
+        "8-10": "Anatoly Franks",
+        "11-13": "Anna Maria 'Mariposa' Contreras",
+        "14-17": "Beren Furghast",
+        "18-19": "Breavington",
+        "20-22": "Callie 'Razz' Matusz",
+        "23-25": "Derek Undershield",
+        "26-27": "Enoch 'Carbon' Poirier",
+        "28-31": "Eskander Aradowsi",
+        "32-34": "Ettor Sanchez",
+        "35-37": "Firtu Galatas",
+        "38-40": "Franklin Doerr",
+        "41-44": "Gloric Vunderfel",
+        "45-47": "Grace Viviane York",
+        "48-49": "Green Monkey",
+        "50-51": "Jo Nagano",
+        "52-53": "Kaeoloam",
+        "54-55": "Kalafax Dkar",
+        "56-58": "Kathas Ertu",
+        "59-61": "Kent Taveris",
+        "62-64": "Lalita Ahuja",
+        "65-66": "Lune",
+        "67-68": "Medawky",
+        "69-70": "Pat 'The One-Man Wrecking Crew' Martin",
+        "71-73": "Rafael Sanotri",
+        "74-75": "Rhogar Novacrush",
+        "76-78": "Saravia Gregor",
+        "79-81": "Shuichi Saito",
+        "82-85": "Striker Johnson",
+        "86-89": "Tribe Achebe",
+        "90-92": "Vasili Ivanov",
+        "93-96": "Vasshka 'Doubleshot' Lestrage",
+        "97-98": "Volk Dunklop",
+        "99-100": "Yar Nyllewell"
+      }
+    },
+    "npcDisposition": {
+      "name": "NPC Disposition",
+      "module2": {
+        "1": "Hostile",
+        "2": "Unfriendly",
+        "3-4": "Neutral",
+        "5": "Friendly",
+        "6": "Allied"
+      }
+    },
+    "combatDifficulty": {
+      "name": "Combat Difficulty",
+      "module2": {
+        "1-2": "Very Easy: 1 Light Threat adversary per player or 1 Medium Threat adversary",
+        "3": "Easy: 2 Light Threat adversaries per player or 1 Medium Threat adversary per player",
+        "4": "Medium: 3 Light Threat adversaries per player or 2 Medium Threat adversaries per player or 1 High Threat adversary",
+        "5": "Hard: 3 Medium Threat adversaries per player or 1 High Threat adversary per 2 players or 1 Deadly Threat adversary",
+        "6": "Very Hard: (for 5+ Mission characters) 4 Medium Threat adversaries per player or 1 High Threat adversary per player or 2 Deadly Threat adversaries"
+      }
+    },
+    "adversaries": {
+      "name": "Adversaries",
+      "module2": {
+        "light": {
+          "1-2": "Assault Prototype",
+          "3-4": "Auto-Doc Drone",
+          "5-6": "B.A.S.I.C. Drone",
+          "7-8": "Bear*",
+          "9-10": "Bocat*",
+          "11-12": "Crocodile*",
+          "13-16": "Cyber-Sec Drone",
+          "17-18": "Defender Prototype",
+          "19-20": "Eagle*",
+          "21-22": "Explorer Prototype",
+          "23-26": "Field Support",
+          "27-28": "Fox*",
+          "29-32": "Frenzied Rager",
+          "33-34": "Harpy",
+          "35-38": "Lesser Entropic Beast",
+          "39-40": "Medical Prototype",
+          "41-44": "Mercenary",
+          "45-46": "Mine Drone",
+          "47-48": "Police Officer",
+          "49-50": "Pomeranian Spirit",
+          "51-52": "Propaganda Drone",
+          "53-54": "Python*",
+          "55-58": "Rager",
+          "59-62": "Rotodrone",
+          "63-64": "Security Engineer",
+          "65-66": "Security Guard",
+          "67-70": "Security Turret",
+          "71-74": "Shock Drone",
+          "75-76": "Spam-0 Drone",
+          "77-80": "Spider Drone",
+          "81-82": "Stag*",
+          "83-86": "Surveillance Camera",
+          "87-90": "Trainee (Daypath)",
+          "91-94": "Trainee (Nightpath)",
+          "95-98": "Unaligned Firebrand**",
+          "99-100": "Wolf*"
+        },
+        "medium": {
+          "1-5": "Apprentice Entromancer",
+          "6-8": "Arcane Pitcher",
+          "9-13": "Assassin",
+          "14-16": "Centurian-Class Walker",
+          "17-21": "Corporate Enforcer",
+          "22-26": "Cyber-Mercenary",
+          "27-31": "Entropic Beast",
+          "32-34": "Guerilla Tactician",
+          "35-37": "Gunslinger",
+          "38-42": "Heavy Patroller",
+          "43-47": "Industrial Drone",
+          "48-50": "Inferno Squad",
+          "51-55": "K-9 Drone",
+          "56-58": "Lemure",
+          "59-61": "Mancer Hunter",
+          "62-66": "NIGHT Agent (Daypath)",
+          "67-71": "NIGHT Agent (Nightpath)",
+          "72-74": "Oneiromancer",
+          "75-77": "Phoenix",
+          "78-80": "Pyromancer",
+          "81-83": "Recruit",
+          "84-86": "Rent-a-Mage",
+          "87-89": "Sniper",
+          "90-92": "Street Mancer",
+          "93-95": "Trojan Drone",
+          "96-100": "Unaligned Firebrand Ringleader**"
+        },
+        "high": {
+          "1-2": "Atlas-Class Walker",
+          "3": "Aurikar Elite",
+          "4": "Basilisk",
+          "5": "Bright Inquisitor",
+          "6": "Cabalist Entromancer",
+          "7": "Exo-Suit Patroller",
+          "8": "Greater Entropic Beast",
+          "9-10": "Heavy Turret",
+          "11": "Herald of Chaos",
+          "12": "Mandragora",
+          "13-14": "Merlin-Class Walker",
+          "15": "Ocelot-Class Walker",
+          "16": "Patriot-Class Walker",
+          "17": "S.W.A.T.",
+          "18": "Shadow Inquisitor",
+          "19": "War Leader",
+          "20": "Wendigo"
+        },
+        "deadly": {
+          "1": "Chimera",
+          "2": "Dark Cuttle",
+          "3": "Echidna-Class Walker",
+          "4": "Greater Entrophage",
+          "5": "Inquisitor General",
+          "6": "Shadow Dragon**",
+          "7": "Swarm of Ragers",
+          "8": "Technodragon**"
+        }
+      }
+    },
+    "redhatPatrols": {
+      "name": "Redhat Patrols",
+      "module3": {
+        "1": "The redhat patrol takes you and your party in for questioning, immediately ending your current encounter and requiring you to complete one additional encounter to complete your global objective.",
+        "2": "A high speed chase occurs, complicating your objective but not beyond repair.  Implement the Skill Difficulty interface (Table 6 in Module 2: Struct) and make a Vehicles check. On a success, you proceed with your current encounter; on a failure, your encounter ends and you must choose a new one.",
+        "3": "An opportunity for reconciliation appears, providing a brief window for exchange. Implement the Skill Difficulty interface (Table 6 in Module 2: Struct) and make a Negotiation check. On a success, you proceed with your current encounter; on a failure, your encounter ends and you must choose a new one.",
+        "4": "Your encounter with the redhat patrol is uniquely situated to allow for dialogue across party lines. You can spend one faction point from the faction for which you have the highest faction point total to reconcile with the redhat patrol, bypassing any further redhat encounters for the remainder of the current mission. If you do not choose to resolve the encounter in this manner, implement the Redhat Patrols interface again."
+      }
+    },
+    "timeRifts": {
+      "name": "Time Rifts",
+      "module4": {
+        "1": "Time Shock. All rolls attempted by organic or artificial creatures for the remainder of the current round and the next round are made with disadvantage.",
+        "2": "Time Swap. Implement the Locations interface (Table 4: Locations in Module 2: Struct). Your encounter - including everything and everyone in it - immediately teleports to the new location.",
+        "3": "Time Shift. Each creature within your location can take an extra move action on their next turn.",
+        "4": "Time Exchange. Anyone at your location can roll a d20, saving the result.  At any time during the remainder of the current encounter, they can exchange their result with any other die roll, before or without knowing the outcome of the other die roll.  Each creature can only utilize this effect once until the end of the encounter.",
+        "5": "Time Stasis. Each creature within the location of your encounter can either take a move or combat action, but not both, on their next turn.",
+        "6": "Time Stop. Roll a d10. Each creature within the location of your encounter must make a Strength or Will check against a DC equal to 10 + the result of the d10.  On a success, the creature can act as normal.  On a failure, the creature cannot take any actions on their next turn.",
+        "7": "Time Block. Any spell that utilizes ceridium automatically fails for the remainder of the current round and the next round. Weapons and abilities that use ceridium operate as normal.",
+        "8": "Time Charge. All rolls attempted by organic or artificial creatures for the remainder of the current round and the next round are made with advantage."
+      }
+    }
+  }
+}
