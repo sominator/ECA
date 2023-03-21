@@ -21,8 +21,10 @@
         border: 3px solid cyan;
         border-radius: 5px;
         text-align: left;
+        width: 250px;
+        height: 400px;
         padding-left: 5px;
-        margin: 20px 5px 5px 5px;
+        margin: 5px 5px 5px 5px;
     }
     .npc:hover {
         border-color: hotpink;

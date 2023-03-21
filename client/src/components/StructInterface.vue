@@ -5,7 +5,7 @@
                 <th>Roll</th>
                 <th align="center">Outcome</th>
             </tr>
-            <tr v-for="(value, key) in structData">
+            <tr v-for="(value, key) in structData" v-bind:key="key">
                 <td>{{key}}</td>
                 <td style="border-left:3px solid">{{value}}</td>
             </tr>

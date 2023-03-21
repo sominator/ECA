@@ -1,16 +1,16 @@
 <template>
     <div>
-        <div class="div-button" v-on:click="displayToggle = 'locations'" v-bind:class="{selected: displayToggle==='locations'}">
-            <p>Key Locations</p>
+        <div id="buttons">
+            <button v-on:click="toggle = 'locations'" v-bind:class="{selected: toggle==='locations'}">Key Locations</button>
+            <button v-on:click="toggle = 'npcs'" v-bind:class="{selected: toggle==='npcs'}">Key Characters</button>
         </div>
-        <div class="div-button" v-on:click="displayToggle = 'npcs'" v-bind:class="{selected: displayToggle==='npcs'}">
-            <p>Key Characters</p>
-        </div>
-        <div id="locations" v-show="displayToggle === 'locations'">
-            <Location v-for="location in locationData" :locationData="location" :key="location.name" />
-        </div>
-        <div id="npcs" v-show="displayToggle === 'npcs'">
-            <NPC v-for="npc in npcData" :npcData="npc" :key="npc.name" />
+        <div id="lore">
+            <div id="locations" v-show="toggle === 'locations'">
+                <Location v-for="location in locationData" :locationData="location" :key="location.name" />
+            </div>
+            <div id="npcs" v-show="toggle === 'npcs'">
+                <NPC v-for="npc in npcData" :npcData="npc" :key="npc.name" />
+            </div>
         </div>
     </div>
 </template>
@@ -27,7 +27,7 @@
         },
         data: function () {
             return {
-                displayToggle: "locations",
+                toggle: "locations",
                 locationData: json.locationData,
                 npcData: json.npcData
             }
@@ -36,38 +36,50 @@
 </script>
 
 <style scoped>
+    #lore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
     #locations {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
-        max-width: 70%;
-        margin: auto;
     }
+
     #npcs {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
-        max-width: 70%;
-        margin: auto;
     }
-    .div-button {
-        display: inline-block;
-        background: cyan;
-        color: black;
-        width: 200px;
-        height: 30px;
-        margin: auto;
-        margin-left: 10px;
+
+    #buttons {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
         margin-bottom: 10px;
-        padding-bottom: 10px;
-        line-height: 5px;
-        border-radius: 10px;
+        margin: 3px 0px 7px 0px;
     }
-    .div-button:hover{
-        background: hotpink;
-        cursor: pointer;
+
+    @media (max-width: 1000px) {
+        #buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            margin: auto;
+            justify-content: center;
+        }
+
+        #locations {
+            margin: auto;
+        }
+
+        #npcs {
+            margin: auto;
+        }
+
     }
-    .selected {
-        background: hotpink;
-    }
+
 </style>

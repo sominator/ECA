@@ -54,22 +54,4 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    button {
-        background-color: cyan;
-        border-radius: 10px;
-        border: 0px;
-        width: 100px;
-        height: 35px;
-        margin-right: 5px;
-        font-weight: bold;
-        outline: none;
-        font-family: 'Trebuchet MS';
-    }
-    button:hover {
-        cursor: pointer;
-        background-color: hotpink;
-    }
-    .selected {
-        background: hotpink;
-    }
 </style>

@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\src",
+    "\\client\\node_modules",
+    "\\client\\node_modules\\webpack",
+    "\\client\\node_modules\\webpack\\lib",
     "\\client\\src\\components"
   ],
-  "SelectedNode": "\\client\\src\\structData.json",
+  "SelectedNode": "\\client\\node_modules\\webpack\\lib\\Compilation.js",
   "PreviewInSolutionExplorer": false
 }

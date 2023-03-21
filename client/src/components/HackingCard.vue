@@ -28,20 +28,14 @@
         border-radius: 5px;
         text-align: left;
         width: 250px;
-        min-height: 400px;
+        height: 270px;
         padding-left: 5px;
         margin: 5px 5px 5px 5px;
     }
-
     .hacking-card:hover {
         border-color: hotpink;
         cursor: pointer;
     }
-
-    .selected {
-        border-color: hotpink;
-    }
-
     h3 {
         text-align: center
     }

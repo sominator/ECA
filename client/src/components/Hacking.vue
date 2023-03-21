@@ -56,9 +56,6 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    .selected {
-        background: hotpink;
-    }
     #buttons {
         justify-content: center;
         display: flex;
@@ -66,21 +63,7 @@
         margin-bottom: 10px;
         margin: 3px 0px 7px 0px;
     }
-    button {
-        background-color: cyan;
-        border-radius: 10px;
-        border: 0px;
-        width: 100px;
-        height: 30px;
-        margin-right: 5px;
-        font-weight: bold;
-        outline: none;
-        font-family: 'Trebuchet MS';
-    }
-    button:hover {
-        cursor: pointer;
-        background-color: hotpink;
-    }
+
     @media (max-width: 1000px) {
         #buttons {
             flex-direction: row;
@@ -89,16 +72,8 @@
             margin: auto;
             justify-content: center;
         }
-        #races {
+        #hacking {
             margin: auto;
-        }
-        #classes {
-            margin: auto;
-        }
-        button {
-            margin-left: 2.5px;
-            margin-right: 2.5px;
-            margin-bottom: 2.5px;
         }
     }
 </style>

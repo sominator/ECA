@@ -1,28 +1,19 @@
 <template>
     <div id="home">
         <h1>Entromancy Compendium <span>App</span></h1>
+        <p id="contact">Feedback? Send us a message at <a href="mailto:info@entromancy.com">info@entromancy.com</a></p>
         <div id="sidebar">
-            <div class="div-button" v-on:click="displayToggle = 'characters'" v-bind:class="{selected: displayToggle==='characters'}">
-                <p>Characters</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'lore'" v-bind:class="{selected: displayToggle==='lore'}">
-                <p>Lore</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'equipment'" v-bind:class="{selected: displayToggle==='equipment'}">
-                <p>Equipment</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'struct'" v-bind:class="{selected: displayToggle==='struct'}">
-                <p>Struct</p>
-            </div>
-            <div class="div-button" v-on:click="displayToggle = 'hacker-battles'" v-bind:class="{selected: displayToggle==='hacker-battles'}">
-                <p>Hacker Battles</p>
-            </div>
+            <button v-on:click="toggle = 'characters'" v-bind:class="{selected: toggle==='characters'}">Characters</button>
+            <button v-on:click="toggle = 'lore'" v-bind:class="{selected: toggle==='lore'}">Lore</button>
+            <button v-on:click="toggle = 'equipment'" v-bind:class="{selected: toggle==='equipment'}">Equipment</button>
+            <button v-on:click="toggle = 'struct'" v-bind:class="{selected: toggle==='struct'}">Struct</button>
+            <button v-on:click="toggle = 'hacker-battles'" v-bind:class="{selected: toggle==='hacker-battles'}">Hacker Battles</button>
         </div>
-        <Characters v-show="displayToggle === 'characters'" />
-        <Lore v-show="displayToggle === 'lore'" />
-        <Equipment v-show="displayToggle === 'equipment'" />
-        <Struct v-show="displayToggle === 'struct'" />
-        <Hacking v-show="displayToggle === 'hacker-battles'" />
+        <Characters v-show="toggle === 'characters'" />
+        <Lore v-show="toggle === 'lore'" />
+        <Equipment v-show="toggle === 'equipment'" />
+        <Struct v-show="toggle === 'struct'" />
+        <Hacking v-show="toggle === 'hacker-battles'" />
     </div>
 </template>
 
@@ -43,7 +34,7 @@
         },
         data: function () {
             return {
-                displayToggle: ""
+                toggle: ""
             }
         }
     };
@@ -51,36 +42,31 @@
 
 <style scoped>
     #sidebar {
+        align-items: center;
         max-width: 7vw;
         display: flex;
         flex-direction: column;
         position: fixed;
     }
-    .div-button {
-        background: cyan;
-        color: black;
+    #contact{
+        font-size: 12px;
+        text-align: center;
+        margin-top: -5px;
+    }
+    button {
         width: 120px;
-        height: 30px;
+        height: 50px;
         margin-bottom: 10px;
-        padding-bottom: 20px;
-        border-radius: 10px;
+        font-weight: normal;
+        font-size: 16px;
     }
-    .div-button:hover{
-        background: hotpink;
-        cursor: pointer;
-    }
-    .selected {
-        background: hotpink;
-    }
+
     @media(max-width: 1000px) {
         #sidebar{
             position: relative;
             flex-direction: row;
             max-width: 100vw;
             justify-content: center;
-        }
-        .div-button {
-            margin-right: 5px;
         }
     }
 </style>

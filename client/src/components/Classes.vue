@@ -48,27 +48,6 @@
         margin: 3px 0px 7px 0px;
     }
 
-    button {
-        background-color: cyan;
-        border-radius: 10px;
-        border: 0px;
-        width: 100px;
-        height: 30px;
-        margin-right: 5px;
-        font-weight: bold;
-        outline: none;
-        font-family: 'Trebuchet MS';
-    }
-
-    button:hover {
-        cursor: pointer;
-        background-color: hotpink;
-    }
-
-    .selected {
-        background: hotpink;
-    }
-
     @media (max-width: 1000px) {
         #buttons {
             flex-direction: row;
@@ -76,6 +55,10 @@
             position: relative;
             margin: auto;
             justify-content: center;
+        }
+        button {
+            margin-right: 5px;
+            margin-bottom: 5px;
         }
     }
 </style>

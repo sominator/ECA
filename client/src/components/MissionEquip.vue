@@ -39,11 +39,6 @@
         border-color: hotpink;
         cursor: pointer;
     }
-
-    .selected {
-        border-color: hotpink;
-    }
-
     h3 {
         text-align: center
     }
